@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://siraj-muslim-hub.github.io/sitemap.xml

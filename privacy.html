@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · Sirāj</title>
+<meta name="description" content="Sirāj's privacy policy — what data the app uses, how it stays on your device, optional cloud sync, and your rights.">
+<link rel="canonical" href="https://siraj-muslim-hub.github.io/privacy.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sirāj">
+<meta property="og:title" content="Privacy Policy · Sirāj">
+<meta property="og:description" content="What data Sirāj uses, how it stays on your device, optional cloud sync, and your rights.">
+<meta property="og:url" content="https://siraj-muslim-hub.github.io/privacy.html">
+<meta name="theme-color" content="#06120D">
+<link rel="icon" type="image/png" sizes="256x256" href="assets/app-icon-256.png">
+<link rel="apple-touch-icon" href="assets/app-icon-256.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="logo" aria-label="Sirāj home">
+    <img src="assets/logo-mark.svg" alt="" width="34" height="34">
+    <span class="wordmark">Sirāj<span class="ar"> سِراج</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#features">Features</a>
+    <a href="support.html">Support</a>
+    <a href="index.html#download" class="cta">Get Sirāj</a>
+  </div>
+</nav>
+
+<main class="doc">
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 20 June 2026</p>
+
+  <p>Sirāj (“the app”, “we”) is a Muslim companion app for prayer, the Qur'an, and remembrance. We built it to respect your privacy as much as your worship. This policy explains, in plain language, what the app uses, what stays on your device, and the few optional things that don't.</p>
+
+  <div class="callout">
+    <p><strong>The short version:</strong> Sirāj works offline and keeps your data on your device by default. We don't sell your data, we don't use it for advertising, and you only share anything with our cloud if you choose to sign in for sync.</p>
+  </div>
+
+  <h2>1. Information the app uses on your device</h2>
+  <ul>
+    <li><strong>Location</strong> — used to calculate prayer times and the Qibla direction. It is processed on your device for those calculations. You can also set a city manually instead of granting precise location.</li>
+    <li><strong>Your activity in the app</strong> — bookmarks, last-read position, reading streak, tasbīḥ counts, Zakat inputs, and your settings (theme, language, calculation method, notification preferences). This is stored locally on your device.</li>
+    <li><strong>Notifications</strong> — prayer reminders, the adhān, and the optional daily reflection are scheduled locally on your device. No server is involved in delivering them.</li>
+  </ul>
+
+  <h2>2. Optional account &amp; cloud sync</h2>
+  <p>You can use every feature of Sirāj without an account. If you choose to sign in (with Apple or Google), we use Google Firebase to:</p>
+  <ul>
+    <li>authenticate you (Firebase Authentication), and</li>
+    <li>sync your bookmarks, last-read position, trackers and settings across your devices (Cloud Firestore).</li>
+  </ul>
+  <p>We store only the worship data needed for sync, keyed to your account. We never see your Apple/Google password. If you sign out, syncing stops; if you delete your account, your synced data is removed.</p>
+
+  <h2>3. Diagnostics &amp; analytics</h2>
+  <p>To keep the app stable and improve it, Sirāj may use Google Firebase Crashlytics (crash reports) and Firebase Analytics (anonymous, aggregate usage). These do <strong>not</strong> identify you personally and are <strong>opt-out</strong> in the app's settings. We do not use analytics for advertising and there is no ad tracking.</p>
+
+  <h2>4. Network requests</h2>
+  <p>Most content is bundled and works offline. The app reaches the network only to: optionally stream Qur'an recitation audio, sync your data when signed in, and fetch crash/usage diagnostics (unless you opt out). Sacred text (Qur'an and Ḥadīth) is bundled and verified — never generated.</p>
+
+  <h2>5. What we don't do</h2>
+  <ul>
+    <li>We don't sell or rent your personal data.</li>
+    <li>We don't show ads or track you for advertising.</li>
+    <li>We don't require an account to worship with Sirāj.</li>
+  </ul>
+
+  <h2>6. Third-party services</h2>
+  <p>When you opt into the features above, data is processed by Google Firebase under Google's privacy terms. Streaming recitation is served by public Qur'an audio sources. We encourage you to review their respective policies.</p>
+
+  <h2>7. Children</h2>
+  <p>Sirāj is suitable for all ages and does not knowingly collect personal information from children. The optional account features are intended for users able to consent under their local law.</p>
+
+  <h2>8. Your rights &amp; choices</h2>
+  <ul>
+    <li>Use the app fully without an account.</li>
+    <li>Turn analytics and crash reporting off in Settings.</li>
+    <li>Delete your account in the app to remove synced cloud data; on-device data stays until you uninstall.</li>
+  </ul>
+
+  <h2>9. Changes</h2>
+  <p>We may update this policy as the app evolves. Material changes will be reflected here with a new “last updated” date.</p>
+
+  <h2>10. Contact</h2>
+  <p>Questions about privacy? Email <a href="mailto:y.farag84@gmail.com">y.farag84@gmail.com</a>.</p>
+
+  <p style="margin-top:36px"><a href="index.html">← Back to home</a></p>
+</main>
+
+<footer class="site-footer">
+  <p class="legal">© <span id="year">2026</span> Sirāj. <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a></p>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

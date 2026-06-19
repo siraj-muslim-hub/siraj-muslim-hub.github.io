@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" role="img" aria-label="Sirāj">
+  <defs>
+    <radialGradient id="sirajGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFF7DC" stop-opacity="0.95"/>
+      <stop offset="0.45" stop-color="#FFF7DC" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#FFF7DC" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sirajBeam" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#FFF7DC" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#FFF7DC" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g fill="#D4B968">
+    <path d="M34 80 L86 80 L86 94 L34 94 Z"/>
+    <path d="M19 94 L19 48 L28 48 L28 94 Z"/>
+    <path d="M16 54 L31 54 L31 59 L16 59 Z"/>
+    <path d="M19 48 C19 40 23.5 36 23.5 31 C23.5 36 28 40 28 48 Z"/>
+    <circle cx="23.5" cy="28" r="2.4"/>
+    <path d="M92 94 L92 48 L101 48 L101 94 Z"/>
+    <path d="M89 54 L104 54 L104 59 L89 59 Z"/>
+    <path d="M92 48 C92 40 96.5 36 96.5 31 C96.5 36 101 40 101 48 Z"/>
+    <circle cx="96.5" cy="28" r="2.4"/>
+  </g>
+  <path d="M46 79 C44 61 51 50 60 41 C69 50 76 61 74 79 Z" fill="#FFF7DC"/>
+  <path d="M44 80 C42 60 50 48 60 38 C70 48 78 60 76 80 Z" fill="none" stroke="#D4B968" stroke-width="3"/>
+  <line x1="60" y1="38" x2="60" y2="30" stroke="#D4B968" stroke-width="3"/>
+  <circle cx="60" cy="28" r="21" fill="url(#sirajGlow)"/>
+  <path d="M57.8 27 L62.2 27 L61 5 L59 5 Z" fill="url(#sirajBeam)"/>
+  <circle cx="60" cy="27" r="4" fill="#FFF7DC"/>
+</svg>
