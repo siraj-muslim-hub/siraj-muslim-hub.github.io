@@ -1,12 +1,32 @@
 {
   "_comment": "UI strings for the generated prayer-time pages. Placeholders in {braces} are substituted by tools/gen-cities.js — keep every one of them intact when editing a translation, and keep the same set in each language. Method names (Umm al-Qurā, Diyanet İşleri Başkanlığı, …) are deliberately left in their canonical institutional form rather than translated. Month names, number grouping and date order come from Intl at build time, not from this file.",
-
   "en": {
-    "name": "English", "dir": "ltr", "locale": "en-GB",
-    "nav": { "features": "Features", "prayerTimes": "Prayer times", "support": "Support", "getApp": "Get Sirāj" },
-    "footer": { "privacy": "Privacy", "terms": "Terms", "support": "Support" },
-    "prayers": { "fajr": "Fajr", "sunrise": "Sunrise", "dhuhr": "Dhuhr", "asr": "ʿAsr", "maghrib": "Maghrib", "isha": "ʿIshāʾ" },
-    "madhhab": { "hanafi": "Ḥanafī", "standard": "Shāfiʿī / Mālikī / Ḥanbalī" },
+    "name": "English",
+    "dir": "ltr",
+    "locale": "en-GB",
+    "nav": {
+      "features": "Features",
+      "prayerTimes": "Prayer times",
+      "support": "Support",
+      "getApp": "Get Sirāj"
+    },
+    "footer": {
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "support": "Support"
+    },
+    "prayers": {
+      "fajr": "Fajr",
+      "sunrise": "Sunrise",
+      "dhuhr": "Dhuhr",
+      "asr": "ʿAsr",
+      "maghrib": "Maghrib",
+      "isha": "ʿIshāʾ"
+    },
+    "madhhab": {
+      "hanafi": "Ḥanafī",
+      "standard": "Shāfiʿī / Mālikī / Ḥanbalī"
+    },
     "city": {
       "title": "Prayer Times in {cityIn} — Today's Ṣalāh Times & Qibla · Sirāj",
       "description": "Today's prayer times for {city}, {country}: Fajr {fajr}, Dhuhr {dhuhr}, ʿAsr {asr}, Maghrib {maghrib}, ʿIshāʾ {isha}. Qibla {qibla}° from north. Calculated with {method}.",
@@ -16,9 +36,12 @@
       "staticNote": "Showing the times this page was built with. Enable JavaScript to see today's.",
       "liveNote": "Calculated in your browser for {tz} — these are live, not the times this page was built with.",
       "qiblaHeading": "Qibla from {city}",
-      "direction": "Direction", "directionSub": "clockwise from true north",
-      "compass": "Compass point", "compassSub": "approximate heading",
-      "distance": "Distance to Makkah", "distanceSub": "great-circle",
+      "direction": "Direction",
+      "directionSub": "clockwise from true north",
+      "compass": "Compass point",
+      "compassSub": "approximate heading",
+      "distance": "Distance to Makkah",
+      "distanceSub": "great-circle",
       "magneticNote": "A magnetic compass points to magnetic north, not true north, and the difference varies by location and drifts year to year. Sirāj's Qibla compass corrects for it automatically using your device's sensors.",
       "timetableHeading": "{month} {year} timetable",
       "tableCaption": "Prayer times for {city}, {country} — {month} {year}, local time (24-hour)",
@@ -41,20 +64,319 @@
       "introLink": "get Sirāj",
       "searchLabel": "Search cities",
       "searchPlaceholder": "Search for a city or country…",
-      "noMatch": "No city matches that.", "noMatchLink": "Ask us to add it →",
+      "noMatch": "No city matches that.",
+      "noMatchLink": "Ask us to add it →",
       "callout": "Don't see your city? Sirāj computes times for any location on device, from GPS or a city you set by hand — these pages are just the most-searched ones. {link}",
       "calloutLink": "Tell us which to add."
     },
-    "store": { "appleSmall": "Download on the", "appleBig": "App Store", "playSmall": "Get it on", "playBig": "Google Play" },
-    "lang": { "label": "Language", "switcher": "Choose a language" }
+    "store": {
+      "appleSmall": "Download on the",
+      "appleBig": "App Store",
+      "playSmall": "Get it on",
+      "playBig": "Google Play"
+    },
+    "lang": {
+      "label": "Language",
+      "switcher": "Choose a language"
+    },
+    "ramadan": {
+      "nav": "Ramadan",
+      "hubTitle": "Ramadan 1448 / 2027 — Timetables, Suhoor & Iftar Times · Sirāj",
+      "hubDescription": "Ramadan 1448 begins on {start} and ends on {end} — {days} days of fasting. Suhoor and iftar timetables for {cities} cities, calculated with the convention followed locally. Free, no ads.",
+      "hubH1": "Ramadan 1448",
+      "range": "{start} – {end} · {days} days",
+      "before": "{days} days to Ramadan",
+      "during": "Day {day} of Ramadan",
+      "after": "Ramadan 1448 has ended",
+      "standfirst": "The dates below follow the Umm al-Qurā calendar. The start of Ramadan may shift by a day where the month is begun on local moon sighting — follow your local masjid.",
+      "citiesHeading": "Timetables by city",
+      "citiesIntro": "Every city page gives the full month: when suhoor ends, when to break the fast, and how long each day's fast runs.",
+      "toolsHeading": "What Sirāj does during Ramadan",
+      "tool1t": "Suhoor and iftar reminders",
+      "tool1b": "Notifications before suhoor ends and at maghrib, computed on your device for wherever you are.",
+      "tool2t": "Fasting tracker",
+      "tool2b": "Mark each day kept, and any you owe. Your record stays on your device unless you choose to sync it.",
+      "tool3t": "Qur'an and taraweeh",
+      "tool3b": "The whole Qur'an with recitation and a reading plan, so a juz' a night is a plan rather than a hope.",
+      "tool4t": "The last ten nights",
+      "tool4b": "Adhkār and duʿāʾ for Laylat al-Qadr, and a Hijri calendar that knows which night you are on.",
+      "eidHeading": "Eid al-Fitr",
+      "eidBody": "Expected on {eid}, on the sighting of the Shawwāl crescent.",
+      "cityTitle": "Ramadan Timetable {city} 2027 — Suhoor & Iftar Times · Sirāj",
+      "cityDescription": "Ramadan 1448 timetable for {city}, {country}. Suhoor ends and iftar times for all {days} days, from {start} to {end}. Calculated with {method}.",
+      "cityH1": "Ramadan timetable · {city}",
+      "cityIntro": "Suhoor ends at Fajr and the fast is broken at Maghrib. Times are calculated for {city} with {method}; where your masjid differs by a minute or two, follow your masjid.",
+      "tableCaption": "Ramadan 1448 timetable for {city}, {country} — local time (24-hour)",
+      "colDay": "Ramadan",
+      "colDate": "Date",
+      "colSuhoor": "Suhoor ends",
+      "colIftar": "Iftar",
+      "colLength": "Fast length",
+      "imsakNote": "Some communities observe an imsak a few minutes before Fajr as a precaution. The Fajr time is given here; Sirāj lets you set a suhoor reminder as early as you like.",
+      "allCities": "All Ramadan timetables",
+      "longest": "Longest fast",
+      "shortest": "Shortest fast"
+    },
+    "site": {
+      "heroEyebrow": "Your Muslim companion",
+      "heroH1": "Your light for daily worship.",
+      "heroLead": "Sirāj brings prayer times, the Qur'an, Qibla, authentic Ḥadīth, Duʿāʾ & Adhkār and more into one calm, beautiful app — private by design, and free.",
+      "heroCta1": "Get Sirāj",
+      "heroCta2": "Explore features",
+      "fEyebrow": "Everything in one place",
+      "fTitle": "A complete companion for the day",
+      "fSub": "From the first adhān to the last duʿāʾ before sleep — thoughtfully designed, accurate, and respectful.",
+      "f1t": "Prayer times & adhān",
+      "f1b": "Accurate local times with every major calculation method, Ḥanafī/Shāfiʿī Asr, and adhān notifications — with a Ḥadīth at each prayer.",
+      "f2t": "Qibla compass",
+      "f2b": "A precise, smooth Qibla pointer to face the Kaʿbah from anywhere, with a clear heading and calibration.",
+      "f3t": "The Qur'an",
+      "f3b": "Uthmānī script with translations, verse-by-verse recitation, word-by-word, tafsīr and tajwīd — with bookmarks and last-read.",
+      "f4t": "Authentic Ḥadīth",
+      "f4b": "Verified collections — an-Nawawī's Forty, the Forty Qudsī and Muwaṭṭaʾ Mālik — taken verbatim from trusted sources.",
+      "f5t": "Duʿāʾ & Adhkār",
+      "f5b": "Morning & evening adhkār and supplications by occasion — plus your own custom duʿāʾ and bookmarks.",
+      "f6t": "The 99 Names",
+      "f6b": "Al-Asmāʾ al-Ḥusnā with meanings and explanations, beautifully presented for reflection and memorisation.",
+      "f7t": "Hijri calendar",
+      "f7b": "The Islamic calendar with a Gregorian converter and the year's observances, so you never miss a sacred date.",
+      "f8t": "Tasbīḥ counter",
+      "f8b": "A tactile digital tasbīḥ for your dhikr, with presets and gentle haptics that keep your count safe.",
+      "f9t": "Zakat & Ramadan",
+      "f9b": "A guided Zakat calculator and Ramadan tools, including Laylat al-Qadr reminders across the last ten nights.",
+      "wEyebrow": "Why Sirāj",
+      "wTitle": "Built with care, and with respect",
+      "w1t": "Private by design",
+      "w1b": "Your worship is yours. Sirāj works offline and keeps your data on your device. Sign in only if you want cloud sync — analytics are opt-out and there is no tracking for ads.",
+      "w2t": "Free, with no ads",
+      "w2b": "Every feature is free. No ads interrupt your worship. An optional Supporter tier simply helps fund development and adds cross-device sync.",
+      "w3t": "Accurate & authentic",
+      "w3b": "Prayer times are computed with established methods; the Qur'an and Ḥadīth come verbatim from verified sources. Sacred text is never invented.",
+      "sEyebrow": "A calm, beautiful interface",
+      "sTitle": "Twelve themes. Eight languages. One focus.",
+      "sSub": "Light and dark, with hand-tuned colour families — and full right-to-left support for Arabic and Urdu.",
+      "sIpad": "Made for the bigger screen",
+      "qEyebrow": "Questions",
+      "qTitle": "Good to know",
+      "q1": "Is Sirāj free?",
+      "a1": "Yes — every worship feature is free, with no ads. An optional Supporter subscription helps fund development and unlocks cloud sync across your devices; it adds no walls to the core features.",
+      "q2": "Does it work offline?",
+      "a2": "Yes. Prayer times, the Qur'an, Ḥadīth, Duʿāʾ, the 99 Names and the Hijri calendar all work without a connection. Your data stays on your device unless you sign in for sync.",
+      "q3": "Where do the prayer times come from?",
+      "a3": "They're computed locally from your location using established methods (Muslim World League, Umm al-Qurā, ISNA, Egyptian and more), with Ḥanafī/Shāfiʿī Asr options and manual adjustments.",
+      "q4": "Is the religious content authentic?",
+      "a4": "Yes. The Qur'an uses the Uthmānī script from Tanzil with established translations, and the Ḥadīth are taken verbatim from verified collections. Nothing sacred is machine-generated.",
+      "q5": "Which languages are supported?",
+      "a5": "English and Arabic are fully maintained, with translations for Urdu, Turkish, French, Indonesian, Malay and Hausa — and full right-to-left layout for Arabic and Urdu.",
+      "dEyebrow": "Now available",
+      "dTitle": "Download Sirāj",
+      "dSub": "Sirāj is now available on the App Store and Google Play — free, in shā’ Allāh.",
+      "supTitle": "Support · Sirāj",
+      "supH1": "Support",
+      "supLead": "We're here to help, in shā’ Allāh.",
+      "supEmail": "Email us",
+      "supEmailNote": "Please include your device, OS version, and a short description — it helps us help you faster.",
+      "supCommon": "Common questions",
+      "sq1": "My prayer times look off",
+      "sa1": "Open Settings → Prayer and check your location and calculation method. Different communities follow different methods (Muslim World League, Umm al-Qurā, ISNA, Egyptian). You can also choose the Ḥanafī or Shāfiʿī Asr and apply per-prayer minute adjustments.",
+      "sq2": "I'm not getting the adhān or prayer notifications",
+      "sa2": "Make sure notifications are allowed for Sirāj in your phone's system settings, then enable them in the app under Notifications. To hear the adhān even when your phone is on silent (iOS critical alerts), turn on “Play even on silent.”",
+      "sq3": "How do I sync across devices?",
+      "sa3": "Sign in with Apple or Google from the Account screen. Syncing your bookmarks, last-read, trackers and settings is part of the Supporter tier. Sign in on each device with the same account.",
+      "sq4": "How do I change the language or theme?",
+      "sa4": "Open Quick Settings (the gear) for themes, or More → Language to switch among the supported languages. Arabic and Urdu switch the whole layout to right-to-left.",
+      "backHome": "Back to home"
+    },
+    "legal": {
+      "governs": "This is a translation provided for convenience. If it differs from the English version, the English version governs.",
+      "backHome": "Back to home",
+      "updatedLabel": "Last updated",
+      "privacy": {
+        "title": "Privacy Policy · Sirāj",
+        "h1": "Privacy Policy",
+        "date": "29 August 2026",
+        "intro": "Sirāj (“the app”, “we”) is a Muslim companion app for prayer, the Qur'an, and remembrance. We built it to respect your privacy as much as your worship. This policy explains, in plain language, what the app uses, what stays on your device, and the few optional things that don't.",
+        "shortLabel": "The short version:",
+        "short": "Sirāj works offline and keeps your data on your device by default. We don't sell your data, we don't use it for advertising, and you only share anything with our cloud if you choose to sign in for sync.",
+        "sections": [
+          {
+            "h": "1. Information the app uses on your device",
+            "p": [],
+            "li": [
+              "<strong>Location</strong> — used to calculate prayer times and the Qibla direction. It is processed on your device for those calculations. You can also set a city manually instead of granting precise location.",
+              "<strong>Your activity in the app</strong> — bookmarks, last-read position, reading streak, tasbīḥ counts, Zakat inputs, and your settings. This is stored locally on your device.",
+              "<strong>Notifications</strong> — prayer reminders, the adhān, and the optional daily reflection are scheduled locally on your device. No server is involved in delivering them."
+            ]
+          },
+          {
+            "h": "2. Optional account & cloud sync",
+            "p": [
+              "You can use every feature of Sirāj without an account. If you choose to sign in (with Apple or Google), we use Google Firebase to:",
+              "We store only the worship data needed for sync, keyed to your account. We never see your Apple/Google password. If you sign out, syncing stops; if you delete your account, your synced data is removed."
+            ],
+            "li": [
+              "authenticate you (Firebase Authentication), and",
+              "sync your bookmarks, last-read position, trackers and settings across your devices (Cloud Firestore)."
+            ]
+          },
+          {
+            "h": "3. Diagnostics & analytics",
+            "p": [
+              "To keep the app stable and improve it, Sirāj may use Google Firebase Crashlytics (crash reports) and Firebase Analytics (anonymous, aggregate usage). These do <strong>not</strong> identify you personally and are <strong>opt-out</strong> in the app's settings. We do not use analytics for advertising and there is no ad tracking.",
+              "<em>This website:</em> separately from the app, this website uses Cloudflare Web Analytics to count page views and referrers. It is cookieless, stores nothing on your device, does not fingerprint your browser, and cannot follow you to other sites. We also honour the Do Not Track and Global Privacy Control browser signals: if either is on, the measurement script is never loaded at all."
+            ],
+            "li": []
+          },
+          {
+            "h": "4. Network requests",
+            "p": [
+              "Most content is bundled and works offline. The app reaches the network only to: optionally stream Qur'an recitation audio, sync your data when signed in, and fetch crash/usage diagnostics (unless you opt out). Sacred text (Qur'an and Ḥadīth) is bundled and verified — never generated."
+            ],
+            "li": []
+          },
+          {
+            "h": "5. What we don't do",
+            "p": [],
+            "li": [
+              "We don't sell or rent your personal data.",
+              "We don't show ads or track you for advertising.",
+              "We don't require an account to worship with Sirāj."
+            ]
+          },
+          {
+            "h": "6. Third-party services",
+            "p": [
+              "When you opt into the features above, data is processed by Google Firebase under Google's privacy terms. Streaming recitation is served by public Qur'an audio sources. Page views on this website are counted by Cloudflare Web Analytics. We encourage you to review their respective policies."
+            ],
+            "li": []
+          },
+          {
+            "h": "7. Children",
+            "p": [
+              "Sirāj is suitable for all ages and does not knowingly collect personal information from children. The optional account features are intended for users able to consent under their local law."
+            ],
+            "li": []
+          },
+          {
+            "h": "8. Your rights & choices",
+            "p": [],
+            "li": [
+              "Use the app fully without an account.",
+              "Turn analytics and crash reporting off in Settings.",
+              "Delete your account in the app to remove synced cloud data; on-device data stays until you uninstall."
+            ]
+          },
+          {
+            "h": "9. Changes",
+            "p": [
+              "We may update this policy as the app evolves. Material changes will be reflected here with a new “last updated” date."
+            ],
+            "li": []
+          },
+          {
+            "h": "10. Contact",
+            "p": [
+              "Questions about privacy? Email {email}."
+            ],
+            "li": []
+          }
+        ]
+      },
+      "terms": {
+        "title": "Terms of Service · Sirāj",
+        "h1": "Terms of Service",
+        "date": "20 June 2026",
+        "intro": "These terms govern your use of the Sirāj app and this website. By using Sirāj, you agree to them.",
+        "sections": [
+          {
+            "h": "1. The service",
+            "p": [
+              "Sirāj provides prayer times, the Qur'an, Ḥadīth, supplications, and related Islamic tools for personal, devotional use. We strive for accuracy, but the app is provided as an aid to worship, not as a religious authority."
+            ],
+            "li": []
+          },
+          {
+            "h": "2. Religious content",
+            "p": [
+              "The Qur'an and Ḥadīth in Sirāj are drawn verbatim from established, verified sources and are presented for your benefit. Prayer times are calculated using well-known methods; where your local mosque differs, follow your local mosque."
+            ],
+            "li": []
+          },
+          {
+            "h": "3. Accounts",
+            "p": [
+              "An account is optional and used only to sync your data across devices. You are responsible for keeping access to your Apple or Google sign-in secure. You may delete your account from within the app at any time."
+            ],
+            "li": []
+          },
+          {
+            "h": "4. Supporter subscription",
+            "p": [
+              "Sirāj is free to use. An optional Supporter subscription helps fund development and enables cross-device cloud sync. Subscriptions are billed through the App Store or Google Play and renew unless cancelled; manage or cancel them in your store account."
+            ],
+            "li": []
+          },
+          {
+            "h": "5. Acceptable use",
+            "p": [],
+            "li": [
+              "Use Sirāj lawfully and respectfully.",
+              "Do not attempt to disrupt, reverse-engineer, or misuse the service.",
+              "Do not misrepresent the app's content or use the Sirāj name or marks without permission."
+            ]
+          },
+          {
+            "h": "6. Disclaimer & liability",
+            "p": [
+              "Sirāj is provided “as is”, without warranties of any kind. To the maximum extent permitted by law, we are not liable for any indirect or consequential loss arising from your use of the app."
+            ],
+            "li": []
+          },
+          {
+            "h": "7. Changes",
+            "p": [
+              "We may update the app and these terms over time. Continued use after changes means you accept the updated terms."
+            ],
+            "li": []
+          },
+          {
+            "h": "8. Contact",
+            "p": [
+              "Questions about these terms? Email {email}."
+            ],
+            "li": []
+          }
+        ]
+      }
+    }
   },
-
   "ar": {
-    "name": "العربية", "dir": "rtl", "locale": "ar",
-    "nav": { "features": "المزايا", "prayerTimes": "مواقيت الصلاة", "support": "الدعم", "getApp": "حمّل سِراج" },
-    "footer": { "privacy": "الخصوصية", "terms": "الشروط", "support": "الدعم" },
-    "prayers": { "fajr": "الفجر", "sunrise": "الشروق", "dhuhr": "الظهر", "asr": "العصر", "maghrib": "المغرب", "isha": "العشاء" },
-    "madhhab": { "hanafi": "الحنفي", "standard": "الشافعي والمالكي والحنبلي" },
+    "name": "العربية",
+    "dir": "rtl",
+    "locale": "ar",
+    "nav": {
+      "features": "المزايا",
+      "prayerTimes": "مواقيت الصلاة",
+      "support": "الدعم",
+      "getApp": "حمّل سِراج"
+    },
+    "footer": {
+      "privacy": "الخصوصية",
+      "terms": "الشروط",
+      "support": "الدعم"
+    },
+    "prayers": {
+      "fajr": "الفجر",
+      "sunrise": "الشروق",
+      "dhuhr": "الظهر",
+      "asr": "العصر",
+      "maghrib": "المغرب",
+      "isha": "العشاء"
+    },
+    "madhhab": {
+      "hanafi": "الحنفي",
+      "standard": "الشافعي والمالكي والحنبلي"
+    },
     "city": {
       "title": "مواقيت الصلاة في {cityIn} — أوقات الصلاة اليوم واتجاه القبلة · سِراج",
       "description": "مواقيت الصلاة اليوم في {city}، {country}: الفجر {fajr}، الظهر {dhuhr}، العصر {asr}، المغرب {maghrib}، العشاء {isha}. اتجاه القبلة {qibla}° من الشمال. محسوبة بطريقة {method}.",
@@ -64,9 +386,12 @@
       "staticNote": "هذه هي المواقيت التي بُنيت بها الصفحة. فعّل الجافاسكربت لعرض مواقيت اليوم.",
       "liveNote": "حُسبت في متصفحك حسب توقيت {tz} — وهي مواقيت حيّة، لا المواقيت التي بُنيت بها الصفحة.",
       "qiblaHeading": "اتجاه القبلة من {city}",
-      "direction": "الاتجاه", "directionSub": "بالدرجات من الشمال الحقيقي",
-      "compass": "الجهة", "compassSub": "اتجاه تقريبي",
-      "distance": "المسافة إلى مكة", "distanceSub": "على الدائرة العظمى",
+      "direction": "الاتجاه",
+      "directionSub": "بالدرجات من الشمال الحقيقي",
+      "compass": "الجهة",
+      "compassSub": "اتجاه تقريبي",
+      "distance": "المسافة إلى مكة",
+      "distanceSub": "على الدائرة العظمى",
       "magneticNote": "تشير البوصلة المغناطيسية إلى الشمال المغناطيسي لا الشمال الحقيقي، والفرق بينهما يختلف باختلاف الموقع ويتغيّر من سنة إلى أخرى. تصحّح بوصلة القبلة في سِراج هذا الفرق تلقائيًا باستخدام مستشعرات جهازك.",
       "timetableHeading": "جدول {month} {year}",
       "tableCaption": "مواقيت الصلاة في {city}، {country} — {month} {year}، بالتوقيت المحلي (نظام ٢٤ ساعة)",
@@ -89,20 +414,319 @@
       "introLink": "حمّل سِراج",
       "searchLabel": "ابحث عن مدينة",
       "searchPlaceholder": "ابحث عن مدينة أو دولة…",
-      "noMatch": "لا توجد مدينة بهذا الاسم.", "noMatchLink": "اطلب منّا إضافتها ←",
+      "noMatch": "لا توجد مدينة بهذا الاسم.",
+      "noMatchLink": "اطلب منّا إضافتها ←",
       "callout": "لا تجد مدينتك؟ يحسب سِراج المواقيت لأي موقع على الجهاز نفسه، من تحديد الموقع أو من مدينة تختارها بنفسك — وما هذه الصفحات إلا الأكثر بحثًا. {link}",
       "calloutLink": "أخبرنا أيّها نضيف."
     },
-    "store": { "appleSmall": "حمّله من", "appleBig": "App Store", "playSmall": "احصل عليه من", "playBig": "Google Play" },
-    "lang": { "label": "اللغة", "switcher": "اختر لغة" }
+    "store": {
+      "appleSmall": "حمّله من",
+      "appleBig": "App Store",
+      "playSmall": "احصل عليه من",
+      "playBig": "Google Play"
+    },
+    "lang": {
+      "label": "اللغة",
+      "switcher": "اختر لغة"
+    },
+    "ramadan": {
+      "nav": "رمضان",
+      "hubTitle": "رمضان ١٤٤٨ / ٢٠٢٧ — إمساكية وأوقات السحور والإفطار · سِراج",
+      "hubDescription": "يبدأ رمضان ١٤٤٨ في {start} وينتهي في {end} — {days} يومًا من الصيام. إمساكية السحور والإفطار لـ {cities} مدينة، محسوبة بالطريقة المتّبعة محليًا. مجانًا وبلا إعلانات.",
+      "hubH1": "رمضان ١٤٤٨",
+      "range": "{start} – {end} · {days} يومًا",
+      "before": "بقي {days} يومًا على رمضان",
+      "during": "اليوم {day} من رمضان",
+      "after": "انقضى رمضان ١٤٤٨",
+      "standfirst": "التواريخ أدناه على تقويم أم القرى، وقد يتقدّم أول رمضان أو يتأخّر يومًا حيث يُعتمد على رؤية الهلال محليًا — والأولى اتّباع مسجدك.",
+      "citiesHeading": "الإمساكية حسب المدينة",
+      "citiesIntro": "تعرض صفحة كل مدينة الشهر كاملًا: متى ينتهي السحور، ومتى يكون الإفطار، وكم تبلغ مدة الصيام في كل يوم.",
+      "toolsHeading": "ماذا يقدّم سِراج في رمضان",
+      "tool1t": "تنبيهات السحور والإفطار",
+      "tool1b": "تنبيه قبل انتهاء السحور وآخر عند المغرب، محسوبان على جهازك أينما كنت.",
+      "tool2t": "متابعة الصيام",
+      "tool2b": "سجّل كل يوم صمته وما عليك من قضاء. ويبقى سجلّك على جهازك ما لم تختر مزامنته.",
+      "tool3t": "القرآن والتراويح",
+      "tool3b": "المصحف كاملًا بالتلاوة مع خطة قراءة، فيكون جزءٌ كل ليلة خطةً لا أمنية.",
+      "tool4t": "العشر الأواخر",
+      "tool4b": "أذكار وأدعية ليلة القدر، وتقويم هجري يعرف في أي ليلة أنت.",
+      "eidHeading": "عيد الفطر",
+      "eidBody": "يُتوقّع في {eid}، على رؤية هلال شوال.",
+      "cityTitle": "إمساكية رمضان {city} ٢٠٢٧ — أوقات السحور والإفطار · سِراج",
+      "cityDescription": "إمساكية رمضان ١٤٤٨ لمدينة {city}، {country}. مواعيد انتهاء السحور والإفطار طوال {days} يومًا، من {start} إلى {end}. محسوبة بطريقة {method}.",
+      "cityH1": "إمساكية رمضان · {city}",
+      "cityIntro": "ينتهي السحور بأذان الفجر ويكون الإفطار بأذان المغرب. حُسبت المواقيت لمدينة {city} بطريقة {method}؛ فإن اختلف مسجدك بدقيقة أو دقيقتين فاتّبع مسجدك.",
+      "tableCaption": "إمساكية رمضان ١٤٤٨ لمدينة {city}، {country} — بالتوقيت المحلي (نظام ٢٤ ساعة)",
+      "colDay": "رمضان",
+      "colDate": "التاريخ",
+      "colSuhoor": "نهاية السحور",
+      "colIftar": "الإفطار",
+      "colLength": "مدة الصيام",
+      "imsakNote": "تعتمد بعض الجهات إمساكًا قبل الفجر بدقائق احتياطًا. والمذكور هنا وقت الفجر، ويتيح لك سِراج ضبط تنبيه السحور قبله بما تشاء.",
+      "allCities": "كل الإمساكيات",
+      "longest": "أطول صيام",
+      "shortest": "أقصر صيام"
+    },
+    "site": {
+      "heroEyebrow": "رفيقك المسلم",
+      "heroH1": "نورك في عبادة يومك.",
+      "heroLead": "يجمع سِراج مواقيت الصلاة والقرآن الكريم والقبلة والحديث الصحيح والأدعية والأذكار وغيرها في تطبيق واحد هادئ وجميل — يحفظ خصوصيتك بحكم تصميمه، ومجانًا.",
+      "heroCta1": "حمّل سِراج",
+      "heroCta2": "استعرض المزايا",
+      "fEyebrow": "كل شيء في مكان واحد",
+      "fTitle": "رفيق كامل ليومك",
+      "fSub": "من أذان الفجر إلى آخر دعاء قبل النوم — بتصميم متأنٍّ، ودقةٍ، واحترام.",
+      "f1t": "مواقيت الصلاة والأذان",
+      "f1b": "مواقيت محلية دقيقة بجميع طرق الحساب المعتمدة، وعصر حنفي أو شافعي، وتنبيهات الأذان — مع حديث عند كل صلاة.",
+      "f2t": "بوصلة القبلة",
+      "f2b": "مؤشّر قبلة دقيق وسلس لاستقبال الكعبة من أي مكان، باتجاه واضح وإمكانية المعايرة.",
+      "f3t": "القرآن الكريم",
+      "f3b": "الرسم العثماني مع الترجمات، وتلاوة آية آية، وكلمة كلمة، والتفسير والتجويد — مع العلامات المرجعية وموضع آخر قراءة.",
+      "f4t": "الحديث الصحيح",
+      "f4b": "مجموعات موثّقة — الأربعون النووية، والأربعون القدسية، وموطأ مالك — منقولة بنصّها من مصادر موثوقة.",
+      "f5t": "الأدعية والأذكار",
+      "f5b": "أذكار الصباح والمساء وأدعية المناسبات — مع إمكانية إضافة أدعيتك الخاصة وحفظها.",
+      "f6t": "الأسماء الحسنى",
+      "f6b": "الأسماء الحسنى بمعانيها وشروحها، معروضة عرضًا جميلًا للتدبّر والحفظ.",
+      "f7t": "التقويم الهجري",
+      "f7b": "التقويم الهجري مع محوّل ميلادي ومناسبات العام، فلا يفوتك تاريخ مبارك.",
+      "f8t": "المسبحة",
+      "f8b": "مسبحة رقمية مريحة لذكرك، بإعدادات جاهزة واهتزاز لطيف يحفظ لك العدّ.",
+      "f9t": "الزكاة ورمضان",
+      "f9b": "حاسبة زكاة موجَّهة وأدوات رمضان، منها تنبيهات ليلة القدر في العشر الأواخر.",
+      "wEyebrow": "لماذا سِراج",
+      "wTitle": "صُنع بعناية، وباحترام",
+      "w1t": "الخصوصية أصل في التصميم",
+      "w1b": "عبادتك لك وحدك. يعمل سِراج دون اتصال ويبقي بياناتك على جهازك. ولا تحتاج إلى تسجيل الدخول إلا إن أردت المزامنة السحابية — والتحليلات اختيارية يمكنك إيقافها، ولا تتبّع لأغراض الإعلان.",
+      "w2t": "مجاني وبلا إعلانات",
+      "w2b": "كل المزايا مجانية، ولا إعلانات تقطع عليك عبادتك. وباقة الداعم اختيارية، تسهم في تمويل التطوير وتضيف المزامنة بين الأجهزة.",
+      "w3t": "دقيق وموثوق",
+      "w3b": "تُحسب المواقيت بطرق معتمدة، والقرآن والحديث منقولان بنصّهما من مصادر موثّقة. ولا يُولَّد النص الشرعي آليًا أبدًا.",
+      "sEyebrow": "واجهة هادئة وجميلة",
+      "sTitle": "اثنا عشر مظهرًا. ثماني لغات. تركيز واحد.",
+      "sSub": "فاتح وداكن، بعائلات ألوان مضبوطة بعناية — ودعم كامل للكتابة من اليمين إلى اليسار للعربية والأردية.",
+      "sIpad": "مصمَّم للشاشات الكبيرة أيضًا",
+      "qEyebrow": "أسئلة",
+      "qTitle": "ما يحسن معرفته",
+      "q1": "هل سِراج مجاني؟",
+      "a1": "نعم — كل مزايا العبادة مجانية وبلا إعلانات. وهناك اشتراك داعم اختياري يسهم في تمويل التطوير ويفتح المزامنة السحابية بين أجهزتك، ولا يضع أي حاجز أمام المزايا الأساسية.",
+      "q2": "هل يعمل دون اتصال؟",
+      "a2": "نعم. تعمل مواقيت الصلاة والقرآن والحديث والأدعية والأسماء الحسنى والتقويم الهجري كلها دون اتصال. وتبقى بياناتك على جهازك ما لم تسجّل الدخول للمزامنة.",
+      "q3": "من أين تأتي مواقيت الصلاة؟",
+      "a3": "تُحسب محليًا من موقعك بطرق معتمدة (رابطة العالم الإسلامي، وأم القرى، والجمعية الإسلامية لأمريكا الشمالية، والهيئة المصرية العامة للمساحة وغيرها)، مع خياري العصر الحنفي والشافعي وتعديلات يدوية.",
+      "q4": "هل المحتوى الشرعي موثوق؟",
+      "a4": "نعم. القرآن بالرسم العثماني من مشروع تنزيل مع ترجمات معتمدة، والأحاديث منقولة بنصّها من مجموعات موثّقة. ولا يُولَّد شيء من النص الشرعي آليًا.",
+      "q5": "ما اللغات المدعومة؟",
+      "a5": "الإنجليزية والعربية مدعومتان دعمًا كاملًا، مع ترجمات للأردية والتركية والفرنسية والإندونيسية والملايوية والهوسا — وتخطيط كامل من اليمين إلى اليسار للعربية والأردية.",
+      "dEyebrow": "متاح الآن",
+      "dTitle": "حمّل سِراج",
+      "dSub": "سِراج متاح الآن على App Store و Google Play — مجانًا، إن شاء الله.",
+      "supTitle": "الدعم · سِراج",
+      "supH1": "الدعم",
+      "supLead": "نحن هنا لمساعدتك، إن شاء الله.",
+      "supEmail": "راسلنا",
+      "supEmailNote": "يرجى ذكر جهازك وإصدار نظامه ووصف مختصر للمشكلة — فذلك يعيننا على مساعدتك أسرع.",
+      "supCommon": "أسئلة شائعة",
+      "sq1": "المواقيت لدي تبدو غير صحيحة",
+      "sa1": "افتح الإعدادات ← الصلاة وتحقّق من موقعك وطريقة الحساب. فالمجتمعات تختلف في الطرق المتّبعة (رابطة العالم الإسلامي، أم القرى، ISNA، الهيئة المصرية). ويمكنك أيضًا اختيار العصر الحنفي أو الشافعي وضبط تعديل بالدقائق لكل صلاة.",
+      "sq2": "لا تصلني تنبيهات الأذان أو الصلاة",
+      "sa2": "تأكّد من السماح بالإشعارات لسِراج في إعدادات نظام هاتفك، ثم فعّلها داخل التطبيق من قسم الإشعارات. ولسماع الأذان حتى والهاتف صامت (تنبيهات iOS الحرجة) فعّل خيار «التشغيل حتى في الوضع الصامت».",
+      "sq3": "كيف أزامن بين أجهزتي؟",
+      "sa3": "سجّل الدخول بحساب Apple أو Google من شاشة الحساب. ومزامنة علاماتك وآخر قراءة ومتابعاتك وإعداداتك من ضمن باقة الداعم. وسجّل الدخول على كل جهاز بالحساب نفسه.",
+      "sq4": "كيف أغيّر اللغة أو المظهر؟",
+      "sa4": "افتح الإعدادات السريعة (رمز الترس) للمظاهر، أو المزيد ← اللغة للتنقّل بين اللغات المدعومة. والعربية والأردية تحوّلان التخطيط كاملًا إلى اليمين.",
+      "backHome": "العودة إلى الرئيسية"
+    },
+    "legal": {
+      "governs": "هذه ترجمة مقدَّمة للتيسير، فإن اختلفت عن النسخة الإنجليزية فالنسخة الإنجليزية هي المعتمدة.",
+      "backHome": "العودة إلى الرئيسية",
+      "updatedLabel": "آخر تحديث",
+      "privacy": {
+        "title": "سياسة الخصوصية · سِراج",
+        "h1": "سياسة الخصوصية",
+        "date": "٢٩ أغسطس ٢٠٢٦",
+        "intro": "سِراج («التطبيق»، «نحن») تطبيقٌ مسلمٌ للصلاة والقرآن والذكر. بنيناه ليحترم خصوصيتك كما يحترم عبادتك. وتوضّح هذه السياسة بلغة واضحة ما يستخدمه التطبيق، وما يبقى على جهازك، والقليل الاختياري مما لا يبقى.",
+        "shortLabel": "باختصار:",
+        "short": "يعمل سِراج دون اتصال ويبقي بياناتك على جهازك افتراضيًا. لا نبيع بياناتك، ولا نستخدمها للإعلان، ولا تشارك شيئًا مع سحابتنا إلا إن اخترت تسجيل الدخول للمزامنة.",
+        "sections": [
+          {
+            "h": "١. المعلومات التي يستخدمها التطبيق على جهازك",
+            "p": [],
+            "li": [
+              "<strong>الموقع</strong> — يُستخدم لحساب مواقيت الصلاة واتجاه القبلة، ويُعالَج على جهازك لهذين الغرضين. ويمكنك بدلًا من ذلك تحديد مدينتك يدويًا دون منح الموقع الدقيق.",
+              "<strong>نشاطك داخل التطبيق</strong> — العلامات المرجعية، وموضع آخر قراءة، وسلسلة القراءة، وعدّ التسبيح، ومدخلات الزكاة، وإعداداتك. ويُحفظ ذلك محليًا على جهازك.",
+              "<strong>الإشعارات</strong> — تنبيهات الصلاة والأذان والتأمل اليومي الاختياري تُجدوَل محليًا على جهازك، ولا يتدخّل أي خادم في إيصالها."
+            ]
+          },
+          {
+            "h": "٢. الحساب الاختياري والمزامنة السحابية",
+            "p": [
+              "يمكنك استخدام كل مزايا سِراج دون حساب. فإن اخترت تسجيل الدخول (بحساب Apple أو Google) فإننا نستخدم Google Firebase من أجل:",
+              "لا نخزّن إلا بيانات العبادة اللازمة للمزامنة، مرتبطةً بحسابك. ولا نطّلع أبدًا على كلمة مرور Apple أو Google. وإن سجّلت الخروج توقّفت المزامنة، وإن حذفت حسابك حُذفت بياناتك المزامَنة."
+            ],
+            "li": [
+              "التحقق من هويتك (Firebase Authentication)، و",
+              "مزامنة علاماتك وموضع آخر قراءة ومتابعاتك وإعداداتك بين أجهزتك (Cloud Firestore)."
+            ]
+          },
+          {
+            "h": "٣. التشخيص والتحليلات",
+            "p": [
+              "للحفاظ على استقرار التطبيق وتحسينه، قد يستخدم سِراج خدمتي Firebase Crashlytics (تقارير الأعطال) وFirebase Analytics (استخدام مجمّع ومجهول). وهما <strong>لا</strong> تعرّفان بك شخصيًا، ويمكنك <strong>إيقافهما</strong> من إعدادات التطبيق. ولا نستخدم التحليلات للإعلان، ولا يوجد تتبّع إعلاني.",
+              "<em>هذا الموقع:</em> بمعزل عن التطبيق، يستخدم هذا الموقع Cloudflare Web Analytics لعدّ مشاهدات الصفحات ومصادر الزيارات. وهي بلا كوكيز، ولا تخزّن شيئًا على جهازك، ولا تبصم متصفحك، ولا يمكنها تتبّعك إلى مواقع أخرى. ونحترم كذلك إشارتي Do Not Track وGlobal Privacy Control: فإن كانت إحداهما مفعّلة لم يُحمَّل نص القياس أصلًا."
+            ],
+            "li": []
+          },
+          {
+            "h": "٤. طلبات الشبكة",
+            "p": [
+              "معظم المحتوى مضمَّن ويعمل دون اتصال. ولا يتصل التطبيق بالشبكة إلا من أجل: بثّ تلاوة القرآن اختياريًا، ومزامنة بياناتك عند تسجيل الدخول، وإرسال تشخيصات الأعطال والاستخدام (ما لم توقفها). والنص الشرعي (القرآن والحديث) مضمَّن وموثّق — ولا يُولَّد أبدًا."
+            ],
+            "li": []
+          },
+          {
+            "h": "٥. ما لا نفعله",
+            "p": [],
+            "li": [
+              "لا نبيع بياناتك الشخصية ولا نؤجّرها.",
+              "لا نعرض إعلانات ولا نتتبّعك لأغراض إعلانية.",
+              "لا نشترط حسابًا لتتعبّد بسِراج."
+            ]
+          },
+          {
+            "h": "٦. خدمات الطرف الثالث",
+            "p": [
+              "عند اختيارك المزايا المذكورة أعلاه تُعالَج البيانات لدى Google Firebase وفق شروط خصوصية Google. وتُبثّ التلاوة من مصادر صوتية عامة للقرآن. وتُعدّ مشاهدات هذا الموقع بواسطة Cloudflare Web Analytics. وندعوك إلى الاطلاع على سياسات كل منها."
+            ],
+            "li": []
+          },
+          {
+            "h": "٧. الأطفال",
+            "p": [
+              "سِراج مناسب لجميع الأعمار، ولا يجمع عن قصد معلومات شخصية من الأطفال. ومزايا الحساب الاختيارية موجَّهة لمن يستطيع إبداء الموافقة وفق قانون بلده."
+            ],
+            "li": []
+          },
+          {
+            "h": "٨. حقوقك وخياراتك",
+            "p": [],
+            "li": [
+              "استخدام التطبيق كاملًا دون حساب.",
+              "إيقاف التحليلات وتقارير الأعطال من الإعدادات.",
+              "حذف حسابك من داخل التطبيق لإزالة البيانات السحابية المزامَنة؛ وتبقى بيانات الجهاز حتى تحذف التطبيق."
+            ]
+          },
+          {
+            "h": "٩. التغييرات",
+            "p": [
+              "قد نحدّث هذه السياسة مع تطوّر التطبيق، وستُذكر التغييرات الجوهرية هنا بتاريخ «آخر تحديث» جديد."
+            ],
+            "li": []
+          },
+          {
+            "h": "١٠. التواصل",
+            "p": [
+              "لديك سؤال عن الخصوصية؟ راسلنا على {email}."
+            ],
+            "li": []
+          }
+        ]
+      },
+      "terms": {
+        "title": "شروط الخدمة · سِراج",
+        "h1": "شروط الخدمة",
+        "date": "٢٠ يونيو ٢٠٢٦",
+        "intro": "تحكم هذه الشروط استخدامك لتطبيق سِراج ولهذا الموقع. وباستخدامك سِراج فإنك توافق عليها.",
+        "sections": [
+          {
+            "h": "١. الخدمة",
+            "p": [
+              "يقدّم سِراج مواقيت الصلاة والقرآن والحديث والأدعية وأدوات إسلامية متصلة بها، للاستخدام الشخصي التعبّدي. ونحرص على الدقة، غير أن التطبيق عونٌ على العبادة لا مرجعٌ شرعي."
+            ],
+            "li": []
+          },
+          {
+            "h": "٢. المحتوى الشرعي",
+            "p": [
+              "القرآن والحديث في سِراج منقولان بنصّهما من مصادر معتمدة وموثّقة، ومعروضان لنفعك. وتُحسب المواقيت بطرق معروفة، فإن خالفها مسجدك فاتّبع مسجدك."
+            ],
+            "li": []
+          },
+          {
+            "h": "٣. الحسابات",
+            "p": [
+              "الحساب اختياري ولا يُستخدم إلا لمزامنة بياناتك بين أجهزتك. وأنت مسؤول عن حماية وصولك إلى حساب Apple أو Google. ويمكنك حذف حسابك من داخل التطبيق متى شئت."
+            ],
+            "li": []
+          },
+          {
+            "h": "٤. اشتراك الداعم",
+            "p": [
+              "سِراج مجاني الاستخدام. واشتراك الداعم اختياري، يسهم في تمويل التطوير ويتيح المزامنة السحابية بين الأجهزة. وتُحصَّل الاشتراكات عبر App Store أو Google Play وتتجدّد ما لم تُلغَ؛ وتُدار أو تُلغى من حساب المتجر لديك."
+            ],
+            "li": []
+          },
+          {
+            "h": "٥. الاستخدام المقبول",
+            "p": [],
+            "li": [
+              "استخدم سِراج استخدامًا مشروعًا ومحترمًا.",
+              "لا تحاول تعطيل الخدمة أو الهندسة العكسية أو إساءة استخدامها.",
+              "لا تنسب إلى التطبيق ما ليس فيه، ولا تستخدم اسم سِراج أو علاماته دون إذن."
+            ]
+          },
+          {
+            "h": "٦. إخلاء المسؤولية",
+            "p": [
+              "يُقدَّم سِراج «كما هو» دون ضمانات من أي نوع. وإلى أقصى حدّ يسمح به القانون، لا نتحمّل مسؤولية أي خسارة غير مباشرة أو تبعية تنشأ عن استخدامك التطبيق."
+            ],
+            "li": []
+          },
+          {
+            "h": "٧. التغييرات",
+            "p": [
+              "قد نحدّث التطبيق وهذه الشروط مع الوقت. واستمرارك في الاستخدام بعد التغيير يعني قبولك الشروط المحدَّثة."
+            ],
+            "li": []
+          },
+          {
+            "h": "٨. التواصل",
+            "p": [
+              "لديك سؤال عن هذه الشروط؟ راسلنا على {email}."
+            ],
+            "li": []
+          }
+        ]
+      }
+    }
   },
-
   "ur": {
-    "name": "اردو", "dir": "rtl", "locale": "ur",
-    "nav": { "features": "خصوصیات", "prayerTimes": "نماز کے اوقات", "support": "مدد", "getApp": "سِراج حاصل کریں" },
-    "footer": { "privacy": "پرائیویسی", "terms": "شرائط", "support": "مدد" },
-    "prayers": { "fajr": "فجر", "sunrise": "طلوعِ آفتاب", "dhuhr": "ظہر", "asr": "عصر", "maghrib": "مغرب", "isha": "عشاء" },
-    "madhhab": { "hanafi": "حنفی", "standard": "شافعی، مالکی، حنبلی" },
+    "name": "اردو",
+    "dir": "rtl",
+    "locale": "ur",
+    "nav": {
+      "features": "خصوصیات",
+      "prayerTimes": "نماز کے اوقات",
+      "support": "مدد",
+      "getApp": "سِراج حاصل کریں"
+    },
+    "footer": {
+      "privacy": "پرائیویسی",
+      "terms": "شرائط",
+      "support": "مدد"
+    },
+    "prayers": {
+      "fajr": "فجر",
+      "sunrise": "طلوعِ آفتاب",
+      "dhuhr": "ظہر",
+      "asr": "عصر",
+      "maghrib": "مغرب",
+      "isha": "عشاء"
+    },
+    "madhhab": {
+      "hanafi": "حنفی",
+      "standard": "شافعی، مالکی، حنبلی"
+    },
     "city": {
       "title": "{cityIn} میں نماز کے اوقات — آج کے اوقاتِ نماز اور قبلہ · سِراج",
       "description": "{city}، {country} میں آج نماز کے اوقات: فجر {fajr}، ظہر {dhuhr}، عصر {asr}، مغرب {maghrib}، عشاء {isha}۔ قبلہ شمال سے {qibla}°۔ {method} کے مطابق شمار کیے گئے۔",
@@ -112,9 +736,12 @@
       "staticNote": "یہ وہ اوقات ہیں جن کے ساتھ یہ صفحہ بنایا گیا۔ آج کے اوقات دیکھنے کے لیے جاوا اسکرپٹ فعال کریں۔",
       "liveNote": "آپ کے براؤزر میں {tz} کے لیے شمار کیے گئے — یہ زندہ اوقات ہیں، وہ نہیں جن کے ساتھ صفحہ بنایا گیا تھا۔",
       "qiblaHeading": "{city} سے قبلہ کی سمت",
-      "direction": "سمت", "directionSub": "حقیقی شمال سے گھڑی وار",
-      "compass": "قطب نما سمت", "compassSub": "تخمینی سمت",
-      "distance": "مکہ سے فاصلہ", "distanceSub": "دائرہ عظیمہ",
+      "direction": "سمت",
+      "directionSub": "حقیقی شمال سے گھڑی وار",
+      "compass": "قطب نما سمت",
+      "compassSub": "تخمینی سمت",
+      "distance": "مکہ سے فاصلہ",
+      "distanceSub": "دائرہ عظیمہ",
       "magneticNote": "مقناطیسی قطب نما حقیقی شمال کے بجائے مقناطیسی شمال کی طرف اشارہ کرتا ہے، اور یہ فرق ہر مقام پر مختلف ہوتا ہے اور سال بہ سال بدلتا رہتا ہے۔ سِراج کا قبلہ نما آپ کے آلے کے سینسرز کی مدد سے یہ فرق خودبخود درست کر دیتا ہے۔",
       "timetableHeading": "{month} {year} کا نقشہ",
       "tableCaption": "{city}، {country} کے نماز کے اوقات — {month} {year}، مقامی وقت (۲۴ گھنٹے)",
@@ -137,20 +764,319 @@
       "introLink": "سِراج حاصل کریں",
       "searchLabel": "شہر تلاش کریں",
       "searchPlaceholder": "شہر یا ملک تلاش کریں…",
-      "noMatch": "اس نام کا کوئی شہر نہیں ملا۔", "noMatchLink": "ہمیں شامل کرنے کو کہیں ←",
+      "noMatch": "اس نام کا کوئی شہر نہیں ملا۔",
+      "noMatchLink": "ہمیں شامل کرنے کو کہیں ←",
       "callout": "اپنا شہر نہیں مل رہا؟ سِراج کسی بھی مقام کے اوقات آلے پر ہی شمار کرتا ہے، جی پی ایس سے یا خود منتخب کردہ شہر سے — یہ صفحات صرف سب سے زیادہ تلاش کیے جانے والے شہروں کے ہیں۔ {link}",
       "calloutLink": "ہمیں بتائیں کون سا شامل کریں۔"
     },
-    "store": { "appleSmall": "ڈاؤن لوڈ کریں", "appleBig": "App Store", "playSmall": "حاصل کریں", "playBig": "Google Play" },
-    "lang": { "label": "زبان", "switcher": "زبان منتخب کریں" }
+    "store": {
+      "appleSmall": "ڈاؤن لوڈ کریں",
+      "appleBig": "App Store",
+      "playSmall": "حاصل کریں",
+      "playBig": "Google Play"
+    },
+    "lang": {
+      "label": "زبان",
+      "switcher": "زبان منتخب کریں"
+    },
+    "ramadan": {
+      "nav": "رمضان",
+      "hubTitle": "رمضان ۱۴۴۸ / ۲۰۲۷ — سحری و افطاری اوقات · سِراج",
+      "hubDescription": "رمضان ۱۴۴۸ کا آغاز {start} کو اور اختتام {end} کو — {days} دن کے روزے۔ {cities} شہروں کے سحری و افطاری اوقات، مقامی طور پر رائج طریقے کے مطابق۔ مفت، بغیر اشتہار۔",
+      "hubH1": "رمضان ۱۴۴۸",
+      "range": "{start} – {end} · {days} دن",
+      "before": "رمضان میں {days} دن باقی",
+      "during": "رمضان کا {day} واں دن",
+      "after": "رمضان ۱۴۴۸ اختتام پذیر ہوا",
+      "standfirst": "درج ذیل تاریخیں ام القریٰ کیلنڈر کے مطابق ہیں۔ جہاں مقامی رویتِ ہلال پر عمل ہوتا ہے وہاں رمضان کا آغاز ایک دن آگے پیچھے ہو سکتا ہے — اپنی مسجد کی پیروی کریں۔",
+      "citiesHeading": "شہر کے اعتبار سے اوقات",
+      "citiesIntro": "ہر شہر کا صفحہ پورا مہینہ دکھاتا ہے: سحری کب ختم ہوتی ہے، افطار کب ہے، اور ہر دن کا روزہ کتنے دورانیے کا ہے۔",
+      "toolsHeading": "رمضان میں سِراج کیا کرتا ہے",
+      "tool1t": "سحری و افطار کی اطلاعات",
+      "tool1b": "سحری ختم ہونے سے پہلے اور مغرب کے وقت اطلاع، جو آپ کے آلے پر آپ کے مقام کے مطابق شمار ہوتی ہے۔",
+      "tool2t": "روزوں کا ریکارڈ",
+      "tool2b": "ہر رکھا ہوا روزہ اور ہر قضا درج کریں۔ ریکارڈ آپ کے آلے پر رہتا ہے جب تک آپ خود مطابقت نہ چاہیں۔",
+      "tool3t": "قرآن اور تراویح",
+      "tool3b": "پورا قرآن تلاوت کے ساتھ اور ایک پڑھنے کا منصوبہ، تاکہ ہر رات ایک پارہ خواہش نہیں بلکہ منصوبہ ہو۔",
+      "tool4t": "آخری عشرہ",
+      "tool4b": "شبِ قدر کے اذکار و دعائیں، اور ہجری کیلنڈر جو بتاتا ہے آپ کون سی رات میں ہیں۔",
+      "eidHeading": "عید الفطر",
+      "eidBody": "متوقع {eid}، شوال کے چاند کی رویت پر۔",
+      "cityTitle": "{city} رمضان کیلنڈر ۲۰۲۷ — سحری و افطاری اوقات · سِراج",
+      "cityDescription": "{city}، {country} کے لیے رمضان ۱۴۴۸ کا کیلنڈر۔ {start} سے {end} تک تمام {days} دن کے سحری و افطاری اوقات۔ {method} کے مطابق شمار کیے گئے۔",
+      "cityH1": "رمضان کیلنڈر · {city}",
+      "cityIntro": "سحری کا وقت فجر پر ختم ہوتا ہے اور روزہ مغرب پر کھولا جاتا ہے۔ اوقات {city} کے لیے {method} کے مطابق شمار کیے گئے ہیں؛ اگر آپ کی مسجد ایک دو منٹ مختلف ہو تو اپنی مسجد کی پیروی کریں۔",
+      "tableCaption": "{city}، {country} کے لیے رمضان ۱۴۴۸ کا کیلنڈر — مقامی وقت (۲۴ گھنٹے)",
+      "colDay": "رمضان",
+      "colDate": "تاریخ",
+      "colSuhoor": "سحری ختم",
+      "colIftar": "افطار",
+      "colLength": "دورانیہ",
+      "imsakNote": "کچھ مقامات پر احتیاطاً فجر سے چند منٹ پہلے امساک کیا جاتا ہے۔ یہاں فجر کا وقت دیا گیا ہے، اور سِراج میں آپ سحری کی اطلاع جتنا پہلے چاہیں مقرر کر سکتے ہیں۔",
+      "allCities": "تمام رمضان کیلنڈر",
+      "longest": "طویل ترین روزہ",
+      "shortest": "مختصر ترین روزہ"
+    },
+    "site": {
+      "heroEyebrow": "آپ کا مسلم ساتھی",
+      "heroH1": "آپ کی روزمرہ عبادت کا نور۔",
+      "heroLead": "سِراج نماز کے اوقات، قرآن، قبلہ، مستند حدیث، دعا و اذکار اور بہت کچھ ایک پُرسکون اور خوبصورت ایپ میں لاتا ہے — بنیادی ڈیزائن میں نجی، اور مفت۔",
+      "heroCta1": "سِراج حاصل کریں",
+      "heroCta2": "خصوصیات دیکھیں",
+      "fEyebrow": "سب کچھ ایک جگہ",
+      "fTitle": "پورے دن کا مکمل ساتھی",
+      "fSub": "پہلی اذان سے لے کر سونے سے پہلے کی آخری دعا تک — سوچ سمجھ کر بنایا گیا، درست اور باادب۔",
+      "f1t": "نماز کے اوقات و اذان",
+      "f1b": "ہر بڑے طریقۂ حساب کے ساتھ درست مقامی اوقات، حنفی/شافعی عصر، اور اذان کی اطلاعات — ہر نماز پر ایک حدیث کے ساتھ۔",
+      "f2t": "قبلہ نما",
+      "f2b": "کہیں سے بھی کعبہ کی طرف رخ کرنے کے لیے درست اور ہموار قبلہ نما، واضح سمت اور کیلبریشن کے ساتھ۔",
+      "f3t": "قرآنِ کریم",
+      "f3b": "عثمانی رسم الخط ترجمے کے ساتھ، آیت بہ آیت تلاوت، لفظ بہ لفظ، تفسیر اور تجوید — بُک مارکس اور آخری پڑھے مقام کے ساتھ۔",
+      "f4t": "مستند حدیث",
+      "f4b": "تصدیق شدہ مجموعے — اربعین نووی، اربعین قدسی اور مؤطا مالک — قابلِ اعتماد مآخذ سے بعینہٖ نقل کیے گئے۔",
+      "f5t": "دعا و اذکار",
+      "f5b": "صبح و شام کے اذکار اور مواقع کی دعائیں — اور اپنی پسندیدہ دعائیں محفوظ کرنے کی سہولت۔",
+      "f6t": "اسمائے حسنیٰ",
+      "f6b": "اللہ کے ننانوے نام معانی اور تشریح کے ساتھ، تدبر اور حفظ کے لیے خوبصورتی سے پیش کیے گئے۔",
+      "f7t": "ہجری کیلنڈر",
+      "f7b": "اسلامی کیلنڈر عیسوی کنورٹر اور سال بھر کے مواقع کے ساتھ، تاکہ کوئی مبارک دن نہ چھوٹے۔",
+      "f8t": "تسبیح",
+      "f8b": "آپ کے ذکر کے لیے ایک ڈیجیٹل تسبیح، پہلے سے طے شدہ گنتیوں اور ہلکی تھرتھراہٹ کے ساتھ جو آپ کا شمار محفوظ رکھتی ہے۔",
+      "f9t": "زکوٰۃ و رمضان",
+      "f9b": "رہنمائی کے ساتھ زکوٰۃ کیلکولیٹر اور رمضان کے اوزار، بشمول آخری عشرے میں شبِ قدر کی یاد دہانیاں۔",
+      "wEyebrow": "سِراج کیوں",
+      "wTitle": "محنت اور ادب کے ساتھ بنایا گیا",
+      "w1t": "نجی، بنیاد ہی سے",
+      "w1b": "آپ کی عبادت آپ کی ہے۔ سِراج آف لائن کام کرتا ہے اور آپ کا ڈیٹا آپ کے آلے پر رکھتا ہے۔ سائن اِن صرف تب کریں جب کلاؤڈ سنک چاہیں — تجزیات اختیاری ہیں اور اشتہار کے لیے کوئی ٹریکنگ نہیں۔",
+      "w2t": "مفت، بغیر اشتہار",
+      "w2b": "ہر خصوصیت مفت ہے۔ کوئی اشتہار آپ کی عبادت میں خلل نہیں ڈالتا۔ اختیاری سپورٹر ٹیئر صرف ترقی کے اخراجات میں مدد دیتا ہے اور آلات کے درمیان سنک شامل کرتا ہے۔",
+      "w3t": "درست اور مستند",
+      "w3b": "اوقات مسلّمہ طریقوں سے شمار کیے جاتے ہیں؛ قرآن اور حدیث تصدیق شدہ مآخذ سے بعینہٖ لیے گئے ہیں۔ مقدس متن کبھی خودساختہ نہیں ہوتا۔",
+      "sEyebrow": "پُرسکون، خوبصورت انٹرفیس",
+      "sTitle": "بارہ تھیم۔ آٹھ زبانیں۔ ایک توجہ۔",
+      "sSub": "روشن اور تاریک، ہاتھ سے ترتیب دیے گئے رنگوں کے ساتھ — اور عربی و اردو کے لیے مکمل دائیں سے بائیں معاونت۔",
+      "sIpad": "بڑی اسکرین کے لیے بھی",
+      "qEyebrow": "سوالات",
+      "qTitle": "جاننے کی باتیں",
+      "q1": "کیا سِراج مفت ہے؟",
+      "a1": "جی ہاں — عبادت کی ہر خصوصیت مفت ہے، بغیر اشتہار۔ ایک اختیاری سپورٹر سبسکرپشن ترقی میں مدد دیتی ہے اور آلات کے درمیان کلاؤڈ سنک کھولتی ہے؛ بنیادی خصوصیات پر کوئی پابندی نہیں لگاتی۔",
+      "q2": "کیا یہ آف لائن کام کرتا ہے؟",
+      "a2": "جی ہاں۔ نماز کے اوقات، قرآن، حدیث، دعائیں، اسمائے حسنیٰ اور ہجری کیلنڈر سب بغیر انٹرنیٹ کام کرتے ہیں۔ آپ کا ڈیٹا آپ کے آلے پر رہتا ہے جب تک آپ سنک کے لیے سائن اِن نہ کریں۔",
+      "q3": "نماز کے اوقات کہاں سے آتے ہیں؟",
+      "a3": "یہ آپ کے مقام سے مقامی طور پر مسلّمہ طریقوں (رابطہ عالم اسلامی، ام القریٰ، ISNA، مصری ادارہ وغیرہ) کے مطابق شمار کیے جاتے ہیں، حنفی/شافعی عصر کے اختیارات اور دستی ترمیم کے ساتھ۔",
+      "q4": "کیا دینی مواد مستند ہے؟",
+      "a4": "جی ہاں۔ قرآن تنزیل کے عثمانی رسم الخط میں مسلّمہ تراجم کے ساتھ ہے، اور احادیث تصدیق شدہ مجموعوں سے بعینہٖ لی گئی ہیں۔ کوئی مقدس متن مشین سے تیار نہیں ہوتا۔",
+      "q5": "کون سی زبانیں معاون ہیں؟",
+      "a5": "انگریزی اور عربی مکمل طور پر برقرار رکھی جاتی ہیں، اردو، ترکی، فرانسیسی، انڈونیشی، ملائی اور ہاؤسا کے تراجم کے ساتھ — اور عربی و اردو کے لیے مکمل دائیں سے بائیں ترتیب۔",
+      "dEyebrow": "اب دستیاب",
+      "dTitle": "سِراج ڈاؤن لوڈ کریں",
+      "dSub": "سِراج اب App Store اور Google Play پر دستیاب ہے — مفت، ان شاء اللہ۔",
+      "supTitle": "مدد · سِراج",
+      "supH1": "مدد",
+      "supLead": "ہم مدد کے لیے حاضر ہیں، ان شاء اللہ۔",
+      "supEmail": "ہمیں ای میل کریں",
+      "supEmailNote": "براہِ کرم اپنا آلہ، آپریٹنگ سسٹم کا ورژن اور مختصر تفصیل شامل کریں — اس سے ہمیں تیزی سے مدد کرنے میں آسانی ہوتی ہے۔",
+      "supCommon": "عام سوالات",
+      "sq1": "میرے نماز کے اوقات درست نہیں لگتے",
+      "sa1": "ترتیبات ← نماز کھولیں اور اپنا مقام اور طریقۂ حساب دیکھیں۔ مختلف جماعتیں مختلف طریقے اپناتی ہیں (رابطہ عالم اسلامی، ام القریٰ، ISNA، مصری ادارہ)۔ آپ حنفی یا شافعی عصر منتخب کر سکتے ہیں اور ہر نماز کے لیے منٹوں میں ترمیم کر سکتے ہیں۔",
+      "sq2": "مجھے اذان یا نماز کی اطلاعات نہیں مل رہیں",
+      "sa2": "یقینی بنائیں کہ آپ کے فون کی سسٹم ترتیبات میں سِراج کے لیے اطلاعات کی اجازت ہے، پھر ایپ میں اطلاعات کے تحت انہیں فعال کریں۔ فون خاموش ہونے پر بھی اذان سننے کے لیے (iOS کریٹیکل الرٹس) «خاموش حالت میں بھی چلائیں» فعال کریں۔",
+      "sq3": "میں آلات کے درمیان سنک کیسے کروں؟",
+      "sa3": "اکاؤنٹ اسکرین سے Apple یا Google کے ساتھ سائن اِن کریں۔ آپ کے بُک مارکس، آخری پڑھا مقام، ریکارڈ اور ترتیبات کی سنک سپورٹر ٹیئر کا حصہ ہے۔ ہر آلے پر ایک ہی اکاؤنٹ سے سائن اِن کریں۔",
+      "sq4": "زبان یا تھیم کیسے بدلوں؟",
+      "sa4": "تھیم کے لیے کوئیک سیٹنگز (گیئر) کھولیں، یا مزید ← زبان سے معاون زبانوں میں تبدیلی کریں۔ عربی اور اردو پورے لے آؤٹ کو دائیں سے بائیں کر دیتی ہیں۔",
+      "backHome": "ہوم پر واپس"
+    },
+    "legal": {
+      "governs": "یہ ترجمہ محض سہولت کے لیے فراہم کیا گیا ہے۔ اگر یہ انگریزی نسخے سے مختلف ہو تو انگریزی نسخہ ہی معتبر ہوگا۔",
+      "backHome": "ہوم پر واپس",
+      "updatedLabel": "آخری تازہ کاری",
+      "privacy": {
+        "title": "پرائیویسی پالیسی · سِراج",
+        "h1": "پرائیویسی پالیسی",
+        "date": "۲۹ اگست ۲۰۲۶",
+        "intro": "سِراج («ایپ»، «ہم») نماز، قرآن اور ذکر کے لیے ایک مسلم ساتھی ایپ ہے۔ ہم نے اسے اس طرح بنایا کہ یہ آپ کی پرائیویسی کا اتنا ہی احترام کرے جتنا آپ کی عبادت کا۔ یہ پالیسی سادہ الفاظ میں بتاتی ہے کہ ایپ کیا استعمال کرتی ہے، کیا آپ کے آلے پر رہتا ہے، اور وہ چند اختیاری چیزیں کون سی ہیں جو نہیں رہتیں۔",
+        "shortLabel": "مختصراً:",
+        "short": "سِراج آف لائن کام کرتا ہے اور بطورِ ڈیفالٹ آپ کا ڈیٹا آپ کے آلے پر رکھتا ہے۔ ہم آپ کا ڈیٹا نہ بیچتے ہیں نہ اشتہار کے لیے استعمال کرتے ہیں، اور آپ ہمارے کلاؤڈ کے ساتھ کچھ بھی صرف اسی صورت شیئر کرتے ہیں جب آپ خود سنک کے لیے سائن اِن کریں۔",
+        "sections": [
+          {
+            "h": "۱. ایپ آپ کے آلے پر کون سی معلومات استعمال کرتی ہے",
+            "p": [],
+            "li": [
+              "<strong>مقام</strong> — نماز کے اوقات اور قبلہ کی سمت شمار کرنے کے لیے، اور یہ آپ ہی کے آلے پر ان حسابات کے لیے استعمال ہوتا ہے۔ آپ درست مقام دیے بغیر دستی طور پر شہر بھی منتخب کر سکتے ہیں۔",
+              "<strong>ایپ میں آپ کی سرگرمی</strong> — بُک مارکس، آخری پڑھا مقام، پڑھنے کا تسلسل، تسبیح کی گنتی، زکوٰۃ کے اندراجات اور آپ کی ترتیبات۔ یہ سب آپ کے آلے پر مقامی طور پر محفوظ رہتا ہے۔",
+              "<strong>اطلاعات</strong> — نماز کی یاد دہانیاں، اذان اور اختیاری روزانہ تذکیر آپ کے آلے پر ہی طے ہوتی ہیں۔ انہیں پہنچانے میں کوئی سرور شامل نہیں۔"
+            ]
+          },
+          {
+            "h": "۲. اختیاری اکاؤنٹ اور کلاؤڈ سنک",
+            "p": [
+              "آپ سِراج کی ہر خصوصیت بغیر اکاؤنٹ استعمال کر سکتے ہیں۔ اگر آپ سائن اِن کرنا چاہیں (Apple یا Google سے) تو ہم Google Firebase استعمال کرتے ہیں تاکہ:",
+              "ہم صرف وہی عبادت سے متعلق ڈیٹا محفوظ کرتے ہیں جو سنک کے لیے درکار ہو، آپ کے اکاؤنٹ سے منسلک۔ ہم آپ کا Apple یا Google پاس ورڈ کبھی نہیں دیکھتے۔ سائن آؤٹ پر سنک رک جاتی ہے؛ اکاؤنٹ حذف کرنے پر آپ کا سنک شدہ ڈیٹا ہٹا دیا جاتا ہے۔"
+            ],
+            "li": [
+              "آپ کی توثیق کریں (Firebase Authentication)، اور",
+              "آپ کے بُک مارکس، آخری پڑھا مقام، ریکارڈ اور ترتیبات آلات کے درمیان سنک کریں (Cloud Firestore)۔"
+            ]
+          },
+          {
+            "h": "۳. تشخیص اور تجزیات",
+            "p": [
+              "ایپ کو مستحکم رکھنے اور بہتر بنانے کے لیے سِراج Google Firebase Crashlytics (کریش رپورٹس) اور Firebase Analytics (بے نام، مجموعی استعمال) استعمال کر سکتا ہے۔ یہ آپ کی ذاتی شناخت <strong>نہیں</strong> کرتے اور ایپ کی ترتیبات سے <strong>بند</strong> کیے جا سکتے ہیں۔ ہم تجزیات اشتہار کے لیے استعمال نہیں کرتے اور کوئی اشتہاری ٹریکنگ نہیں ہے۔",
+              "<em>یہ ویب سائٹ:</em> ایپ سے الگ، یہ ویب سائٹ صفحات کے مشاہدے اور ریفرر گننے کے لیے Cloudflare Web Analytics استعمال کرتی ہے۔ یہ کوکی سے پاک ہے، آپ کے آلے پر کچھ محفوظ نہیں کرتی، آپ کے براؤزر کا فنگر پرنٹ نہیں لیتی، اور آپ کا دوسری سائٹس تک پیچھا نہیں کر سکتی۔ ہم Do Not Track اور Global Privacy Control اشاروں کا بھی احترام کرتے ہیں: ان میں سے کوئی بھی فعال ہو تو پیمائشی اسکرپٹ لوڈ ہی نہیں ہوتی۔"
+            ],
+            "li": []
+          },
+          {
+            "h": "۴. نیٹ ورک درخواستیں",
+            "p": [
+              "زیادہ تر مواد ایپ کے ساتھ آتا ہے اور آف لائن کام کرتا ہے۔ ایپ نیٹ ورک سے صرف اس لیے رابطہ کرتی ہے: اختیاری طور پر تلاوت کا آڈیو چلانے، سائن اِن ہونے پر آپ کا ڈیٹا سنک کرنے، اور کریش/استعمال کی تشخیص بھیجنے کے لیے (جب تک آپ اسے بند نہ کریں)۔ مقدس متن (قرآن اور حدیث) ایپ میں شامل اور تصدیق شدہ ہے — کبھی تیار کردہ نہیں۔"
+            ],
+            "li": []
+          },
+          {
+            "h": "۵. ہم کیا نہیں کرتے",
+            "p": [],
+            "li": [
+              "ہم آپ کا ذاتی ڈیٹا نہ بیچتے ہیں نہ کرائے پر دیتے ہیں۔",
+              "ہم اشتہار نہیں دکھاتے اور نہ اشتہار کے لیے آپ کا تعاقب کرتے ہیں۔",
+              "سِراج کے ساتھ عبادت کے لیے ہم اکاؤنٹ لازمی نہیں کرتے۔"
+            ]
+          },
+          {
+            "h": "۶. فریقِ ثالث کی خدمات",
+            "p": [
+              "جب آپ مذکورہ بالا خصوصیات منتخب کرتے ہیں تو ڈیٹا Google Firebase پر Google کی پرائیویسی شرائط کے تحت پروسیس ہوتا ہے۔ تلاوت عوامی قرآن آڈیو ذرائع سے آتی ہے۔ اس ویب سائٹ کے صفحات کے مشاہدے Cloudflare Web Analytics گنتی ہے۔ ہم آپ کو ان کی متعلقہ پالیسیاں دیکھنے کی ترغیب دیتے ہیں۔"
+            ],
+            "li": []
+          },
+          {
+            "h": "۷. بچے",
+            "p": [
+              "سِراج ہر عمر کے لیے موزوں ہے اور جان بوجھ کر بچوں سے ذاتی معلومات جمع نہیں کرتا۔ اختیاری اکاؤنٹ کی خصوصیات ان صارفین کے لیے ہیں جو اپنے مقامی قانون کے تحت رضامندی دے سکتے ہوں۔"
+            ],
+            "li": []
+          },
+          {
+            "h": "۸. آپ کے حقوق اور اختیارات",
+            "p": [],
+            "li": [
+              "بغیر اکاؤنٹ ایپ مکمل استعمال کریں۔",
+              "ترتیبات سے تجزیات اور کریش رپورٹنگ بند کریں۔",
+              "سنک شدہ کلاؤڈ ڈیٹا ہٹانے کے لیے ایپ میں اپنا اکاؤنٹ حذف کریں؛ آلے کا ڈیٹا ان انسٹال تک باقی رہتا ہے۔"
+            ]
+          },
+          {
+            "h": "۹. تبدیلیاں",
+            "p": [
+              "ایپ کی ترقی کے ساتھ ہم یہ پالیسی تازہ کر سکتے ہیں۔ اہم تبدیلیاں نئی «آخری تازہ کاری» تاریخ کے ساتھ یہاں ظاہر ہوں گی۔"
+            ],
+            "li": []
+          },
+          {
+            "h": "۱۰. رابطہ",
+            "p": [
+              "پرائیویسی کے بارے میں سوال ہے؟ {email} پر ای میل کریں۔"
+            ],
+            "li": []
+          }
+        ]
+      },
+      "terms": {
+        "title": "شرائطِ خدمت · سِراج",
+        "h1": "شرائطِ خدمت",
+        "date": "۲۰ جون ۲۰۲۶",
+        "intro": "یہ شرائط سِراج ایپ اور اس ویب سائٹ کے آپ کے استعمال پر لاگو ہوتی ہیں۔ سِراج استعمال کرکے آپ ان سے اتفاق کرتے ہیں۔",
+        "sections": [
+          {
+            "h": "۱. خدمت",
+            "p": [
+              "سِراج ذاتی و عبادتی استعمال کے لیے نماز کے اوقات، قرآن، حدیث، دعائیں اور متعلقہ اسلامی اوزار فراہم کرتا ہے۔ ہم درستی کی پوری کوشش کرتے ہیں، مگر ایپ عبادت میں معاون ہے، کوئی دینی مرجع نہیں۔"
+            ],
+            "li": []
+          },
+          {
+            "h": "۲. دینی مواد",
+            "p": [
+              "سِراج میں قرآن و حدیث مسلّمہ اور تصدیق شدہ مآخذ سے بعینہٖ لیے گئے ہیں اور آپ کے فائدے کے لیے پیش کیے گئے ہیں۔ نماز کے اوقات معروف طریقوں سے شمار کیے جاتے ہیں؛ جہاں آپ کی مقامی مسجد مختلف ہو، وہاں اپنی مسجد کی پیروی کریں۔"
+            ],
+            "li": []
+          },
+          {
+            "h": "۳. اکاؤنٹس",
+            "p": [
+              "اکاؤنٹ اختیاری ہے اور صرف آلات کے درمیان ڈیٹا سنک کرنے کے لیے استعمال ہوتا ہے۔ اپنے Apple یا Google سائن اِن تک رسائی محفوظ رکھنا آپ کی ذمہ داری ہے۔ آپ کسی بھی وقت ایپ کے اندر سے اپنا اکاؤنٹ حذف کر سکتے ہیں۔"
+            ],
+            "li": []
+          },
+          {
+            "h": "۴. سپورٹر سبسکرپشن",
+            "p": [
+              "سِراج استعمال کے لیے مفت ہے۔ اختیاری سپورٹر سبسکرپشن ترقی کے اخراجات میں مدد دیتی ہے اور آلات کے درمیان کلاؤڈ سنک ممکن بناتی ہے۔ سبسکرپشنز App Store یا Google Play کے ذریعے وصول کی جاتی ہیں اور منسوخ نہ کرنے پر تجدید ہوتی ہیں؛ انہیں اپنے اسٹور اکاؤنٹ سے منظم یا منسوخ کریں۔"
+            ],
+            "li": []
+          },
+          {
+            "h": "۵. قابلِ قبول استعمال",
+            "p": [],
+            "li": [
+              "سِراج کو قانونی اور باادب طریقے سے استعمال کریں۔",
+              "خدمت میں خلل ڈالنے، ریورس انجینئرنگ یا غلط استعمال کی کوشش نہ کریں۔",
+              "ایپ کے مواد کو غلط طور پر پیش نہ کریں اور اجازت کے بغیر سِراج کا نام یا نشان استعمال نہ کریں۔"
+            ]
+          },
+          {
+            "h": "۶. دستبرداری و ذمہ داری",
+            "p": [
+              "سِراج «جیسا ہے» فراہم کیا جاتا ہے، کسی بھی قسم کی ضمانت کے بغیر۔ قانون کی اجازت کی حد تک، ایپ کے آپ کے استعمال سے پیدا ہونے والے کسی بالواسطہ یا تبعی نقصان کے ہم ذمہ دار نہیں۔"
+            ],
+            "li": []
+          },
+          {
+            "h": "۷. تبدیلیاں",
+            "p": [
+              "ہم وقت کے ساتھ ایپ اور یہ شرائط تازہ کر سکتے ہیں۔ تبدیلی کے بعد استعمال جاری رکھنے کا مطلب ہے کہ آپ تازہ شرائط قبول کرتے ہیں۔"
+            ],
+            "li": []
+          },
+          {
+            "h": "۸. رابطہ",
+            "p": [
+              "ان شرائط کے بارے میں سوال ہے؟ {email} پر ای میل کریں۔"
+            ],
+            "li": []
+          }
+        ]
+      }
+    }
   },
-
   "tr": {
-    "name": "Türkçe", "dir": "ltr", "locale": "tr",
-    "nav": { "features": "Özellikler", "prayerTimes": "Namaz vakitleri", "support": "Destek", "getApp": "Sirāj'ı edinin" },
-    "footer": { "privacy": "Gizlilik", "terms": "Şartlar", "support": "Destek" },
-    "prayers": { "fajr": "İmsak", "sunrise": "Güneş", "dhuhr": "Öğle", "asr": "İkindi", "maghrib": "Akşam", "isha": "Yatsı" },
-    "madhhab": { "hanafi": "Hanefî", "standard": "Şâfiî / Mâlikî / Hanbelî" },
+    "name": "Türkçe",
+    "dir": "ltr",
+    "locale": "tr",
+    "nav": {
+      "features": "Özellikler",
+      "prayerTimes": "Namaz vakitleri",
+      "support": "Destek",
+      "getApp": "Sirāj'ı edinin"
+    },
+    "footer": {
+      "privacy": "Gizlilik",
+      "terms": "Şartlar",
+      "support": "Destek"
+    },
+    "prayers": {
+      "fajr": "İmsak",
+      "sunrise": "Güneş",
+      "dhuhr": "Öğle",
+      "asr": "İkindi",
+      "maghrib": "Akşam",
+      "isha": "Yatsı"
+    },
+    "madhhab": {
+      "hanafi": "Hanefî",
+      "standard": "Şâfiî / Mâlikî / Hanbelî"
+    },
     "city": {
       "title": "{cityIn} Namaz Vakitleri — Bugünün Vakitleri ve Kıble · Sirāj",
       "description": "{city}, {country} için bugünün namaz vakitleri: İmsak {fajr}, Öğle {dhuhr}, İkindi {asr}, Akşam {maghrib}, Yatsı {isha}. Kıble kuzeyden {qibla}°. {method} yöntemiyle hesaplanmıştır.",
@@ -160,9 +1086,12 @@
       "staticNote": "Bu sayfanın oluşturulduğu andaki vakitler gösteriliyor. Bugünün vakitleri için JavaScript'i etkinleştirin.",
       "liveNote": "Tarayıcınızda {tz} saat dilimi için hesaplandı — bunlar canlı vakitlerdir, sayfanın oluşturulduğu andaki vakitler değil.",
       "qiblaHeading": "{city} şehrinden kıble",
-      "direction": "Yön", "directionSub": "gerçek kuzeyden saat yönünde",
-      "compass": "Pusula yönü", "compassSub": "yaklaşık yön",
-      "distance": "Mekke'ye uzaklık", "distanceSub": "büyük daire",
+      "direction": "Yön",
+      "directionSub": "gerçek kuzeyden saat yönünde",
+      "compass": "Pusula yönü",
+      "compassSub": "yaklaşık yön",
+      "distance": "Mekke'ye uzaklık",
+      "distanceSub": "büyük daire",
       "magneticNote": "Manyetik pusula gerçek kuzeyi değil manyetik kuzeyi gösterir; aradaki fark konuma göre değişir ve yıldan yıla kayar. Sirāj'ın kıble pusulası bu farkı cihazınızın sensörlerini kullanarak otomatik olarak düzeltir.",
       "timetableHeading": "{month} {year} vakit cetveli",
       "tableCaption": "{city}, {country} namaz vakitleri — {month} {year}, yerel saat (24 saat)",
@@ -185,20 +1114,319 @@
       "introLink": "Sirāj'ı edinin",
       "searchLabel": "Şehir ara",
       "searchPlaceholder": "Şehir veya ülke arayın…",
-      "noMatch": "Bu aramayla eşleşen şehir yok.", "noMatchLink": "Eklememizi isteyin →",
+      "noMatch": "Bu aramayla eşleşen şehir yok.",
+      "noMatchLink": "Eklememizi isteyin →",
       "callout": "Şehrinizi göremiyor musunuz? Sirāj her konum için vakitleri cihazda hesaplar — GPS'ten ya da elle seçtiğiniz bir şehirden. Bu sayfalar yalnızca en çok aranan şehirlerdir. {link}",
       "calloutLink": "Hangisini ekleyelim, bize bildirin."
     },
-    "store": { "appleSmall": "İndirin:", "appleBig": "App Store", "playSmall": "Edinin:", "playBig": "Google Play" },
-    "lang": { "label": "Dil", "switcher": "Bir dil seçin" }
+    "store": {
+      "appleSmall": "İndirin:",
+      "appleBig": "App Store",
+      "playSmall": "Edinin:",
+      "playBig": "Google Play"
+    },
+    "lang": {
+      "label": "Dil",
+      "switcher": "Bir dil seçin"
+    },
+    "ramadan": {
+      "nav": "Ramazan",
+      "hubTitle": "Ramazan 1448 / 2027 — İmsakiye, Sahur ve İftar Vakitleri · Sirāj",
+      "hubDescription": "Ramazan 1448, {start} tarihinde başlıyor ve {end} tarihinde sona eriyor — {days} gün oruç. {cities} şehir için sahur ve iftar vakitleri, yerel olarak benimsenen yönteme göre. Ücretsiz, reklamsız.",
+      "hubH1": "Ramazan 1448",
+      "range": "{start} – {end} · {days} gün",
+      "before": "Ramazan'a {days} gün",
+      "during": "Ramazan'ın {day}. günü",
+      "after": "Ramazan 1448 sona erdi",
+      "standfirst": "Aşağıdaki tarihler Ümmü'l-Kurâ takvimine göredir. Ayın yerel hilâl gözlemiyle başlatıldığı yerlerde Ramazan'ın başlangıcı bir gün kayabilir — kendi caminizi esas alın.",
+      "citiesHeading": "Şehirlere göre imsakiye",
+      "citiesIntro": "Her şehir sayfası ayın tamamını verir: sahurun ne zaman bittiği, orucun ne zaman açılacağı ve her günün ne kadar sürdüğü.",
+      "toolsHeading": "Sirāj Ramazan'da ne yapar",
+      "tool1t": "Sahur ve iftar hatırlatmaları",
+      "tool1b": "Sahur bitmeden önce ve akşam ezanında bildirim; nerede olursanız olun cihazınızda hesaplanır.",
+      "tool2t": "Oruç takibi",
+      "tool2b": "Tuttuğunuz her günü ve kazaya kalanları işaretleyin. Kaydınız, siz eşitlemeyi seçmedikçe cihazınızda kalır.",
+      "tool3t": "Kur'an ve teravih",
+      "tool3b": "Tilavetli tam Kur'an ve bir okuma planı — her gece bir cüz temenni değil, plan olsun.",
+      "tool4t": "Son on gece",
+      "tool4b": "Kadir Gecesi için zikir ve dualar, hangi gecede olduğunuzu bilen bir hicrî takvim.",
+      "eidHeading": "Ramazan Bayramı",
+      "eidBody": "Şevval hilâlinin görülmesine bağlı olarak {eid} tarihinde bekleniyor.",
+      "cityTitle": "{city} Ramazan İmsakiyesi 2027 — Sahur ve İftar Vakitleri · Sirāj",
+      "cityDescription": "{city}, {country} için Ramazan 1448 imsakiyesi. {start} – {end} arası {days} günün sahur ve iftar vakitleri. {method} yöntemiyle hesaplanmıştır.",
+      "cityH1": "Ramazan imsakiyesi · {city}",
+      "cityIntro": "Sahur imsakla biter, oruç akşam ezanıyla açılır. Vakitler {city} için {method} yöntemiyle hesaplanmıştır; caminiz bir iki dakika farklı ilan ediyorsa caminizi esas alın.",
+      "tableCaption": "{city}, {country} için Ramazan 1448 imsakiyesi — yerel saat (24 saat)",
+      "colDay": "Ramazan",
+      "colDate": "Tarih",
+      "colSuhoor": "İmsak",
+      "colIftar": "İftar",
+      "colLength": "Oruç süresi",
+      "imsakNote": "Bazı yerlerde ihtiyaten imsak, fecirden birkaç dakika önce alınır. Burada fecir (imsak) vakti verilmiştir; Sirāj'da sahur hatırlatmasını dilediğiniz kadar önceye alabilirsiniz.",
+      "allCities": "Tüm imsakiyeler",
+      "longest": "En uzun oruç",
+      "shortest": "En kısa oruç"
+    },
+    "site": {
+      "heroEyebrow": "Müslüman yol arkadaşınız",
+      "heroH1": "Günlük ibadetinizin ışığı.",
+      "heroLead": "Sirāj; namaz vakitlerini, Kur'an'ı, kıbleyi, sahih hadisleri, dua ve zikirleri ve daha fazlasını tek bir sakin, güzel uygulamada toplar — tasarımı gereği özel ve ücretsiz.",
+      "heroCta1": "Sirāj'ı edinin",
+      "heroCta2": "Özellikleri görün",
+      "fEyebrow": "Hepsi tek yerde",
+      "fTitle": "Gün boyu eksiksiz bir yoldaş",
+      "fSub": "İlk ezandan uykudan önceki son duaya kadar — özenle tasarlanmış, doğru ve saygılı.",
+      "f1t": "Namaz vakitleri ve ezan",
+      "f1b": "Bütün büyük hesaplama yöntemleriyle doğru yerel vakitler, Hanefî/Şâfiî ikindi ve ezan bildirimleri — her vakitte bir hadisle.",
+      "f2t": "Kıble pusulası",
+      "f2b": "Nerede olursanız olun Kâbe'ye yönelmeniz için hassas ve akıcı bir kıble göstergesi; net yön ve kalibrasyon.",
+      "f3t": "Kur'an-ı Kerim",
+      "f3b": "Meallerle Osmanlı hattı, ayet ayet tilavet, kelime kelime anlam, tefsir ve tecvid — yer imleri ve son okunan yerle.",
+      "f4t": "Sahih hadis",
+      "f4b": "Doğrulanmış derlemeler — Nevevî'nin Kırk Hadisi, Kırk Kudsî Hadis ve Muvatta' — güvenilir kaynaklardan aynen alınmıştır.",
+      "f5t": "Dua ve zikirler",
+      "f5b": "Sabah-akşam zikirleri ve hallere göre dualar — ayrıca kendi dualarınızı ekleyip kaydedebilirsiniz.",
+      "f6t": "Esmâü'l-Hüsnâ",
+      "f6b": "Allah'ın güzel isimleri, anlamları ve açıklamalarıyla; tefekkür ve ezber için özenle sunulmuş.",
+      "f7t": "Hicrî takvim",
+      "f7b": "Milâdî çevirici ve yılın mübarek günleriyle hicrî takvim — hiçbir kutlu günü kaçırmayın.",
+      "f8t": "Tesbih",
+      "f8b": "Zikriniz için dokunsal bir dijital tesbih; hazır sayılar ve sayınızı koruyan hafif titreşimlerle.",
+      "f9t": "Zekât ve Ramazan",
+      "f9b": "Adım adım zekât hesaplayıcı ve Ramazan araçları; son on gecede Kadir Gecesi hatırlatmaları dâhil.",
+      "wEyebrow": "Neden Sirāj",
+      "wTitle": "Özenle ve saygıyla yapıldı",
+      "w1t": "Tasarımı gereği özel",
+      "w1b": "İbadetiniz sizindir. Sirāj çevrimdışı çalışır ve verilerinizi cihazınızda tutar. Yalnızca bulut eşitleme isterseniz giriş yapın — analitik isteğe bağlıdır, kapatılabilir ve reklam amaçlı hiçbir takip yoktur.",
+      "w2t": "Ücretsiz, reklamsız",
+      "w2b": "Bütün özellikler ücretsizdir. Hiçbir reklam ibadetinizi bölmez. İsteğe bağlı Destekçi paketi yalnızca geliştirmeyi finanse etmeye yardım eder ve cihazlar arası eşitleme ekler.",
+      "w3t": "Doğru ve sahih",
+      "w3b": "Vakitler yerleşik yöntemlerle hesaplanır; Kur'an ve hadis doğrulanmış kaynaklardan aynen alınır. Kutsal metin asla üretilmez.",
+      "sEyebrow": "Sakin, güzel bir arayüz",
+      "sTitle": "On iki tema. Sekiz dil. Tek odak.",
+      "sSub": "Açık ve koyu, elle ayarlanmış renk aileleriyle — Arapça ve Urduca için tam sağdan sola destek.",
+      "sIpad": "Büyük ekran için de",
+      "qEyebrow": "Sorular",
+      "qTitle": "Bilmekte fayda var",
+      "q1": "Sirāj ücretsiz mi?",
+      "a1": "Evet — bütün ibadet özellikleri ücretsiz ve reklamsız. İsteğe bağlı Destekçi aboneliği geliştirmeye katkı sağlar ve cihazlarınız arasında bulut eşitlemeyi açar; temel özelliklerin önüne hiçbir duvar koymaz.",
+      "q2": "Çevrimdışı çalışıyor mu?",
+      "a2": "Evet. Namaz vakitleri, Kur'an, hadis, dualar, Esmâü'l-Hüsnâ ve hicrî takvim bağlantı olmadan çalışır. Eşitleme için giriş yapmadıkça verileriniz cihazınızda kalır.",
+      "q3": "Namaz vakitleri nereden geliyor?",
+      "a3": "Konumunuzdan yerel olarak, yerleşik yöntemlerle hesaplanır (İslam Dünyası Birliği, Ümmü'l-Kurâ, ISNA, Mısır Genel Müdürlüğü ve diğerleri); Hanefî/Şâfiî ikindi seçenekleri ve elle düzeltmelerle.",
+      "q4": "Dinî içerik sahih mi?",
+      "a4": "Evet. Kur'an, Tanzil'in Osmanlı hattını yerleşik meallerle kullanır; hadisler doğrulanmış derlemelerden aynen alınmıştır. Kutsal hiçbir metin makineyle üretilmez.",
+      "q5": "Hangi diller destekleniyor?",
+      "a5": "İngilizce ve Arapça tam olarak sürdürülüyor; Urduca, Türkçe, Fransızca, Endonezce, Malayca ve Hausa çevirileriyle — ayrıca Arapça ve Urduca için tam sağdan sola düzen.",
+      "dEyebrow": "Şimdi yayında",
+      "dTitle": "Sirāj'ı indirin",
+      "dSub": "Sirāj artık App Store ve Google Play'de — ücretsiz, inşâallah.",
+      "supTitle": "Destek · Sirāj",
+      "supH1": "Destek",
+      "supLead": "Yardıma hazırız, inşâallah.",
+      "supEmail": "Bize e-posta gönderin",
+      "supEmailNote": "Lütfen cihazınızı, işletim sistemi sürümünü ve kısa bir açıklama ekleyin — size daha hızlı yardımcı olmamızı sağlar.",
+      "supCommon": "Sık sorulanlar",
+      "sq1": "Namaz vakitlerim yanlış görünüyor",
+      "sa1": "Ayarlar → Namaz'ı açıp konumunuzu ve hesaplama yöntemini kontrol edin. Farklı cemaatler farklı yöntemler izler (İslam Dünyası Birliği, Ümmü'l-Kurâ, ISNA, Mısır). Hanefî veya Şâfiî ikindiyi seçebilir, her vakit için dakika düzeltmesi uygulayabilirsiniz.",
+      "sq2": "Ezan veya namaz bildirimleri gelmiyor",
+      "sa2": "Telefonunuzun sistem ayarlarında Sirāj için bildirimlere izin verildiğinden emin olun, sonra uygulamada Bildirimler altından etkinleştirin. Telefon sessizdeyken de ezanı duymak için (iOS kritik uyarılar) “Sessizde de çal” seçeneğini açın.",
+      "sq3": "Cihazlar arasında nasıl eşitlerim?",
+      "sa3": "Hesap ekranından Apple veya Google ile giriş yapın. Yer imlerinizin, son okunan yerin, takiplerin ve ayarların eşitlenmesi Destekçi paketine dâhildir. Her cihazda aynı hesapla giriş yapın.",
+      "sq4": "Dili veya temayı nasıl değiştiririm?",
+      "sa4": "Temalar için Hızlı Ayarlar'ı (dişli) açın; desteklenen diller arasında geçiş için Daha Fazla → Dil'i kullanın. Arapça ve Urduca tüm düzeni sağdan sola çevirir.",
+      "backHome": "Ana sayfaya dön"
+    },
+    "legal": {
+      "governs": "Bu, kolaylık olsun diye sunulan bir çeviridir. İngilizce sürümden farklılık göstermesi hâlinde İngilizce sürüm esas alınır.",
+      "backHome": "Ana sayfaya dön",
+      "updatedLabel": "Son güncelleme",
+      "privacy": {
+        "title": "Gizlilik Politikası · Sirāj",
+        "h1": "Gizlilik Politikası",
+        "date": "29 Ağustos 2026",
+        "intro": "Sirāj (“uygulama”, “biz”), namaz, Kur'an ve zikir için bir Müslüman yol arkadaşı uygulamasıdır. Onu, gizliliğinize ibadetiniz kadar saygı gösterecek şekilde yaptık. Bu politika, uygulamanın neyi kullandığını, neyin cihazınızda kaldığını ve kalmayan birkaç isteğe bağlı şeyi sade bir dille açıklar.",
+        "shortLabel": "Kısacası:",
+        "short": "Sirāj çevrimdışı çalışır ve verilerinizi varsayılan olarak cihazınızda tutar. Verilerinizi satmayız, reklam için kullanmayız; bulutumuzla bir şey paylaşmanız yalnızca eşitleme için giriş yapmayı seçtiğinizde olur.",
+        "sections": [
+          {
+            "h": "1. Uygulamanın cihazınızda kullandığı bilgiler",
+            "p": [],
+            "li": [
+              "<strong>Konum</strong> — namaz vakitlerini ve kıble yönünü hesaplamak için kullanılır ve bu hesaplamalar için cihazınızda işlenir. Kesin konum vermek yerine şehri elle de belirleyebilirsiniz.",
+              "<strong>Uygulamadaki etkinlikleriniz</strong> — yer imleri, son okunan yer, okuma serisi, tesbih sayıları, zekât girdileri ve ayarlarınız. Bunlar cihazınızda yerel olarak saklanır.",
+              "<strong>Bildirimler</strong> — namaz hatırlatmaları, ezan ve isteğe bağlı günlük tefekkür cihazınızda yerel olarak zamanlanır. İletilmelerinde hiçbir sunucu yer almaz."
+            ]
+          },
+          {
+            "h": "2. İsteğe bağlı hesap ve bulut eşitleme",
+            "p": [
+              "Sirāj'ın her özelliğini hesapsız kullanabilirsiniz. Giriş yapmayı seçerseniz (Apple veya Google ile) Google Firebase'i şunlar için kullanırız:",
+              "Yalnızca eşitleme için gereken ibadet verilerini, hesabınıza bağlı olarak saklarız. Apple/Google parolanızı asla görmeyiz. Çıkış yaparsanız eşitleme durur; hesabınızı silerseniz eşitlenen verileriniz kaldırılır."
+            ],
+            "li": [
+              "kimliğinizi doğrulamak (Firebase Authentication) ve",
+              "yer imlerinizi, son okunan yeri, takiplerinizi ve ayarlarınızı cihazlarınız arasında eşitlemek (Cloud Firestore)."
+            ]
+          },
+          {
+            "h": "3. Tanılama ve analitik",
+            "p": [
+              "Uygulamayı kararlı tutmak ve geliştirmek için Sirāj, Google Firebase Crashlytics (çökme raporları) ve Firebase Analytics (anonim, toplu kullanım) kullanabilir. Bunlar sizi kişisel olarak <strong>tanımlamaz</strong> ve uygulama ayarlarından <strong>kapatılabilir</strong>. Analitiği reklam için kullanmayız ve hiçbir reklam takibi yoktur.",
+              "<em>Bu web sitesi:</em> uygulamadan ayrı olarak bu site, sayfa görüntülemelerini ve yönlendirenleri saymak için Cloudflare Web Analytics kullanır. Çerezsizdir, cihazınızda hiçbir şey saklamaz, tarayıcınızın parmak izini almaz ve sizi başka sitelere takip edemez. Do Not Track ve Global Privacy Control sinyallerine de uyarız: biri açıksa ölçüm betiği hiç yüklenmez."
+            ],
+            "li": []
+          },
+          {
+            "h": "4. Ağ istekleri",
+            "p": [
+              "İçeriğin çoğu uygulamayla birlikte gelir ve çevrimdışı çalışır. Uygulama ağa yalnızca şunlar için bağlanır: isteğe bağlı Kur'an tilaveti akışı, giriş yapıldığında verilerinizin eşitlenmesi ve çökme/kullanım tanılamalarının gönderilmesi (kapatmadıysanız). Kutsal metin (Kur'an ve hadis) uygulamayla gelir ve doğrulanmıştır — asla üretilmez."
+            ],
+            "li": []
+          },
+          {
+            "h": "5. Yapmadıklarımız",
+            "p": [],
+            "li": [
+              "Kişisel verilerinizi satmayız ve kiralamayız.",
+              "Reklam göstermeyiz ve reklam için sizi takip etmeyiz.",
+              "Sirāj ile ibadet etmeniz için hesap şartı koşmayız."
+            ]
+          },
+          {
+            "h": "6. Üçüncü taraf hizmetleri",
+            "p": [
+              "Yukarıdaki özellikleri seçtiğinizde veriler Google'ın gizlilik şartları kapsamında Google Firebase tarafından işlenir. Tilavet akışı, kamuya açık Kur'an ses kaynaklarından sunulur. Bu sitedeki sayfa görüntülemeleri Cloudflare Web Analytics tarafından sayılır. İlgili politikalarını incelemenizi öneririz."
+            ],
+            "li": []
+          },
+          {
+            "h": "7. Çocuklar",
+            "p": [
+              "Sirāj her yaş için uygundur ve çocuklardan bilerek kişisel bilgi toplamaz. İsteğe bağlı hesap özellikleri, kendi hukukuna göre rıza verebilecek kullanıcılar içindir."
+            ],
+            "li": []
+          },
+          {
+            "h": "8. Haklarınız ve seçenekleriniz",
+            "p": [],
+            "li": [
+              "Uygulamayı hesapsız olarak tam kullanın.",
+              "Ayarlar'dan analitiği ve çökme raporlamayı kapatın.",
+              "Eşitlenen bulut verilerini kaldırmak için hesabınızı uygulamadan silin; cihazdaki veriler siz uygulamayı kaldırana dek kalır."
+            ]
+          },
+          {
+            "h": "9. Değişiklikler",
+            "p": [
+              "Uygulama geliştikçe bu politikayı güncelleyebiliriz. Esaslı değişiklikler burada yeni bir “son güncelleme” tarihiyle yansıtılır."
+            ],
+            "li": []
+          },
+          {
+            "h": "10. İletişim",
+            "p": [
+              "Gizlilikle ilgili sorunuz mu var? {email} adresine yazın."
+            ],
+            "li": []
+          }
+        ]
+      },
+      "terms": {
+        "title": "Kullanım Şartları · Sirāj",
+        "h1": "Kullanım Şartları",
+        "date": "20 Haziran 2026",
+        "intro": "Bu şartlar, Sirāj uygulamasını ve bu web sitesini kullanımınızı düzenler. Sirāj'ı kullanarak bunları kabul etmiş olursunuz.",
+        "sections": [
+          {
+            "h": "1. Hizmet",
+            "p": [
+              "Sirāj; namaz vakitleri, Kur'an, hadis, dualar ve ilgili İslamî araçları kişisel ve ibadet amaçlı kullanım için sunar. Doğruluk için gayret ederiz, ancak uygulama bir ibadet yardımcısıdır, dinî bir merci değildir."
+            ],
+            "li": []
+          },
+          {
+            "h": "2. Dinî içerik",
+            "p": [
+              "Sirāj'daki Kur'an ve hadisler yerleşik, doğrulanmış kaynaklardan aynen alınmış ve istifadeniz için sunulmuştur. Namaz vakitleri bilinen yöntemlerle hesaplanır; caminiz farklı ilan ediyorsa caminizi esas alın."
+            ],
+            "li": []
+          },
+          {
+            "h": "3. Hesaplar",
+            "p": [
+              "Hesap isteğe bağlıdır ve yalnızca verilerinizi cihazlar arasında eşitlemek için kullanılır. Apple veya Google girişinize erişimi güvende tutmak sizin sorumluluğunuzdadır. Hesabınızı dilediğiniz zaman uygulama içinden silebilirsiniz."
+            ],
+            "li": []
+          },
+          {
+            "h": "4. Destekçi aboneliği",
+            "p": [
+              "Sirāj kullanımı ücretsizdir. İsteğe bağlı Destekçi aboneliği geliştirmeyi finanse etmeye yardım eder ve cihazlar arası bulut eşitlemeyi açar. Abonelikler App Store veya Google Play üzerinden faturalandırılır ve iptal edilmedikçe yenilenir; mağaza hesabınızdan yönetin veya iptal edin."
+            ],
+            "li": []
+          },
+          {
+            "h": "5. Kabul edilebilir kullanım",
+            "p": [],
+            "li": [
+              "Sirāj'ı hukuka uygun ve saygılı biçimde kullanın.",
+              "Hizmeti aksatmaya, tersine mühendislik yapmaya veya kötüye kullanmaya çalışmayın.",
+              "Uygulamanın içeriğini yanlış tanıtmayın; Sirāj adını veya işaretlerini izinsiz kullanmayın."
+            ]
+          },
+          {
+            "h": "6. Sorumluluğun sınırlanması",
+            "p": [
+              "Sirāj, hiçbir garanti verilmeksizin “olduğu gibi” sunulur. Yasanın izin verdiği azami ölçüde, uygulamayı kullanmanızdan doğan dolaylı veya sonuç niteliğindeki zararlardan sorumlu değiliz."
+            ],
+            "li": []
+          },
+          {
+            "h": "7. Değişiklikler",
+            "p": [
+              "Uygulamayı ve bu şartları zamanla güncelleyebiliriz. Değişiklikten sonra kullanmaya devam etmeniz, güncellenmiş şartları kabul ettiğiniz anlamına gelir."
+            ],
+            "li": []
+          },
+          {
+            "h": "8. İletişim",
+            "p": [
+              "Bu şartlarla ilgili sorunuz mu var? {email} adresine yazın."
+            ],
+            "li": []
+          }
+        ]
+      }
+    }
   },
-
   "id": {
-    "name": "Bahasa Indonesia", "dir": "ltr", "locale": "id",
-    "nav": { "features": "Fitur", "prayerTimes": "Jadwal salat", "support": "Bantuan", "getApp": "Dapatkan Sirāj" },
-    "footer": { "privacy": "Privasi", "terms": "Ketentuan", "support": "Bantuan" },
-    "prayers": { "fajr": "Subuh", "sunrise": "Terbit", "dhuhr": "Zuhur", "asr": "Asar", "maghrib": "Magrib", "isha": "Isya" },
-    "madhhab": { "hanafi": "Hanafi", "standard": "Syafi'i / Maliki / Hanbali" },
+    "name": "Bahasa Indonesia",
+    "dir": "ltr",
+    "locale": "id",
+    "nav": {
+      "features": "Fitur",
+      "prayerTimes": "Jadwal salat",
+      "support": "Bantuan",
+      "getApp": "Dapatkan Sirāj"
+    },
+    "footer": {
+      "privacy": "Privasi",
+      "terms": "Ketentuan",
+      "support": "Bantuan"
+    },
+    "prayers": {
+      "fajr": "Subuh",
+      "sunrise": "Terbit",
+      "dhuhr": "Zuhur",
+      "asr": "Asar",
+      "maghrib": "Magrib",
+      "isha": "Isya"
+    },
+    "madhhab": {
+      "hanafi": "Hanafi",
+      "standard": "Syafi'i / Maliki / Hanbali"
+    },
     "city": {
       "title": "Jadwal Salat {cityIn} — Waktu Salat Hari Ini & Arah Kiblat · Sirāj",
       "description": "Jadwal salat hari ini untuk {city}, {country}: Subuh {fajr}, Zuhur {dhuhr}, Asar {asr}, Magrib {maghrib}, Isya {isha}. Kiblat {qibla}° dari utara. Dihitung dengan {method}.",
@@ -208,9 +1436,12 @@
       "staticNote": "Menampilkan waktu saat halaman ini dibuat. Aktifkan JavaScript untuk melihat waktu hari ini.",
       "liveNote": "Dihitung di peramban Anda untuk {tz} — ini waktu langsung, bukan waktu saat halaman dibuat.",
       "qiblaHeading": "Arah kiblat dari {city}",
-      "direction": "Arah", "directionSub": "searah jarum jam dari utara sejati",
-      "compass": "Titik kompas", "compassSub": "arah perkiraan",
-      "distance": "Jarak ke Makkah", "distanceSub": "lingkaran besar",
+      "direction": "Arah",
+      "directionSub": "searah jarum jam dari utara sejati",
+      "compass": "Titik kompas",
+      "compassSub": "arah perkiraan",
+      "distance": "Jarak ke Makkah",
+      "distanceSub": "lingkaran besar",
       "magneticNote": "Kompas magnetik menunjuk ke utara magnetik, bukan utara sejati, dan selisihnya berbeda di tiap lokasi serta bergeser dari tahun ke tahun. Kompas kiblat Sirāj mengoreksinya secara otomatis menggunakan sensor perangkat Anda.",
       "timetableHeading": "Jadwal {month} {year}",
       "tableCaption": "Jadwal salat {city}, {country} — {month} {year}, waktu setempat (24 jam)",
@@ -233,20 +1464,319 @@
       "introLink": "dapatkan Sirāj",
       "searchLabel": "Cari kota",
       "searchPlaceholder": "Cari kota atau negara…",
-      "noMatch": "Tidak ada kota yang cocok.", "noMatchLink": "Minta kami menambahkannya →",
+      "noMatch": "Tidak ada kota yang cocok.",
+      "noMatchLink": "Minta kami menambahkannya →",
       "callout": "Tidak menemukan kota Anda? Sirāj menghitung waktu untuk lokasi mana pun langsung di perangkat, dari GPS atau kota yang Anda pilih sendiri — halaman ini hanya yang paling banyak dicari. {link}",
       "calloutLink": "Beri tahu kami kota mana yang perlu ditambahkan."
     },
-    "store": { "appleSmall": "Unduh di", "appleBig": "App Store", "playSmall": "Dapatkan di", "playBig": "Google Play" },
-    "lang": { "label": "Bahasa", "switcher": "Pilih bahasa" }
+    "store": {
+      "appleSmall": "Unduh di",
+      "appleBig": "App Store",
+      "playSmall": "Dapatkan di",
+      "playBig": "Google Play"
+    },
+    "lang": {
+      "label": "Bahasa",
+      "switcher": "Pilih bahasa"
+    },
+    "ramadan": {
+      "nav": "Ramadan",
+      "hubTitle": "Ramadan 1448 / 2027 — Jadwal Imsakiyah, Sahur & Buka Puasa · Sirāj",
+      "hubDescription": "Ramadan 1448 dimulai {start} dan berakhir {end} — {days} hari puasa. Jadwal imsakiyah untuk {cities} kota, dihitung dengan metode yang berlaku setempat. Gratis, tanpa iklan.",
+      "hubH1": "Ramadan 1448",
+      "range": "{start} – {end} · {days} hari",
+      "before": "{days} hari menuju Ramadan",
+      "during": "Hari ke-{day} Ramadan",
+      "after": "Ramadan 1448 telah berakhir",
+      "standfirst": "Tanggal di bawah mengikuti kalender Umm al-Qura. Awal Ramadan dapat bergeser sehari di tempat yang menetapkan awal bulan dengan rukyat setempat — ikutilah masjid Anda.",
+      "citiesHeading": "Jadwal per kota",
+      "citiesIntro": "Setiap halaman kota memuat satu bulan penuh: kapan waktu sahur berakhir, kapan berbuka, dan berapa lama puasa setiap harinya.",
+      "toolsHeading": "Yang Sirāj lakukan selama Ramadan",
+      "tool1t": "Pengingat sahur dan berbuka",
+      "tool1b": "Notifikasi sebelum waktu sahur habis dan saat magrib, dihitung di perangkat Anda di mana pun Anda berada.",
+      "tool2t": "Catatan puasa",
+      "tool2b": "Tandai setiap hari yang Anda puasai dan yang perlu diqadha. Catatan tetap di perangkat kecuali Anda memilih menyinkronkannya.",
+      "tool3t": "Al-Qur'an dan tarawih",
+      "tool3b": "Al-Qur'an lengkap dengan murottal dan rencana bacaan, agar satu juz semalam menjadi rencana, bukan sekadar harapan.",
+      "tool4t": "Sepuluh malam terakhir",
+      "tool4b": "Zikir dan doa Lailatul Qadar, serta kalender Hijriah yang tahu Anda sedang di malam keberapa.",
+      "eidHeading": "Idulfitri",
+      "eidBody": "Diperkirakan {eid}, bergantung pada rukyat hilal Syawal.",
+      "cityTitle": "Jadwal Imsakiyah {city} 2027 — Waktu Sahur & Buka Puasa · Sirāj",
+      "cityDescription": "Jadwal imsakiyah Ramadan 1448 untuk {city}, {country}. Waktu sahur berakhir dan berbuka selama {days} hari, dari {start} sampai {end}. Dihitung dengan {method}.",
+      "cityH1": "Jadwal imsakiyah · {city}",
+      "cityIntro": "Waktu sahur berakhir saat Subuh dan puasa dibuka saat Magrib. Waktu dihitung untuk {city} dengan {method}; bila masjid Anda berbeda satu dua menit, ikutilah masjid Anda.",
+      "tableCaption": "Jadwal imsakiyah Ramadan 1448 untuk {city}, {country} — waktu setempat (24 jam)",
+      "colDay": "Ramadan",
+      "colDate": "Tanggal",
+      "colSuhoor": "Sahur berakhir",
+      "colIftar": "Buka puasa",
+      "colLength": "Lama puasa",
+      "imsakNote": "Sebagian kalangan menetapkan imsak beberapa menit sebelum Subuh sebagai kehati-hatian. Yang tercantum di sini adalah waktu Subuh; di Sirāj Anda dapat mengatur pengingat sahur seberapa pun lebih awal.",
+      "allCities": "Semua jadwal imsakiyah",
+      "longest": "Puasa terpanjang",
+      "shortest": "Puasa terpendek"
+    },
+    "site": {
+      "heroEyebrow": "Pendamping muslim Anda",
+      "heroH1": "Cahaya untuk ibadah harian Anda.",
+      "heroLead": "Sirāj menyatukan jadwal salat, Al-Qur'an, arah kiblat, hadis sahih, doa & zikir, dan banyak lagi dalam satu aplikasi yang tenang dan indah — privat sejak dirancang, dan gratis.",
+      "heroCta1": "Dapatkan Sirāj",
+      "heroCta2": "Lihat fitur",
+      "fEyebrow": "Semua dalam satu tempat",
+      "fTitle": "Pendamping lengkap sepanjang hari",
+      "fSub": "Dari azan pertama hingga doa terakhir sebelum tidur — dirancang dengan cermat, akurat, dan penuh adab.",
+      "f1t": "Jadwal salat & azan",
+      "f1b": "Waktu setempat yang akurat dengan semua metode perhitungan utama, Asar Hanafi/Syafi'i, dan notifikasi azan — disertai satu hadis pada setiap waktu salat.",
+      "f2t": "Kompas kiblat",
+      "f2b": "Penunjuk kiblat yang presisi dan halus untuk menghadap Kakbah dari mana pun, dengan arah yang jelas dan kalibrasi.",
+      "f3t": "Al-Qur'an",
+      "f3b": "Rasm Usmani dengan terjemahan, murottal ayat per ayat, kata per kata, tafsir dan tajwid — lengkap dengan penanda dan bacaan terakhir.",
+      "f4t": "Hadis sahih",
+      "f4b": "Kumpulan terverifikasi — Arbain Nawawi, Empat Puluh Hadis Qudsi, dan Muwaththa' Malik — dikutip apa adanya dari sumber tepercaya.",
+      "f5t": "Doa & zikir",
+      "f5b": "Zikir pagi dan petang serta doa sesuai keadaan — ditambah doa pilihan Anda sendiri dan penanda.",
+      "f6t": "Asmaul Husna",
+      "f6b": "Sembilan puluh sembilan nama Allah beserta makna dan penjelasannya, disajikan indah untuk direnungkan dan dihafal.",
+      "f7t": "Kalender Hijriah",
+      "f7b": "Kalender Islam dengan konverter Masehi dan hari-hari penting sepanjang tahun, agar tak ada tanggal mulia yang terlewat.",
+      "f8t": "Penghitung tasbih",
+      "f8b": "Tasbih digital yang terasa nyaman untuk zikir Anda, dengan preset dan getaran lembut yang menjaga hitungan tetap aman.",
+      "f9t": "Zakat & Ramadan",
+      "f9b": "Kalkulator zakat berpemandu dan perangkat Ramadan, termasuk pengingat Lailatul Qadar sepanjang sepuluh malam terakhir.",
+      "wEyebrow": "Mengapa Sirāj",
+      "wTitle": "Dibuat dengan cermat dan penuh adab",
+      "w1t": "Privat sejak dirancang",
+      "w1b": "Ibadah Anda milik Anda. Sirāj bekerja luring dan menyimpan data di perangkat Anda. Masuk hanya bila Anda menginginkan sinkronisasi awan — analitik bersifat opsional dan dapat dimatikan, dan tidak ada pelacakan untuk iklan.",
+      "w2t": "Gratis, tanpa iklan",
+      "w2b": "Semua fitur gratis. Tidak ada iklan yang mengganggu ibadah Anda. Paket Pendukung bersifat opsional, sekadar membantu membiayai pengembangan dan menambahkan sinkronisasi antarperangkat.",
+      "w3t": "Akurat & sahih",
+      "w3b": "Waktu salat dihitung dengan metode yang mapan; Al-Qur'an dan hadis dikutip apa adanya dari sumber terverifikasi. Teks suci tidak pernah dibuat-buat.",
+      "sEyebrow": "Antarmuka yang tenang dan indah",
+      "sTitle": "Dua belas tema. Delapan bahasa. Satu fokus.",
+      "sSub": "Terang dan gelap, dengan keluarga warna yang disetel dengan tangan — serta dukungan penuh kanan-ke-kiri untuk bahasa Arab dan Urdu.",
+      "sIpad": "Dirancang juga untuk layar besar",
+      "qEyebrow": "Pertanyaan",
+      "qTitle": "Baik untuk diketahui",
+      "q1": "Apakah Sirāj gratis?",
+      "a1": "Ya — semua fitur ibadah gratis, tanpa iklan. Langganan Pendukung bersifat opsional, membantu membiayai pengembangan dan membuka sinkronisasi awan antarperangkat; tidak ada dinding pada fitur inti.",
+      "q2": "Apakah bekerja luring?",
+      "a2": "Ya. Jadwal salat, Al-Qur'an, hadis, doa, Asmaul Husna, dan kalender Hijriah semuanya bekerja tanpa koneksi. Data Anda tetap di perangkat kecuali Anda masuk untuk sinkronisasi.",
+      "q3": "Dari mana jadwal salat berasal?",
+      "a3": "Dihitung langsung dari lokasi Anda dengan metode yang mapan (Liga Muslim Dunia, Umm al-Qura, ISNA, Mesir, dan lainnya), dengan pilihan Asar Hanafi/Syafi'i serta penyesuaian manual.",
+      "q4": "Apakah kontennya sahih?",
+      "a4": "Ya. Al-Qur'an memakai rasm Usmani dari Tanzil dengan terjemahan yang mapan, dan hadis dikutip apa adanya dari kumpulan terverifikasi. Tidak ada teks suci yang dihasilkan mesin.",
+      "q5": "Bahasa apa saja yang didukung?",
+      "a5": "Inggris dan Arab dipelihara penuh, dengan terjemahan untuk Urdu, Turki, Prancis, Indonesia, Melayu, dan Hausa — serta tata letak kanan-ke-kiri penuh untuk Arab dan Urdu.",
+      "dEyebrow": "Sudah tersedia",
+      "dTitle": "Unduh Sirāj",
+      "dSub": "Sirāj kini tersedia di App Store dan Google Play — gratis, insya Allah.",
+      "supTitle": "Bantuan · Sirāj",
+      "supH1": "Bantuan",
+      "supLead": "Kami siap membantu, insya Allah.",
+      "supEmail": "Kirim email",
+      "supEmailNote": "Mohon sertakan perangkat, versi sistem operasi, dan penjelasan singkat — itu membantu kami menolong Anda lebih cepat.",
+      "supCommon": "Pertanyaan umum",
+      "sq1": "Jadwal salat saya terlihat meleset",
+      "sa1": "Buka Pengaturan → Salat lalu periksa lokasi dan metode perhitungan. Tiap kalangan mengikuti metode berbeda (Liga Muslim Dunia, Umm al-Qura, ISNA, Mesir). Anda juga bisa memilih Asar Hanafi atau Syafi'i dan menerapkan penyesuaian menit per salat.",
+      "sq2": "Saya tidak menerima azan atau notifikasi salat",
+      "sa2": "Pastikan notifikasi diizinkan untuk Sirāj di pengaturan sistem ponsel, lalu aktifkan di aplikasi pada bagian Notifikasi. Agar azan tetap terdengar saat ponsel senyap (peringatan kritis iOS), aktifkan “Putar meski dalam mode senyap”.",
+      "sq3": "Bagaimana menyinkronkan antarperangkat?",
+      "sa3": "Masuk dengan Apple atau Google dari layar Akun. Sinkronisasi penanda, bacaan terakhir, catatan, dan pengaturan termasuk dalam paket Pendukung. Masuklah di tiap perangkat dengan akun yang sama.",
+      "sq4": "Bagaimana mengubah bahasa atau tema?",
+      "sa4": "Buka Pengaturan Cepat (ikon roda gigi) untuk tema, atau Lainnya → Bahasa untuk berpindah di antara bahasa yang didukung. Bahasa Arab dan Urdu mengubah seluruh tata letak menjadi kanan-ke-kiri.",
+      "backHome": "Kembali ke beranda"
+    },
+    "legal": {
+      "governs": "Ini adalah terjemahan yang disediakan untuk kemudahan. Bila berbeda dengan versi bahasa Inggris, versi bahasa Inggris yang berlaku.",
+      "backHome": "Kembali ke beranda",
+      "updatedLabel": "Terakhir diperbarui",
+      "privacy": {
+        "title": "Kebijakan Privasi · Sirāj",
+        "h1": "Kebijakan Privasi",
+        "date": "29 Agustus 2026",
+        "intro": "Sirāj (“aplikasi”, “kami”) adalah aplikasi pendamping muslim untuk salat, Al-Qur'an, dan zikir. Kami membangunnya agar menghormati privasi Anda sebagaimana menghormati ibadah Anda. Kebijakan ini menjelaskan dengan bahasa sederhana apa yang digunakan aplikasi, apa yang tetap di perangkat Anda, dan sedikit hal opsional yang tidak.",
+        "shortLabel": "Ringkasnya:",
+        "short": "Sirāj bekerja luring dan secara bawaan menyimpan data Anda di perangkat Anda. Kami tidak menjual data Anda, tidak memakainya untuk iklan, dan Anda hanya berbagi sesuatu dengan awan kami bila Anda memilih masuk untuk sinkronisasi.",
+        "sections": [
+          {
+            "h": "1. Informasi yang digunakan aplikasi di perangkat Anda",
+            "p": [],
+            "li": [
+              "<strong>Lokasi</strong> — dipakai untuk menghitung jadwal salat dan arah kiblat, diproses di perangkat Anda untuk perhitungan itu. Anda juga dapat menetapkan kota secara manual tanpa memberikan lokasi persis.",
+              "<strong>Aktivitas Anda dalam aplikasi</strong> — penanda, bacaan terakhir, rentetan membaca, hitungan tasbih, masukan zakat, dan pengaturan Anda. Semua disimpan secara lokal di perangkat Anda.",
+              "<strong>Notifikasi</strong> — pengingat salat, azan, dan renungan harian opsional dijadwalkan secara lokal di perangkat Anda. Tidak ada server yang terlibat dalam pengirimannya."
+            ]
+          },
+          {
+            "h": "2. Akun opsional & sinkronisasi awan",
+            "p": [
+              "Anda dapat memakai setiap fitur Sirāj tanpa akun. Bila Anda memilih masuk (dengan Apple atau Google), kami memakai Google Firebase untuk:",
+              "Kami hanya menyimpan data ibadah yang diperlukan untuk sinkronisasi, terkait akun Anda. Kami tidak pernah melihat kata sandi Apple/Google Anda. Bila Anda keluar, sinkronisasi berhenti; bila Anda menghapus akun, data tersinkron Anda dihapus."
+            ],
+            "li": [
+              "mengautentikasi Anda (Firebase Authentication), dan",
+              "menyinkronkan penanda, bacaan terakhir, catatan, dan pengaturan antarperangkat (Cloud Firestore)."
+            ]
+          },
+          {
+            "h": "3. Diagnostik & analitik",
+            "p": [
+              "Untuk menjaga kestabilan dan meningkatkan aplikasi, Sirāj dapat memakai Google Firebase Crashlytics (laporan galat) dan Firebase Analytics (penggunaan anonim dan agregat). Keduanya <strong>tidak</strong> mengidentifikasi Anda secara pribadi dan dapat <strong>dimatikan</strong> di pengaturan aplikasi. Kami tidak memakai analitik untuk iklan dan tidak ada pelacakan iklan.",
+              "<em>Situs ini:</em> terpisah dari aplikasi, situs ini memakai Cloudflare Web Analytics untuk menghitung tampilan halaman dan perujuk. Tanpa kuki, tidak menyimpan apa pun di perangkat Anda, tidak mengambil sidik jari peramban, dan tidak dapat mengikuti Anda ke situs lain. Kami juga menghormati sinyal Do Not Track dan Global Privacy Control: bila salah satunya aktif, skrip pengukuran tidak pernah dimuat sama sekali."
+            ],
+            "li": []
+          },
+          {
+            "h": "4. Permintaan jaringan",
+            "p": [
+              "Sebagian besar konten disertakan dan bekerja luring. Aplikasi menghubungi jaringan hanya untuk: memutar murottal Al-Qur'an secara opsional, menyinkronkan data saat Anda masuk, dan mengirim diagnostik galat/penggunaan (kecuali Anda mematikannya). Teks suci (Al-Qur'an dan hadis) disertakan dan terverifikasi — tidak pernah dihasilkan mesin."
+            ],
+            "li": []
+          },
+          {
+            "h": "5. Yang tidak kami lakukan",
+            "p": [],
+            "li": [
+              "Kami tidak menjual atau menyewakan data pribadi Anda.",
+              "Kami tidak menampilkan iklan atau melacak Anda untuk iklan.",
+              "Kami tidak mensyaratkan akun untuk beribadah dengan Sirāj."
+            ]
+          },
+          {
+            "h": "6. Layanan pihak ketiga",
+            "p": [
+              "Ketika Anda memilih fitur di atas, data diproses oleh Google Firebase berdasarkan ketentuan privasi Google. Murottal disajikan dari sumber audio Al-Qur'an publik. Tampilan halaman di situs ini dihitung oleh Cloudflare Web Analytics. Kami menganjurkan Anda meninjau kebijakan masing-masing."
+            ],
+            "li": []
+          },
+          {
+            "h": "7. Anak-anak",
+            "p": [
+              "Sirāj cocok untuk segala usia dan tidak dengan sengaja mengumpulkan informasi pribadi dari anak-anak. Fitur akun opsional ditujukan bagi pengguna yang dapat memberikan persetujuan menurut hukum setempat."
+            ],
+            "li": []
+          },
+          {
+            "h": "8. Hak & pilihan Anda",
+            "p": [],
+            "li": [
+              "Memakai aplikasi sepenuhnya tanpa akun.",
+              "Mematikan analitik dan pelaporan galat di Pengaturan.",
+              "Menghapus akun Anda di aplikasi untuk menghapus data awan tersinkron; data di perangkat tetap ada sampai Anda mencopot aplikasi."
+            ]
+          },
+          {
+            "h": "9. Perubahan",
+            "p": [
+              "Kami dapat memperbarui kebijakan ini seiring perkembangan aplikasi. Perubahan penting akan tercermin di sini dengan tanggal “terakhir diperbarui” yang baru."
+            ],
+            "li": []
+          },
+          {
+            "h": "10. Kontak",
+            "p": [
+              "Ada pertanyaan tentang privasi? Kirim email ke {email}."
+            ],
+            "li": []
+          }
+        ]
+      },
+      "terms": {
+        "title": "Ketentuan Layanan · Sirāj",
+        "h1": "Ketentuan Layanan",
+        "date": "20 Juni 2026",
+        "intro": "Ketentuan ini mengatur penggunaan Anda atas aplikasi Sirāj dan situs ini. Dengan memakai Sirāj, Anda menyetujuinya.",
+        "sections": [
+          {
+            "h": "1. Layanan",
+            "p": [
+              "Sirāj menyediakan jadwal salat, Al-Qur'an, hadis, doa, dan perangkat Islami terkait untuk penggunaan pribadi dan ibadah. Kami berupaya akurat, tetapi aplikasi ini disediakan sebagai alat bantu ibadah, bukan otoritas keagamaan."
+            ],
+            "li": []
+          },
+          {
+            "h": "2. Konten keagamaan",
+            "p": [
+              "Al-Qur'an dan hadis dalam Sirāj dikutip apa adanya dari sumber yang mapan dan terverifikasi, serta disajikan untuk manfaat Anda. Jadwal salat dihitung dengan metode yang dikenal luas; bila masjid setempat Anda berbeda, ikutilah masjid Anda."
+            ],
+            "li": []
+          },
+          {
+            "h": "3. Akun",
+            "p": [
+              "Akun bersifat opsional dan hanya dipakai untuk menyinkronkan data antarperangkat. Anda bertanggung jawab menjaga keamanan akses masuk Apple atau Google Anda. Anda dapat menghapus akun dari dalam aplikasi kapan saja."
+            ],
+            "li": []
+          },
+          {
+            "h": "4. Langganan Pendukung",
+            "p": [
+              "Sirāj gratis dipakai. Langganan Pendukung opsional membantu membiayai pengembangan dan mengaktifkan sinkronisasi awan antarperangkat. Langganan ditagih melalui App Store atau Google Play dan diperpanjang kecuali dibatalkan; kelola atau batalkan di akun toko Anda."
+            ],
+            "li": []
+          },
+          {
+            "h": "5. Penggunaan yang wajar",
+            "p": [],
+            "li": [
+              "Gunakan Sirāj secara sah dan penuh adab.",
+              "Jangan mencoba mengganggu, merekayasa balik, atau menyalahgunakan layanan.",
+              "Jangan menyalahartikan konten aplikasi atau memakai nama maupun merek Sirāj tanpa izin."
+            ]
+          },
+          {
+            "h": "6. Penafian & tanggung jawab",
+            "p": [
+              "Sirāj disediakan “sebagaimana adanya”, tanpa jaminan apa pun. Sejauh diizinkan hukum, kami tidak bertanggung jawab atas kerugian tidak langsung atau turutan yang timbul dari penggunaan aplikasi."
+            ],
+            "li": []
+          },
+          {
+            "h": "7. Perubahan",
+            "p": [
+              "Kami dapat memperbarui aplikasi dan ketentuan ini dari waktu ke waktu. Melanjutkan penggunaan setelah perubahan berarti Anda menerima ketentuan yang diperbarui."
+            ],
+            "li": []
+          },
+          {
+            "h": "8. Kontak",
+            "p": [
+              "Ada pertanyaan tentang ketentuan ini? Kirim email ke {email}."
+            ],
+            "li": []
+          }
+        ]
+      }
+    }
   },
-
   "fr": {
-    "name": "Français", "dir": "ltr", "locale": "fr",
-    "nav": { "features": "Fonctionnalités", "prayerTimes": "Horaires de prière", "support": "Aide", "getApp": "Obtenir Sirāj" },
-    "footer": { "privacy": "Confidentialité", "terms": "Conditions", "support": "Aide" },
-    "prayers": { "fajr": "Fajr", "sunrise": "Lever du soleil", "dhuhr": "Dhuhr", "asr": "ʿAsr", "maghrib": "Maghrib", "isha": "ʿIshāʾ" },
-    "madhhab": { "hanafi": "hanafite", "standard": "chaféite / malikite / hanbalite" },
+    "name": "Français",
+    "dir": "ltr",
+    "locale": "fr",
+    "nav": {
+      "features": "Fonctionnalités",
+      "prayerTimes": "Horaires de prière",
+      "support": "Aide",
+      "getApp": "Obtenir Sirāj"
+    },
+    "footer": {
+      "privacy": "Confidentialité",
+      "terms": "Conditions",
+      "support": "Aide"
+    },
+    "prayers": {
+      "fajr": "Fajr",
+      "sunrise": "Lever du soleil",
+      "dhuhr": "Dhuhr",
+      "asr": "ʿAsr",
+      "maghrib": "Maghrib",
+      "isha": "ʿIshāʾ"
+    },
+    "madhhab": {
+      "hanafi": "hanafite",
+      "standard": "chaféite / malikite / hanbalite"
+    },
     "city": {
       "title": "Horaires de prière {cityIn} — Heures de salât et Qibla · Sirāj",
       "description": "Horaires de prière du jour pour {city}, {country} : Fajr {fajr}, Dhuhr {dhuhr}, ʿAsr {asr}, Maghrib {maghrib}, ʿIshāʾ {isha}. Qibla à {qibla}° du nord. Calculés selon {method}.",
@@ -256,9 +1786,12 @@
       "staticNote": "Horaires tels que générés lors de la construction de cette page. Activez JavaScript pour voir ceux du jour.",
       "liveNote": "Calculés dans votre navigateur pour {tz} — ce sont les horaires en direct, non ceux de la génération de la page.",
       "qiblaHeading": "Qibla depuis {city}",
-      "direction": "Direction", "directionSub": "dans le sens horaire depuis le nord géographique",
-      "compass": "Point cardinal", "compassSub": "cap approximatif",
-      "distance": "Distance de La Mecque", "distanceSub": "orthodromie",
+      "direction": "Direction",
+      "directionSub": "dans le sens horaire depuis le nord géographique",
+      "compass": "Point cardinal",
+      "compassSub": "cap approximatif",
+      "distance": "Distance de La Mecque",
+      "distanceSub": "orthodromie",
       "magneticNote": "Une boussole magnétique indique le nord magnétique et non le nord géographique ; l'écart varie selon le lieu et se décale d'année en année. La boussole Qibla de Sirāj le corrige automatiquement grâce aux capteurs de votre appareil.",
       "timetableHeading": "Calendrier de {month} {year}",
       "tableCaption": "Horaires de prière pour {city}, {country} — {month} {year}, heure locale (24 h)",
@@ -281,20 +1814,319 @@
       "introLink": "obtenez Sirāj",
       "searchLabel": "Rechercher une ville",
       "searchPlaceholder": "Rechercher une ville ou un pays…",
-      "noMatch": "Aucune ville ne correspond.", "noMatchLink": "Demandez-nous de l'ajouter →",
+      "noMatch": "Aucune ville ne correspond.",
+      "noMatchLink": "Demandez-nous de l'ajouter →",
       "callout": "Votre ville n'y est pas ? Sirāj calcule les horaires pour n'importe quel lieu directement sur l'appareil, par GPS ou par une ville que vous choisissez — ces pages ne couvrent que les plus recherchées. {link}",
       "calloutLink": "Dites-nous laquelle ajouter."
     },
-    "store": { "appleSmall": "Télécharger dans l'", "appleBig": "App Store", "playSmall": "Disponible sur", "playBig": "Google Play" },
-    "lang": { "label": "Langue", "switcher": "Choisir une langue" }
+    "store": {
+      "appleSmall": "Télécharger dans l'",
+      "appleBig": "App Store",
+      "playSmall": "Disponible sur",
+      "playBig": "Google Play"
+    },
+    "lang": {
+      "label": "Langue",
+      "switcher": "Choisir une langue"
+    },
+    "ramadan": {
+      "nav": "Ramadan",
+      "hubTitle": "Ramadan 1448 / 2027 — Calendrier, Sohour et Iftar · Sirāj",
+      "hubDescription": "Le Ramadan 1448 commence le {start} et se termine le {end} — {days} jours de jeûne. Calendriers du sohour et de l'iftar pour {cities} villes, selon la convention suivie localement. Gratuit, sans publicité.",
+      "hubH1": "Ramadan 1448",
+      "range": "{start} – {end} · {days} jours",
+      "before": "{days} jours avant le Ramadan",
+      "during": "{day}ᵉ jour du Ramadan",
+      "after": "Le Ramadan 1448 est terminé",
+      "standfirst": "Les dates ci-dessous suivent le calendrier Umm al-Qurā. Le début du Ramadan peut se décaler d'un jour là où le mois commence à l'observation locale du croissant — suivez votre mosquée.",
+      "citiesHeading": "Calendriers par ville",
+      "citiesIntro": "Chaque page de ville donne le mois complet : la fin du sohour, l'heure de la rupture du jeûne, et la durée du jeûne chaque jour.",
+      "toolsHeading": "Ce que fait Sirāj pendant le Ramadan",
+      "tool1t": "Rappels de sohour et d'iftar",
+      "tool1b": "Une notification avant la fin du sohour et une au maghrib, calculées sur votre appareil où que vous soyez.",
+      "tool2t": "Suivi du jeûne",
+      "tool2b": "Marquez chaque jour jeûné et ceux à rattraper. Votre relevé reste sur votre appareil, sauf si vous choisissez de le synchroniser.",
+      "tool3t": "Coran et tarawih",
+      "tool3b": "Le Coran entier avec récitation et un plan de lecture, pour qu'un juz' par nuit soit un plan et non un espoir.",
+      "tool4t": "Les dix dernières nuits",
+      "tool4b": "Adhkār et duʿāʾ pour Laylat al-Qadr, et un calendrier hégirien qui sait quelle nuit vous vivez.",
+      "eidHeading": "Aïd el-Fitr",
+      "eidBody": "Attendu le {eid}, selon l'observation du croissant de Chawwal.",
+      "cityTitle": "Calendrier Ramadan {city} 2027 — Heures de Sohour et Iftar · Sirāj",
+      "cityDescription": "Calendrier du Ramadan 1448 pour {city}, {country}. Fin du sohour et heures de l'iftar sur {days} jours, du {start} au {end}. Calculé selon {method}.",
+      "cityH1": "Calendrier du Ramadan · {city}",
+      "cityIntro": "Le sohour se termine au Fajr et le jeûne se rompt au Maghrib. Les heures sont calculées pour {city} selon {method} ; si votre mosquée diffère d'une minute ou deux, suivez votre mosquée.",
+      "tableCaption": "Calendrier du Ramadan 1448 pour {city}, {country} — heure locale (24 h)",
+      "colDay": "Ramadan",
+      "colDate": "Date",
+      "colSuhoor": "Fin du sohour",
+      "colIftar": "Iftar",
+      "colLength": "Durée du jeûne",
+      "imsakNote": "Certaines communautés observent un imsak quelques minutes avant le Fajr par précaution. C'est l'heure du Fajr qui est donnée ici ; Sirāj vous laisse régler le rappel du sohour aussi tôt que vous le souhaitez.",
+      "allCities": "Tous les calendriers",
+      "longest": "Jeûne le plus long",
+      "shortest": "Jeûne le plus court"
+    },
+    "site": {
+      "heroEyebrow": "Votre compagnon musulman",
+      "heroH1": "Votre lumière pour l'adoration quotidienne.",
+      "heroLead": "Sirāj réunit les horaires de prière, le Coran, la Qibla, les hadiths authentiques, les duʿāʾ et adhkār et bien plus dans une application calme et soignée — privée par conception, et gratuite.",
+      "heroCta1": "Obtenir Sirāj",
+      "heroCta2": "Voir les fonctionnalités",
+      "fEyebrow": "Tout au même endroit",
+      "fTitle": "Un compagnon complet pour la journée",
+      "fSub": "Du premier adhān au dernier duʿāʾ avant de dormir — pensé avec soin, exact et respectueux.",
+      "f1t": "Horaires de prière et adhān",
+      "f1b": "Des horaires locaux exacts avec toutes les grandes méthodes de calcul, le ʿAsr hanafite ou chaféite, et des notifications d'adhān — avec un hadith à chaque prière.",
+      "f2t": "Boussole Qibla",
+      "f2b": "Un indicateur de Qibla précis et fluide pour vous orienter vers la Kaʿba où que vous soyez, avec un cap clair et un étalonnage.",
+      "f3t": "Le Coran",
+      "f3b": "Graphie uthmanienne avec traductions, récitation verset par verset, mot à mot, tafsīr et tajwīd — avec signets et reprise de lecture.",
+      "f4t": "Hadiths authentiques",
+      "f4b": "Recueils vérifiés — les Quarante de an-Nawawī, les Quarante Qudsī et le Muwaṭṭaʾ de Mālik — repris mot pour mot de sources fiables.",
+      "f5t": "Duʿāʾ et adhkār",
+      "f5b": "Adhkār du matin et du soir et invocations selon les circonstances — ainsi que vos propres duʿāʾ et vos signets.",
+      "f6t": "Les 99 Noms",
+      "f6b": "Al-Asmāʾ al-Ḥusnā avec leurs sens et explications, présentés avec soin pour la méditation et la mémorisation.",
+      "f7t": "Calendrier hégirien",
+      "f7b": "Le calendrier islamique avec convertisseur grégorien et les dates marquantes de l'année, pour ne manquer aucun jour sacré.",
+      "f8t": "Compteur tasbīḥ",
+      "f8b": "Un tasbīḥ numérique agréable au toucher pour votre dhikr, avec des préréglages et un retour haptique discret qui préserve votre compte.",
+      "f9t": "Zakat et Ramadan",
+      "f9b": "Un calculateur de zakat guidé et des outils pour le Ramadan, dont des rappels pour Laylat al-Qadr durant les dix dernières nuits.",
+      "wEyebrow": "Pourquoi Sirāj",
+      "wTitle": "Conçu avec soin et avec respect",
+      "w1t": "Privé par conception",
+      "w1b": "Votre adoration vous appartient. Sirāj fonctionne hors ligne et conserve vos données sur votre appareil. Connectez-vous seulement si vous voulez la synchronisation ; les statistiques sont désactivables et il n'y a aucun pistage publicitaire.",
+      "w2t": "Gratuit, sans publicité",
+      "w2b": "Toutes les fonctionnalités sont gratuites. Aucune publicité n'interrompt votre adoration. L'offre Soutien, facultative, aide simplement à financer le développement et ajoute la synchronisation entre appareils.",
+      "w3t": "Exact et authentique",
+      "w3b": "Les horaires sont calculés selon des méthodes établies ; le Coran et les hadiths sont repris mot pour mot de sources vérifiées. Le texte sacré n'est jamais inventé.",
+      "sEyebrow": "Une interface calme et soignée",
+      "sTitle": "Douze thèmes. Huit langues. Une seule attention.",
+      "sSub": "Clair et sombre, avec des familles de couleurs réglées à la main — et une prise en charge complète de la droite à gauche pour l'arabe et l'ourdou.",
+      "sIpad": "Pensé aussi pour le grand écran",
+      "qEyebrow": "Questions",
+      "qTitle": "Bon à savoir",
+      "q1": "Sirāj est-il gratuit ?",
+      "a1": "Oui — toutes les fonctions d'adoration sont gratuites et sans publicité. Un abonnement Soutien facultatif aide à financer le développement et débloque la synchronisation entre vos appareils ; il ne met aucune barrière devant les fonctions essentielles.",
+      "q2": "Fonctionne-t-il hors ligne ?",
+      "a2": "Oui. Les horaires de prière, le Coran, les hadiths, les duʿāʾ, les 99 Noms et le calendrier hégirien fonctionnent sans connexion. Vos données restent sur votre appareil tant que vous ne vous connectez pas pour la synchronisation.",
+      "q3": "D'où viennent les horaires de prière ?",
+      "a3": "Ils sont calculés localement à partir de votre position selon des méthodes établies (Ligue islamique mondiale, Umm al-Qurā, ISNA, égyptienne et d'autres), avec le choix du ʿAsr hanafite ou chaféite et des ajustements manuels.",
+      "q4": "Le contenu religieux est-il authentique ?",
+      "a4": "Oui. Le Coran utilise la graphie uthmanienne de Tanzil avec des traductions établies, et les hadiths sont repris mot pour mot de recueils vérifiés. Aucun texte sacré n'est généré par une machine.",
+      "q5": "Quelles langues sont prises en charge ?",
+      "a5": "L'anglais et l'arabe sont pleinement maintenus, avec des traductions en ourdou, turc, français, indonésien, malais et haoussa — et une mise en page entièrement de droite à gauche pour l'arabe et l'ourdou.",
+      "dEyebrow": "Disponible",
+      "dTitle": "Télécharger Sirāj",
+      "dSub": "Sirāj est désormais disponible sur l'App Store et Google Play — gratuitement, in shā’ Allāh.",
+      "supTitle": "Aide · Sirāj",
+      "supH1": "Aide",
+      "supLead": "Nous sommes là pour vous aider, in shā’ Allāh.",
+      "supEmail": "Écrivez-nous",
+      "supEmailNote": "Merci d'indiquer votre appareil, la version du système et une courte description — cela nous permet de vous aider plus vite.",
+      "supCommon": "Questions fréquentes",
+      "sq1": "Mes horaires de prière semblent faux",
+      "sa1": "Ouvrez Réglages → Prière et vérifiez votre position et la méthode de calcul. Les communautés suivent des méthodes différentes (Ligue islamique mondiale, Umm al-Qurā, ISNA, égyptienne). Vous pouvez aussi choisir le ʿAsr hanafite ou chaféite et appliquer des ajustements en minutes prière par prière.",
+      "sq2": "Je ne reçois pas l'adhān ni les notifications",
+      "sa2": "Vérifiez que les notifications sont autorisées pour Sirāj dans les réglages système de votre téléphone, puis activez-les dans l'application sous Notifications. Pour entendre l'adhān même en mode silencieux (alertes critiques iOS), activez « Jouer même en silencieux ».",
+      "sq3": "Comment synchroniser entre mes appareils ?",
+      "sa3": "Connectez-vous avec Apple ou Google depuis l'écran Compte. La synchronisation de vos signets, de la reprise de lecture, de vos suivis et de vos réglages fait partie de l'offre Soutien. Connectez-vous avec le même compte sur chaque appareil.",
+      "sq4": "Comment changer la langue ou le thème ?",
+      "sa4": "Ouvrez les Réglages rapides (l'engrenage) pour les thèmes, ou Plus → Langue pour passer d'une langue prise en charge à l'autre. L'arabe et l'ourdou basculent toute la mise en page de droite à gauche.",
+      "backHome": "Retour à l'accueil"
+    },
+    "legal": {
+      "governs": "Ceci est une traduction fournie à titre de commodité. En cas de divergence avec la version anglaise, la version anglaise prévaut.",
+      "backHome": "Retour à l'accueil",
+      "updatedLabel": "Dernière mise à jour",
+      "privacy": {
+        "title": "Politique de confidentialité · Sirāj",
+        "h1": "Politique de confidentialité",
+        "date": "29 août 2026",
+        "intro": "Sirāj (« l'application », « nous ») est une application compagnon musulmane pour la prière, le Coran et le rappel. Nous l'avons conçue pour respecter votre vie privée autant que votre adoration. Cette politique explique en langage clair ce que l'application utilise, ce qui reste sur votre appareil, et les rares éléments facultatifs qui n'y restent pas.",
+        "shortLabel": "En bref :",
+        "short": "Sirāj fonctionne hors ligne et conserve vos données sur votre appareil par défaut. Nous ne vendons pas vos données, nous ne les utilisons pas à des fins publicitaires, et vous ne partagez quoi que ce soit avec notre cloud que si vous choisissez de vous connecter pour la synchronisation.",
+        "sections": [
+          {
+            "h": "1. Informations utilisées par l'application sur votre appareil",
+            "p": [],
+            "li": [
+              "<strong>Localisation</strong> — utilisée pour calculer les horaires de prière et la direction de la Qibla. Elle est traitée sur votre appareil pour ces calculs. Vous pouvez aussi définir une ville manuellement plutôt que d'accorder la localisation précise.",
+              "<strong>Votre activité dans l'application</strong> — signets, reprise de lecture, série de lecture, comptes de tasbīḥ, saisies de zakat et vos réglages. Tout cela est stocké localement sur votre appareil.",
+              "<strong>Notifications</strong> — les rappels de prière, l'adhān et la réflexion quotidienne facultative sont programmés localement sur votre appareil. Aucun serveur n'intervient dans leur envoi."
+            ]
+          },
+          {
+            "h": "2. Compte facultatif et synchronisation",
+            "p": [
+              "Vous pouvez utiliser toutes les fonctions de Sirāj sans compte. Si vous choisissez de vous connecter (avec Apple ou Google), nous utilisons Google Firebase pour :",
+              "Nous ne stockons que les données d'adoration nécessaires à la synchronisation, rattachées à votre compte. Nous ne voyons jamais votre mot de passe Apple ou Google. Si vous vous déconnectez, la synchronisation s'arrête ; si vous supprimez votre compte, vos données synchronisées sont effacées."
+            ],
+            "li": [
+              "vous authentifier (Firebase Authentication), et",
+              "synchroniser vos signets, votre reprise de lecture, vos suivis et vos réglages entre vos appareils (Cloud Firestore)."
+            ]
+          },
+          {
+            "h": "3. Diagnostics et statistiques",
+            "p": [
+              "Pour maintenir la stabilité de l'application et l'améliorer, Sirāj peut utiliser Google Firebase Crashlytics (rapports de plantage) et Firebase Analytics (usage anonyme et agrégé). Ces outils ne vous identifient <strong>pas</strong> personnellement et sont <strong>désactivables</strong> dans les réglages. Nous n'utilisons pas les statistiques à des fins publicitaires et il n'y a aucun pistage publicitaire.",
+              "<em>Ce site :</em> indépendamment de l'application, ce site utilise Cloudflare Web Analytics pour compter les pages vues et les référents. Sans cookies, il ne stocke rien sur votre appareil, ne prend pas d'empreinte de votre navigateur et ne peut pas vous suivre sur d'autres sites. Nous respectons aussi les signaux Do Not Track et Global Privacy Control : si l'un des deux est actif, le script de mesure n'est jamais chargé."
+            ],
+            "li": []
+          },
+          {
+            "h": "4. Requêtes réseau",
+            "p": [
+              "L'essentiel du contenu est intégré et fonctionne hors ligne. L'application n'accède au réseau que pour : diffuser facultativement la récitation du Coran, synchroniser vos données lorsque vous êtes connecté, et transmettre les diagnostics de plantage et d'usage (sauf si vous les désactivez). Le texte sacré (Coran et hadiths) est intégré et vérifié — jamais généré."
+            ],
+            "li": []
+          },
+          {
+            "h": "5. Ce que nous ne faisons pas",
+            "p": [],
+            "li": [
+              "Nous ne vendons ni ne louons vos données personnelles.",
+              "Nous n'affichons pas de publicité et ne vous pistons pas à des fins publicitaires.",
+              "Nous n'exigeons pas de compte pour adorer avec Sirāj."
+            ]
+          },
+          {
+            "h": "6. Services tiers",
+            "p": [
+              "Lorsque vous activez les fonctions ci-dessus, les données sont traitées par Google Firebase selon les conditions de confidentialité de Google. La récitation en flux provient de sources audio publiques du Coran. Les pages vues de ce site sont comptées par Cloudflare Web Analytics. Nous vous invitons à consulter leurs politiques respectives."
+            ],
+            "li": []
+          },
+          {
+            "h": "7. Enfants",
+            "p": [
+              "Sirāj convient à tous les âges et ne collecte pas sciemment d'informations personnelles auprès d'enfants. Les fonctions de compte facultatives s'adressent aux personnes capables de consentir selon leur droit local."
+            ],
+            "li": []
+          },
+          {
+            "h": "8. Vos droits et vos choix",
+            "p": [],
+            "li": [
+              "Utiliser pleinement l'application sans compte.",
+              "Désactiver les statistiques et les rapports de plantage dans les réglages.",
+              "Supprimer votre compte dans l'application pour effacer les données synchronisées ; les données locales restent jusqu'à la désinstallation."
+            ]
+          },
+          {
+            "h": "9. Modifications",
+            "p": [
+              "Nous pouvons mettre à jour cette politique à mesure que l'application évolue. Les changements importants seront indiqués ici avec une nouvelle date de « dernière mise à jour »."
+            ],
+            "li": []
+          },
+          {
+            "h": "10. Contact",
+            "p": [
+              "Une question sur la confidentialité ? Écrivez à {email}."
+            ],
+            "li": []
+          }
+        ]
+      },
+      "terms": {
+        "title": "Conditions d'utilisation · Sirāj",
+        "h1": "Conditions d'utilisation",
+        "date": "20 juin 2026",
+        "intro": "Ces conditions régissent votre utilisation de l'application Sirāj et de ce site. En utilisant Sirāj, vous les acceptez.",
+        "sections": [
+          {
+            "h": "1. Le service",
+            "p": [
+              "Sirāj fournit des horaires de prière, le Coran, des hadiths, des invocations et des outils islamiques associés, pour un usage personnel et cultuel. Nous visons l'exactitude, mais l'application est une aide à l'adoration, non une autorité religieuse."
+            ],
+            "li": []
+          },
+          {
+            "h": "2. Contenu religieux",
+            "p": [
+              "Le Coran et les hadiths de Sirāj sont repris mot pour mot de sources établies et vérifiées, et présentés pour votre bénéfice. Les horaires de prière sont calculés selon des méthodes reconnues ; si votre mosquée locale diffère, suivez votre mosquée."
+            ],
+            "li": []
+          },
+          {
+            "h": "3. Comptes",
+            "p": [
+              "Le compte est facultatif et sert uniquement à synchroniser vos données entre appareils. Il vous appartient de protéger l'accès à votre connexion Apple ou Google. Vous pouvez supprimer votre compte depuis l'application à tout moment."
+            ],
+            "li": []
+          },
+          {
+            "h": "4. Abonnement Soutien",
+            "p": [
+              "Sirāj est gratuit. L'abonnement Soutien, facultatif, aide à financer le développement et active la synchronisation entre appareils. Les abonnements sont facturés via l'App Store ou Google Play et se renouvellent sauf résiliation ; gérez-les ou résiliez-les depuis votre compte de boutique."
+            ],
+            "li": []
+          },
+          {
+            "h": "5. Usage acceptable",
+            "p": [],
+            "li": [
+              "Utilisez Sirāj de manière licite et respectueuse.",
+              "N'essayez pas de perturber, de rétroconcevoir ou de détourner le service.",
+              "Ne dénaturez pas le contenu de l'application et n'utilisez pas le nom ou les marques Sirāj sans autorisation."
+            ]
+          },
+          {
+            "h": "6. Garanties et responsabilité",
+            "p": [
+              "Sirāj est fourni « en l'état », sans garantie d'aucune sorte. Dans la mesure permise par la loi, nous ne sommes pas responsables des pertes indirectes ou consécutives résultant de votre utilisation de l'application."
+            ],
+            "li": []
+          },
+          {
+            "h": "7. Modifications",
+            "p": [
+              "Nous pouvons faire évoluer l'application et ces conditions. Poursuivre l'utilisation après une modification vaut acceptation des conditions mises à jour."
+            ],
+            "li": []
+          },
+          {
+            "h": "8. Contact",
+            "p": [
+              "Une question sur ces conditions ? Écrivez à {email}."
+            ],
+            "li": []
+          }
+        ]
+      }
+    }
   },
-
   "de": {
-    "name": "Deutsch", "dir": "ltr", "locale": "de",
-    "nav": { "features": "Funktionen", "prayerTimes": "Gebetszeiten", "support": "Hilfe", "getApp": "Sirāj holen" },
-    "footer": { "privacy": "Datenschutz", "terms": "Nutzungsbedingungen", "support": "Hilfe" },
-    "prayers": { "fajr": "Fadschr", "sunrise": "Sonnenaufgang", "dhuhr": "Dhuhr", "asr": "ʿAsr", "maghrib": "Maghrib", "isha": "ʿIschāʾ" },
-    "madhhab": { "hanafi": "hanafitische", "standard": "schafiitische / malikitische / hanbalitische" },
+    "name": "Deutsch",
+    "dir": "ltr",
+    "locale": "de",
+    "nav": {
+      "features": "Funktionen",
+      "prayerTimes": "Gebetszeiten",
+      "support": "Hilfe",
+      "getApp": "Sirāj holen"
+    },
+    "footer": {
+      "privacy": "Datenschutz",
+      "terms": "Nutzungsbedingungen",
+      "support": "Hilfe"
+    },
+    "prayers": {
+      "fajr": "Fadschr",
+      "sunrise": "Sonnenaufgang",
+      "dhuhr": "Dhuhr",
+      "asr": "ʿAsr",
+      "maghrib": "Maghrib",
+      "isha": "ʿIschāʾ"
+    },
+    "madhhab": {
+      "hanafi": "hanafitische",
+      "standard": "schafiitische / malikitische / hanbalitische"
+    },
     "city": {
       "title": "Gebetszeiten in {cityIn} — Heutige Gebetszeiten & Qibla · Sirāj",
       "description": "Heutige Gebetszeiten für {city}, {country}: Fadschr {fajr}, Dhuhr {dhuhr}, ʿAsr {asr}, Maghrib {maghrib}, ʿIschāʾ {isha}. Qibla {qibla}° von Norden. Berechnet nach {method}.",
@@ -304,9 +2136,12 @@
       "staticNote": "Angezeigt werden die Zeiten, mit denen diese Seite erstellt wurde. Aktivieren Sie JavaScript für die heutigen Zeiten.",
       "liveNote": "In Ihrem Browser für {tz} berechnet — dies sind die aktuellen Zeiten, nicht die der Seitenerstellung.",
       "qiblaHeading": "Qibla von {city} aus",
-      "direction": "Richtung", "directionSub": "im Uhrzeigersinn ab geografisch Nord",
-      "compass": "Himmelsrichtung", "compassSub": "ungefährer Kurs",
-      "distance": "Entfernung nach Mekka", "distanceSub": "Großkreis",
+      "direction": "Richtung",
+      "directionSub": "im Uhrzeigersinn ab geografisch Nord",
+      "compass": "Himmelsrichtung",
+      "compassSub": "ungefährer Kurs",
+      "distance": "Entfernung nach Mekka",
+      "distanceSub": "Großkreis",
       "magneticNote": "Ein Magnetkompass zeigt nach magnetisch Nord, nicht nach geografisch Nord; die Abweichung ist ortsabhängig und verschiebt sich von Jahr zu Jahr. Der Qibla-Kompass von Sirāj korrigiert sie automatisch über die Sensoren Ihres Geräts.",
       "timetableHeading": "Gebetszeiten {month} {year}",
       "tableCaption": "Gebetszeiten für {city}, {country} — {month} {year}, Ortszeit (24 Stunden)",
@@ -329,11 +2164,290 @@
       "introLink": "Sirāj holen",
       "searchLabel": "Städte durchsuchen",
       "searchPlaceholder": "Stadt oder Land suchen…",
-      "noMatch": "Dazu passt keine Stadt.", "noMatchLink": "Bitten Sie uns, sie aufzunehmen →",
+      "noMatch": "Dazu passt keine Stadt.",
+      "noMatchLink": "Bitten Sie uns, sie aufzunehmen →",
       "callout": "Ihre Stadt fehlt? Sirāj berechnet die Zeiten für jeden Ort direkt auf dem Gerät — per GPS oder über eine selbst gewählte Stadt. Diese Seiten decken nur die meistgesuchten ab. {link}",
       "calloutLink": "Sagen Sie uns, welche fehlt."
     },
-    "store": { "appleSmall": "Laden im", "appleBig": "App Store", "playSmall": "Jetzt bei", "playBig": "Google Play" },
-    "lang": { "label": "Sprache", "switcher": "Sprache wählen" }
+    "store": {
+      "appleSmall": "Laden im",
+      "appleBig": "App Store",
+      "playSmall": "Jetzt bei",
+      "playBig": "Google Play"
+    },
+    "lang": {
+      "label": "Sprache",
+      "switcher": "Sprache wählen"
+    },
+    "ramadan": {
+      "nav": "Ramadan",
+      "hubTitle": "Ramadan 1448 / 2027 — Kalender, Sehri- und Iftar-Zeiten · Sirāj",
+      "hubDescription": "Ramadan 1448 beginnt am {start} und endet am {end} — {days} Fastentage. Sehri- und Iftar-Kalender für {cities} Städte, nach der jeweils vor Ort üblichen Konvention. Kostenlos, ohne Werbung.",
+      "hubH1": "Ramadan 1448",
+      "range": "{start} – {end} · {days} Tage",
+      "before": "Noch {days} Tage bis Ramadan",
+      "during": "{day}. Tag des Ramadan",
+      "after": "Ramadan 1448 ist zu Ende",
+      "standfirst": "Die Daten unten folgen dem Umm-al-Qurā-Kalender. Wo der Monat mit der örtlichen Sichtung der Mondsichel beginnt, kann sich der Ramadan-Beginn um einen Tag verschieben — richten Sie sich nach Ihrer Moschee.",
+      "citiesHeading": "Kalender nach Stadt",
+      "citiesIntro": "Jede Stadtseite zeigt den ganzen Monat: wann Sehri endet, wann das Fasten gebrochen wird und wie lange jeder Fastentag dauert.",
+      "toolsHeading": "Was Sirāj im Ramadan leistet",
+      "tool1t": "Sehri- und Iftar-Erinnerungen",
+      "tool1b": "Eine Benachrichtigung vor Ende der Sehri-Zeit und eine zum Maghrib, auf Ihrem Gerät berechnet, wo immer Sie sind.",
+      "tool2t": "Fasten-Übersicht",
+      "tool2b": "Halten Sie jeden gehaltenen Tag fest und jeden nachzuholenden. Ihre Aufzeichnung bleibt auf dem Gerät, sofern Sie nicht synchronisieren.",
+      "tool3t": "Koran und Tarawih",
+      "tool3b": "Der ganze Koran mit Rezitation und ein Leseplan — damit ein Dschuz' pro Nacht ein Plan ist und keine Hoffnung.",
+      "tool4t": "Die letzten zehn Nächte",
+      "tool4b": "Adhkār und Duʿāʾ für Lailat al-Qadr und ein Hidschri-Kalender, der weiß, in welcher Nacht Sie sind.",
+      "eidHeading": "Eid al-Fitr",
+      "eidBody": "Erwartet am {eid}, abhängig von der Sichtung der Schawwal-Mondsichel.",
+      "cityTitle": "Ramadan Kalender {city} 2027 — Sehri- und Iftar-Zeiten · Sirāj",
+      "cityDescription": "Ramadan-1448-Kalender für {city}, {country}. Ende der Sehri-Zeit und Iftar an allen {days} Tagen, vom {start} bis {end}. Berechnet nach {method}.",
+      "cityH1": "Ramadan-Kalender · {city}",
+      "cityIntro": "Die Sehri-Zeit endet mit Fadschr, gebrochen wird das Fasten zum Maghrib. Die Zeiten sind für {city} nach {method} berechnet; weicht Ihre Moschee um ein oder zwei Minuten ab, richten Sie sich nach ihr.",
+      "tableCaption": "Ramadan-1448-Kalender für {city}, {country} — Ortszeit (24 Stunden)",
+      "colDay": "Ramadan",
+      "colDate": "Datum",
+      "colSuhoor": "Sehri-Ende",
+      "colIftar": "Iftar",
+      "colLength": "Fastendauer",
+      "imsakNote": "Manche Gemeinden halten vorsorglich einen Imsak einige Minuten vor Fadschr. Hier steht die Fadschr-Zeit; in Sirāj können Sie die Sehri-Erinnerung beliebig früher setzen.",
+      "allCities": "Alle Ramadan-Kalender",
+      "longest": "Längster Fastentag",
+      "shortest": "Kürzester Fastentag"
+    },
+    "site": {
+      "heroEyebrow": "Ihr muslimischer Begleiter",
+      "heroH1": "Ihr Licht für die tägliche Andacht.",
+      "heroLead": "Sirāj vereint Gebetszeiten, den Koran, die Qibla, authentische Hadithe, Duʿāʾ und Adhkār und mehr in einer ruhigen, schönen App — von Grund auf privat und kostenlos.",
+      "heroCta1": "Sirāj holen",
+      "heroCta2": "Funktionen ansehen",
+      "fEyebrow": "Alles an einem Ort",
+      "fTitle": "Ein vollständiger Begleiter durch den Tag",
+      "fSub": "Vom ersten Adhān bis zum letzten Duʿāʾ vor dem Schlafen — sorgfältig gestaltet, genau und respektvoll.",
+      "f1t": "Gebetszeiten & Adhān",
+      "f1b": "Genaue Ortszeiten mit allen gängigen Berechnungsmethoden, hanafitischem oder schafiitischem ʿAsr und Adhān-Benachrichtigungen — mit einem Hadith zu jedem Gebet.",
+      "f2t": "Qibla-Kompass",
+      "f2b": "Ein präziser, ruhig laufender Qibla-Zeiger, um sich von überall zur Kaʿba auszurichten, mit klarer Gradangabe und Kalibrierung.",
+      "f3t": "Der Koran",
+      "f3b": "Uthmānī-Schrift mit Übersetzungen, Rezitation Vers für Vers, Wort für Wort, Tafsīr und Tadschwīd — mit Lesezeichen und zuletzt gelesener Stelle.",
+      "f4t": "Authentische Hadithe",
+      "f4b": "Geprüfte Sammlungen — die Vierzig des an-Nawawī, die Vierzig Qudsī und der Muwaṭṭaʾ des Mālik — wortgetreu aus verlässlichen Quellen übernommen.",
+      "f5t": "Duʿāʾ & Adhkār",
+      "f5b": "Morgen- und Abend-Adhkār sowie Bittgebete nach Anlass — dazu eigene Duʿāʾ und Lesezeichen.",
+      "f6t": "Die 99 Namen",
+      "f6b": "Al-Asmāʾ al-Ḥusnā mit Bedeutungen und Erläuterungen, sorgfältig aufbereitet zum Nachdenken und Auswendiglernen.",
+      "f7t": "Hidschri-Kalender",
+      "f7b": "Der islamische Kalender mit gregorianischem Umrechner und den Anlässen des Jahres, damit kein heiliges Datum entgeht.",
+      "f8t": "Tasbīḥ-Zähler",
+      "f8b": "Ein haptischer digitaler Tasbīḥ für Ihr Dhikr, mit Voreinstellungen und sanftem Feedback, das Ihre Zählung sichert.",
+      "f9t": "Zakat & Ramadan",
+      "f9b": "Ein geführter Zakat-Rechner und Ramadan-Werkzeuge, samt Erinnerungen an Lailat al-Qadr in den letzten zehn Nächten.",
+      "wEyebrow": "Warum Sirāj",
+      "wTitle": "Mit Sorgfalt und mit Respekt gebaut",
+      "w1t": "Von Grund auf privat",
+      "w1b": "Ihre Andacht gehört Ihnen. Sirāj arbeitet offline und behält Ihre Daten auf dem Gerät. Melden Sie sich nur an, wenn Sie die Cloud-Synchronisierung möchten — die Analyse ist abschaltbar, und es gibt kein Tracking für Werbung.",
+      "w2t": "Kostenlos, ohne Werbung",
+      "w2b": "Alle Funktionen sind kostenlos. Keine Werbung unterbricht Ihre Andacht. Die optionale Unterstützer-Stufe hilft lediglich, die Entwicklung zu finanzieren, und ergänzt die Synchronisierung zwischen Geräten.",
+      "w3t": "Genau & authentisch",
+      "w3b": "Die Gebetszeiten werden nach etablierten Methoden berechnet; Koran und Hadith stammen wortgetreu aus geprüften Quellen. Heiliger Text wird niemals erfunden.",
+      "sEyebrow": "Eine ruhige, schöne Oberfläche",
+      "sTitle": "Zwölf Themes. Acht Sprachen. Ein Fokus.",
+      "sSub": "Hell und dunkel, mit von Hand abgestimmten Farbfamilien — und vollständiger Rechts-nach-links-Unterstützung für Arabisch und Urdu.",
+      "sIpad": "Auch für den größeren Bildschirm gemacht",
+      "qEyebrow": "Fragen",
+      "qTitle": "Gut zu wissen",
+      "q1": "Ist Sirāj kostenlos?",
+      "a1": "Ja — alle Andachtsfunktionen sind kostenlos und werbefrei. Ein optionales Unterstützer-Abo hilft, die Entwicklung zu finanzieren, und schaltet die Cloud-Synchronisierung zwischen Ihren Geräten frei; vor den Kernfunktionen steht keine Schranke.",
+      "q2": "Funktioniert die App offline?",
+      "a2": "Ja. Gebetszeiten, Koran, Hadith, Duʿāʾ, die 99 Namen und der Hidschri-Kalender funktionieren ohne Verbindung. Ihre Daten bleiben auf dem Gerät, solange Sie sich nicht zur Synchronisierung anmelden.",
+      "q3": "Woher stammen die Gebetszeiten?",
+      "a3": "Sie werden lokal aus Ihrem Standort nach etablierten Methoden berechnet (Islamische Weltliga, Umm al-Qurā, ISNA, ägyptische Behörde und weitere), mit hanafitischer oder schafiitischer ʿAsr-Option und manuellen Korrekturen.",
+      "q4": "Sind die religiösen Inhalte authentisch?",
+      "a4": "Ja. Der Koran nutzt die Uthmānī-Schrift von Tanzil mit etablierten Übersetzungen, und die Hadithe sind wortgetreu aus geprüften Sammlungen übernommen. Nichts Heiliges wird maschinell erzeugt.",
+      "q5": "Welche Sprachen werden unterstützt?",
+      "a5": "Englisch und Arabisch werden vollständig gepflegt, dazu Übersetzungen für Urdu, Türkisch, Französisch, Indonesisch, Malaiisch und Hausa — sowie ein vollständiges Rechts-nach-links-Layout für Arabisch und Urdu.",
+      "dEyebrow": "Jetzt verfügbar",
+      "dTitle": "Sirāj herunterladen",
+      "dSub": "Sirāj ist jetzt im App Store und bei Google Play erhältlich — kostenlos, in shā’ Allāh.",
+      "supTitle": "Hilfe · Sirāj",
+      "supH1": "Hilfe",
+      "supLead": "Wir helfen gern, in shā’ Allāh.",
+      "supEmail": "Schreiben Sie uns",
+      "supEmailNote": "Bitte nennen Sie Ihr Gerät, die Systemversion und eine kurze Beschreibung — so können wir schneller helfen.",
+      "supCommon": "Häufige Fragen",
+      "sq1": "Meine Gebetszeiten wirken falsch",
+      "sa1": "Öffnen Sie Einstellungen → Gebet und prüfen Sie Standort und Berechnungsmethode. Verschiedene Gemeinden folgen verschiedenen Methoden (Islamische Weltliga, Umm al-Qurā, ISNA, ägyptische Behörde). Sie können außerdem den hanafitischen oder schafiitischen ʿAsr wählen und je Gebet Minutenkorrekturen anwenden.",
+      "sq2": "Ich erhalte keinen Adhān und keine Gebetsbenachrichtigungen",
+      "sa2": "Stellen Sie sicher, dass Benachrichtigungen für Sirāj in den Systemeinstellungen Ihres Telefons erlaubt sind, und aktivieren Sie sie dann in der App unter Benachrichtigungen. Damit der Adhān auch im Stummmodus hörbar ist (kritische iOS-Hinweise), schalten Sie „Auch im Stummmodus abspielen“ ein.",
+      "sq3": "Wie synchronisiere ich zwischen Geräten?",
+      "sa3": "Melden Sie sich im Konto-Bildschirm mit Apple oder Google an. Die Synchronisierung von Lesezeichen, zuletzt gelesener Stelle, Verläufen und Einstellungen gehört zur Unterstützer-Stufe. Melden Sie sich auf jedem Gerät mit demselben Konto an.",
+      "sq4": "Wie ändere ich Sprache oder Theme?",
+      "sa4": "Öffnen Sie die Schnelleinstellungen (das Zahnrad) für Themes, oder Mehr → Sprache, um zwischen den unterstützten Sprachen zu wechseln. Arabisch und Urdu stellen das gesamte Layout auf rechts-nach-links um.",
+      "backHome": "Zurück zur Startseite"
+    },
+    "legal": {
+      "governs": "Dies ist eine Übersetzung zur Erleichterung. Bei Abweichungen von der englischen Fassung ist die englische Fassung maßgeblich.",
+      "backHome": "Zurück zur Startseite",
+      "updatedLabel": "Zuletzt aktualisiert",
+      "privacy": {
+        "title": "Datenschutzerklärung · Sirāj",
+        "h1": "Datenschutzerklärung",
+        "date": "29. August 2026",
+        "intro": "Sirāj („die App“, „wir“) ist eine muslimische Begleit-App für Gebet, Koran und Gedenken. Wir haben sie so gebaut, dass sie Ihre Privatsphäre ebenso achtet wie Ihre Andacht. Diese Erklärung beschreibt in klarer Sprache, was die App nutzt, was auf Ihrem Gerät bleibt und die wenigen optionalen Dinge, die es nicht tun.",
+        "shortLabel": "Kurz gefasst:",
+        "short": "Sirāj arbeitet offline und behält Ihre Daten standardmäßig auf Ihrem Gerät. Wir verkaufen Ihre Daten nicht, nutzen sie nicht für Werbung, und Sie teilen nur dann etwas mit unserer Cloud, wenn Sie sich zur Synchronisierung anmelden.",
+        "sections": [
+          {
+            "h": "1. Informationen, die die App auf Ihrem Gerät nutzt",
+            "p": [],
+            "li": [
+              "<strong>Standort</strong> — dient der Berechnung der Gebetszeiten und der Qibla-Richtung und wird dafür auf Ihrem Gerät verarbeitet. Sie können statt des genauen Standorts auch eine Stadt von Hand festlegen.",
+              "<strong>Ihre Aktivität in der App</strong> — Lesezeichen, zuletzt gelesene Stelle, Lesesträhne, Tasbīḥ-Zählstände, Zakat-Eingaben und Ihre Einstellungen. All das wird lokal auf Ihrem Gerät gespeichert.",
+              "<strong>Benachrichtigungen</strong> — Gebetserinnerungen, der Adhān und die optionale tägliche Betrachtung werden lokal auf Ihrem Gerät geplant. An der Zustellung ist kein Server beteiligt."
+            ]
+          },
+          {
+            "h": "2. Optionales Konto & Cloud-Synchronisierung",
+            "p": [
+              "Sie können jede Funktion von Sirāj ohne Konto nutzen. Wenn Sie sich anmelden (mit Apple oder Google), verwenden wir Google Firebase, um:",
+              "Wir speichern nur die für die Synchronisierung nötigen Andachtsdaten, Ihrem Konto zugeordnet. Ihr Apple- oder Google-Passwort sehen wir nie. Melden Sie sich ab, endet die Synchronisierung; löschen Sie Ihr Konto, werden Ihre synchronisierten Daten entfernt."
+            ],
+            "li": [
+              "Sie zu authentifizieren (Firebase Authentication), und",
+              "Ihre Lesezeichen, die zuletzt gelesene Stelle, Verläufe und Einstellungen zwischen Ihren Geräten zu synchronisieren (Cloud Firestore)."
+            ]
+          },
+          {
+            "h": "3. Diagnose & Analyse",
+            "p": [
+              "Um die App stabil zu halten und zu verbessern, kann Sirāj Google Firebase Crashlytics (Absturzberichte) und Firebase Analytics (anonyme, aggregierte Nutzung) verwenden. Diese identifizieren Sie <strong>nicht</strong> persönlich und lassen sich in den Einstellungen <strong>abschalten</strong>. Wir nutzen die Analyse nicht für Werbung, und es findet kein Werbe-Tracking statt.",
+              "<em>Diese Website:</em> unabhängig von der App nutzt diese Website Cloudflare Web Analytics, um Seitenaufrufe und Verweisquellen zu zählen. Sie arbeitet ohne Cookies, speichert nichts auf Ihrem Gerät, erstellt keinen Browser-Fingerabdruck und kann Ihnen nicht auf andere Seiten folgen. Wir beachten außerdem die Signale Do Not Track und Global Privacy Control: ist eines davon gesetzt, wird das Messskript gar nicht erst geladen."
+            ],
+            "li": []
+          },
+          {
+            "h": "4. Netzwerkanfragen",
+            "p": [
+              "Die meisten Inhalte sind mitgeliefert und funktionieren offline. Die App greift nur auf das Netz zu, um: optional Koranrezitation zu streamen, Ihre Daten bei Anmeldung zu synchronisieren und Absturz- bzw. Nutzungsdiagnosen zu senden (sofern Sie das nicht abgeschaltet haben). Heiliger Text (Koran und Hadith) ist mitgeliefert und geprüft — niemals generiert."
+            ],
+            "li": []
+          },
+          {
+            "h": "5. Was wir nicht tun",
+            "p": [],
+            "li": [
+              "Wir verkaufen oder vermieten Ihre personenbezogenen Daten nicht.",
+              "Wir zeigen keine Werbung und verfolgen Sie nicht zu Werbezwecken.",
+              "Wir verlangen kein Konto, damit Sie mit Sirāj Ihre Andacht verrichten."
+            ]
+          },
+          {
+            "h": "6. Dienste Dritter",
+            "p": [
+              "Wenn Sie die obigen Funktionen aktivieren, werden Daten von Google Firebase nach Googles Datenschutzbedingungen verarbeitet. Die gestreamte Rezitation stammt aus öffentlichen Koran-Audioquellen. Seitenaufrufe dieser Website zählt Cloudflare Web Analytics. Wir empfehlen, deren jeweilige Richtlinien zu lesen."
+            ],
+            "li": []
+          },
+          {
+            "h": "7. Kinder",
+            "p": [
+              "Sirāj ist für jedes Alter geeignet und erhebt nicht wissentlich personenbezogene Daten von Kindern. Die optionalen Kontofunktionen richten sich an Personen, die nach ihrem örtlichen Recht einwilligen können."
+            ],
+            "li": []
+          },
+          {
+            "h": "8. Ihre Rechte & Wahlmöglichkeiten",
+            "p": [],
+            "li": [
+              "Die App ohne Konto in vollem Umfang nutzen.",
+              "Analyse und Absturzberichte in den Einstellungen abschalten.",
+              "Ihr Konto in der App löschen, um synchronisierte Cloud-Daten zu entfernen; Daten auf dem Gerät bleiben bis zur Deinstallation."
+            ]
+          },
+          {
+            "h": "9. Änderungen",
+            "p": [
+              "Wir können diese Erklärung anpassen, während die App sich weiterentwickelt. Wesentliche Änderungen werden hier mit einem neuen Datum „zuletzt aktualisiert“ kenntlich gemacht."
+            ],
+            "li": []
+          },
+          {
+            "h": "10. Kontakt",
+            "p": [
+              "Fragen zum Datenschutz? Schreiben Sie an {email}."
+            ],
+            "li": []
+          }
+        ]
+      },
+      "terms": {
+        "title": "Nutzungsbedingungen · Sirāj",
+        "h1": "Nutzungsbedingungen",
+        "date": "20. Juni 2026",
+        "intro": "Diese Bedingungen regeln Ihre Nutzung der Sirāj-App und dieser Website. Mit der Nutzung von Sirāj stimmen Sie ihnen zu.",
+        "sections": [
+          {
+            "h": "1. Der Dienst",
+            "p": [
+              "Sirāj stellt Gebetszeiten, den Koran, Hadithe, Bittgebete und verwandte islamische Werkzeuge für den persönlichen, andächtigen Gebrauch bereit. Wir bemühen uns um Genauigkeit, doch die App ist eine Hilfe zur Andacht, keine religiöse Autorität."
+            ],
+            "li": []
+          },
+          {
+            "h": "2. Religiöse Inhalte",
+            "p": [
+              "Koran und Hadith in Sirāj sind wortgetreu etablierten, geprüften Quellen entnommen und Ihnen zum Nutzen bereitgestellt. Die Gebetszeiten werden nach bekannten Methoden berechnet; weicht Ihre Moschee vor Ort ab, richten Sie sich nach Ihrer Moschee."
+            ],
+            "li": []
+          },
+          {
+            "h": "3. Konten",
+            "p": [
+              "Ein Konto ist optional und dient allein der Synchronisierung Ihrer Daten zwischen Geräten. Für die Sicherheit Ihres Apple- oder Google-Zugangs sind Sie verantwortlich. Sie können Ihr Konto jederzeit in der App löschen."
+            ],
+            "li": []
+          },
+          {
+            "h": "4. Unterstützer-Abo",
+            "p": [
+              "Sirāj ist kostenlos nutzbar. Das optionale Unterstützer-Abo hilft, die Entwicklung zu finanzieren, und schaltet die geräteübergreifende Cloud-Synchronisierung frei. Abos werden über den App Store oder Google Play abgerechnet und verlängern sich, sofern sie nicht gekündigt werden; verwalten oder kündigen Sie sie in Ihrem Store-Konto."
+            ],
+            "li": []
+          },
+          {
+            "h": "5. Zulässige Nutzung",
+            "p": [],
+            "li": [
+              "Nutzen Sie Sirāj rechtmäßig und respektvoll.",
+              "Versuchen Sie nicht, den Dienst zu stören, zurückzuentwickeln oder zu missbrauchen.",
+              "Stellen Sie die Inhalte der App nicht falsch dar und verwenden Sie den Namen oder die Zeichen von Sirāj nicht ohne Erlaubnis."
+            ]
+          },
+          {
+            "h": "6. Haftungsausschluss",
+            "p": [
+              "Sirāj wird „wie besehen“ bereitgestellt, ohne Gewährleistung jeder Art. Soweit gesetzlich zulässig, haften wir nicht für mittelbare Schäden oder Folgeschäden aus Ihrer Nutzung der App."
+            ],
+            "li": []
+          },
+          {
+            "h": "7. Änderungen",
+            "p": [
+              "Wir können die App und diese Bedingungen im Lauf der Zeit anpassen. Nutzen Sie die App nach einer Änderung weiter, nehmen Sie die aktualisierten Bedingungen an."
+            ],
+            "li": []
+          },
+          {
+            "h": "8. Kontakt",
+            "p": [
+              "Fragen zu diesen Bedingungen? Schreiben Sie an {email}."
+            ],
+            "li": []
+          }
+        ]
+      }
+    }
   }
 }

@@ -338,3 +338,20 @@ footer.site-footer .legal .ar { color: var(--accent-light); }
 [dir="rtl"] .updated { direction: ltr; unicode-bidi: isolate; }
 [dir="rtl"] .timetable td { text-align: center; }
 [dir="rtl"] .timetable tbody th { text-align: start; }
+
+/* ---- Ramadan hub + timetables ------------------------------------------ */
+.ramadan-countdown .today-head h2 { font-size: 26px; letter-spacing: -.02em; }
+.ramadan-countdown .recalc { margin-top: 10px; font-size: 13px; }
+
+.rtools { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 18px 0 8px; }
+.rtool { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; }
+.rtool h3 { margin: 0 0 6px; font-size: 15px; font-weight: 700; color: var(--accent-light); }
+.rtool p { margin: 0; font-size: 14px; color: var(--text-2); line-height: 1.5; }
+
+.ramadan-table { min-width: 560px; }
+.ramadan-table tbody th { color: var(--accent); font-variant-numeric: tabular-nums; }
+.ramadan-table td:first-of-type { color: var(--text-3); }
+
+/* A translated legal text is a convenience, not the binding instrument. */
+.doc .callout.governs { border-inline-start-color: var(--text-3); background: rgba(255,255,255,0.02); }
+.doc .callout.governs p { font-size: 14px; color: var(--text-3); }
