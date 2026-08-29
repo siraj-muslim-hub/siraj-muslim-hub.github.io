@@ -12,7 +12,10 @@
       section: section,
       country: section.querySelector('h3').textContent.toLowerCase(),
       items: [].slice.call(section.querySelectorAll('li')).map(function (li) {
-        return { li: li, name: li.textContent.toLowerCase() };
+        // data-alias carries the Latin name on localised indexes, so a
+        // reader on the Arabic page can still find القاهرة by typing "Cairo".
+        var alias = li.getAttribute('data-alias') || '';
+        return { li: li, name: (li.textContent + ' ' + alias).toLowerCase() };
       })
     };
   });

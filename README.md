@@ -23,6 +23,8 @@ assets/         App icon, brand mark, OG banner, screenshots
 prayer-times/   Generated per-city landing pages — do not hand-edit
 tools/
   cities.json      The city list (edit this)
+  city-names.json  Localised city names, keyed by slug
+  i18n.json        UI strings for all seven languages
   gen-cities.js    Builds prayer-times/ and sitemap.xml
   set-domain.py    Moves the site to a custom domain in one command
 ```
@@ -66,9 +68,12 @@ are honoured — if either is set, the script is never loaded.
 to Makkah, a full month's timetable, and the local calculation convention. This is the
 organic-search surface — "prayer times in \<city\>" is how this category is searched.
 
+Pages are generated in **seven languages** — English, Arabic, Urdu, Turkish, Indonesian,
+French and German — which is 157 × 7 = 1,099 city pages plus seven indexes.
+
 ```bash
-node tools/gen-cities.js          # rebuild every page + sitemap.xml
-node tools/gen-cities.js --check  # every city has a page, no page outlives its city
+node tools/gen-cities.js          # rebuild every page, every language + sitemap.xml
+node tools/gen-cities.js --check  # every city has a page in every language, none orphaned
 ```
 
 **To add a city**, append a row to `tools/cities.json` and re-run the generator:
@@ -84,6 +89,41 @@ node tools/gen-cities.js --check  # every city has a page, no page outlives its 
 
 Never edit files in `prayer-times/` by hand — the generator overwrites them, and removing a
 city from `cities.json` deletes its page on the next run.
+
+### Languages
+
+| File | Holds |
+|---|---|
+| `tools/i18n.json` | Every UI string, one block per language |
+| `tools/city-names.json` | Localised city names, keyed by slug |
+| `cc` field in `cities.json` | ISO country code — country names come from ICU |
+
+URLs: English keeps the flat paths it was first published at (`/prayer-times/london.html`)
+because those are already live and indexed; every other language sits under a prefix
+(`/prayer-times/ar/london.html`). Each page declares `hreflang` alternates for all seven plus
+`x-default`, and the sitemap repeats the cluster on every URL.
+
+Three rules when editing translations:
+
+1. **Keep every `{placeholder}`.** The generator throws rather than shipping a literal
+   `{city}` to a reader, so a dropped one fails the build — but only for the page that uses
+   it, so run the generator after any edit.
+2. **Keep the key sets identical.** Every language must carry exactly the same keys as `en`.
+3. **Don't add month names, country names or number formats.** Those come from ICU at build
+   time via the `locale` field, so they cannot drift.
+
+Anything ICU can derive is derived: month names, country names (from `cc`), collation order
+on the index, and the duration units in the "next prayer" pill (`2h 48m` / `2 س 48 د` /
+`2s 48d`). `city-names.json` only lists names that actually differ from the default, so
+`Paris` needs no French row.
+
+To add a language: add a block to `tools/i18n.json` with `name`, `dir`, `locale` and the same
+keys as `en`, then re-run the generator. RTL is handled by the shared stylesheet through CSS
+logical properties — no separate RTL sheet.
+
+**These translations have not been reviewed by native speakers.** They are careful, but
+before spending money driving traffic to a language, get a fluent reader to check its index
+page and one city page — particularly the Urdu and Indonesian religious vocabulary.
 
 The maths lives in `assets/prayer-times.js` and is used in **both** places: the generator
 bakes the month table with it at build time, and the browser loads the same file to
