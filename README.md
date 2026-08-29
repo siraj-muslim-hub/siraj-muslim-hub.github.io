@@ -9,25 +9,38 @@ Served via **GitHub Pages** at **https://siraj-muslim-hub.github.io/**.
 ## Structure
 
 ```
-index.html      Landing page (hero, features, why, screenshots, FAQ, download)
-privacy.html    Privacy Policy
-terms.html      Terms of Service
-support.html    Help & contact + FAQ
+index.html      Landing page          GENERATED — edit tools/i18n.json
+privacy.html    Privacy Policy        GENERATED
+terms.html      Terms of Service      GENERATED
+support.html    Help & contact        GENERATED
+ar/ ur/ tr/ id/ fr/ de/               GENERATED — the same four pages, localised
+prayer-times/   Per-city prayer times GENERATED
+ramadan/        Ramadan hub + timetables  GENERATED
 styles.css      Shared emerald + gold "glowing dome" design system
 carousel.js     Screenshot carousel (dependency-free)
-analytics.js    Cloudflare Web Analytics loader (one token, see below)
+analytics.js    Cloudflare Web Analytics loader
 robots.txt      Crawl directives
-sitemap.xml     Sitemap — generated, do not hand-edit
-assets/         App icon, brand mark, OG banner, screenshots
-  prayer-times.js  Prayer time + Qibla maths, shared by the generator and the browser
-prayer-times/   Generated per-city landing pages — do not hand-edit
+sitemap.xml     GENERATED
+assets/
+  prayer-times.js   Prayer time + Qibla maths, shared by generators and browser
 tools/
-  cities.json      The city list (edit this)
-  city-names.json  Localised city names, keyed by slug
-  i18n.json        UI strings for all seven languages
-  gen-cities.js    Builds prayer-times/ and sitemap.xml
-  set-domain.py    Moves the site to a custom domain in one command
+  build.js          Runs every generator, in order
+  shared.js         Chrome, hreflang, names, dates — used by all generators
+  i18n.json         Every UI string, in all seven languages
+  city-names.json   Localised city names
+  cities.json       The city list
+  gen-site.js       index / privacy / terms / support × 7
+  gen-cities.js     prayer-times/ × 7
+  gen-ramadan.js    ramadan/ × 7
+  gen-sitemap.js    sitemap.xml across every section
+  set-domain.py     Moves the site to a custom domain in one command
+  partials/         Markup fragments with no translatable text
 ```
+
+> **Almost every HTML file in this repo is generated.** Editing `index.html`,
+> `privacy.html` or anything under `prayer-times/`, `ramadan/` or a language
+> directory will be overwritten on the next build. Change `tools/i18n.json`
+> and run `node tools/build.js`.
 
 ## Local preview
 
@@ -62,6 +75,23 @@ with no token, `analytics.js` makes no request at all.
 That one constant covers every page on the site. `Do Not Track` and Global Privacy Control
 are honoured — if either is set, the script is never loaded.
 
+## Ramadan
+
+`ramadan/` holds a hub per language plus a Ramadan timetable per city: when suhoor ends,
+when to break the fast, and the length of each day's fast for all 29 days of Ramadan 1448
+(**8 February – 8 March 2027**, Eid on 9 March, per the Umm al-Qurā calendar).
+
+These are the biggest seasonal queries in the category, and they are asked in the reader's
+own language — إمساكية رمضان, jadwal imsakiyah, ramazan imsakiyesi, calendrier ramadan — so
+each has its own localised page and title.
+
+Unlike the prayer-time pages these are **not** rebuilt monthly: the Ramadan dates are fixed,
+so the tables stay correct until the month passes. The countdown on the hub recomputes in
+the browser, because a baked figure is wrong the day after it is generated.
+
+When Ramadan 1449 comes round, update `RAMADAN` at the top of `tools/gen-ramadan.js` and
+rebuild.
+
 ## Prayer-time landing pages
 
 `prayer-times/` holds a page per city: today's ṣalāh times, the Qibla bearing and distance
@@ -72,9 +102,13 @@ Pages are generated in **seven languages** — English, Arabic, Urdu, Turkish, I
 French and German — which is 157 × 7 = 1,099 city pages plus seven indexes.
 
 ```bash
-node tools/gen-cities.js          # rebuild every page, every language + sitemap.xml
-node tools/gen-cities.js --check  # every city has a page in every language, none orphaned
+node tools/build.js          # rebuild the entire site, every language
+node tools/build.js --check  # verify nothing is missing or orphaned
 ```
+
+Individual generators (`gen-site.js`, `gen-cities.js`, `gen-ramadan.js`,
+`gen-sitemap.js`) can be run alone; `build.js` just runs them in order, with the
+sitemap last because it enumerates what the others produced.
 
 **To add a city**, append a row to `tools/cities.json` and re-run the generator:
 

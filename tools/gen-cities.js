@@ -29,91 +29,21 @@
 const fs = require('fs');
 const path = require('path');
 const PT = require('../assets/prayer-times.js');
+const shared = require('./shared.js');
 
 const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'prayer-times');
 const { cities } = require('./cities.json');
 const I18N = require('./i18n.json');
-const CITY_NAMES = require('./city-names.json');
 
-const LANGS = Object.keys(I18N).filter(k => !k.startsWith('_'));
-const DEFAULT_LANG = 'en';
+/* Chrome, names, dates and number formatting all come from tools/shared.js so
+ * this generator and gen-ramadan.js cannot drift apart. */
+const { LANGS, DEFAULT_LANG, ORIGIN, esc, fill, cityName, cityNameIn,
+        countryName, num, monthName, longDate, prayerHref, ramadanHref } = shared;
 
-/* The canonical host, read from the site itself so tools/set-domain.py stays
- * the single place a domain change happens. */
-const ORIGIN = (function () {
-  const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
-  const m = html.match(/<link rel="canonical" href="https:\/\/([^/"]+)/);
-  if (!m) throw new Error('cannot find canonical host in index.html');
-  return 'https://' + m[1];
-})();
-
-const APP_STORE = 'https://apps.apple.com/app/id6780613457';
-const PLAY_STORE = 'https://play.google.com/store/apps/details?id=com.novasoft.siraj';
 const PRAYERS = ['fajr', 'sunrise', 'dhuhr', 'asr', 'maghrib', 'isha'];
 
-function esc(s) {
-  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-}
-
-/* Substitute {placeholders}. Throws on an unfilled one rather than shipping
- * a literal "{city}" to a reader — a missing translation key should break
- * the build, not the page. */
-function fill(template, values) {
-  return String(template).replace(/\{(\w+)\}/g, (whole, key) => {
-    if (!(key in values)) throw new Error(`unfilled placeholder {${key}} in: ${template}`);
-    return values[key];
-  });
-}
-
 function daysInMonth(y, m) { return new Date(Date.UTC(y, m, 0)).getUTCDate(); }
-
-/* Month names and number grouping come from ICU, per language — no table of
- * translated month names to drift out of step. Digits are forced to Latin so
- * a time reads the same in every locale (and matches the app). */
-function monthName(lang, y, m) {
-  return new Intl.DateTimeFormat(I18N[lang].locale + '-u-nu-latn',
-    { month: 'long', timeZone: 'UTC' }).format(new Date(Date.UTC(y, m - 1, 15)));
-}
-function longDate(lang, y, m, d) {
-  return new Intl.DateTimeFormat(I18N[lang].locale + '-u-nu-latn',
-    { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })
-    .format(new Date(Date.UTC(y, m - 1, d)));
-}
-function num(lang, value) {
-  return new Intl.NumberFormat(I18N[lang].locale + '-u-nu-latn').format(value);
-}
-
-/* The city's name in a given language, falling back to the default Latin
- * form when no localised name is recorded — 'Paris' needs no French row. */
-function cityName(city, lang) {
-  const entry = CITY_NAMES[city.slug];
-  return (entry && entry[lang]) || city.name;
-}
-
-/* The city name as it appears after a locative preposition. Only French
- * needs work: "à" contracts with a masculine article, so Le Caire becomes
- * "au Caire" while La Mecque stays "à La Mecque". Every other language
- * keeps its preposition inside the template and just takes the name. */
-function cityNameIn(city, lang) {
-  const name = cityName(city, lang);
-  if (lang !== 'fr') return name;
-  if (/^Le /.test(name)) return 'au ' + name.slice(3);
-  if (/^Les /.test(name)) return 'aux ' + name.slice(4);
-  return 'à ' + name;
-}
-
-/* Country names come from ICU via the ISO code on each city, so there is no
- * table of 63 countries × 7 languages to maintain or let drift. Falls back to
- * the dataset's English name if a code has no localised form. */
-const REGION_NAMES = Object.fromEntries(LANGS.map(l =>
-  [l, new Intl.DisplayNames([I18N[l].locale], { type: 'region', fallback: 'none' })]));
-
-function countryName(city, lang) {
-  try { return REGION_NAMES[lang].of(city.cc) || city.country; }
-  catch (e) { return city.country; }
-}
 
 /* Times for one city on one local calendar date. */
 function timesFor(city, date) {
@@ -135,121 +65,28 @@ function offsetLabel(offset) {
 
 /* ---- paths ---------------------------------------------------------- */
 
-/* English keeps the flat paths it was published at; others get a prefix. */
-function pageHref(lang, slug) {
-  return lang === DEFAULT_LANG ? `/prayer-times/${slug}.html`
-                               : `/prayer-times/${lang}/${slug}.html`;
-}
-function indexHref(lang) {
-  return lang === DEFAULT_LANG ? '/prayer-times/' : `/prayer-times/${lang}/`;
-}
+const pageHref = (lang, slug) => prayerHref(lang, slug);
+const indexHref = (lang) => prayerHref(lang, null);
+
 function outPath(lang, name) {
   return lang === DEFAULT_LANG ? path.join(OUT, name) : path.join(OUT, lang, name);
 }
-/* Depth from a page back to the site root. */
 function up(lang) { return lang === DEFAULT_LANG ? '../' : '../../'; }
 
-/* ---- shared chrome --------------------------------------------------- */
-
-function nav(lang) {
-  const t = I18N[lang], u = up(lang);
-  return `<nav class="site-nav">
-  <a href="${u}index.html" class="logo" aria-label="Sirāj">
-    <img src="${u}assets/logo-mark.svg" alt="" width="34" height="34">
-    <span class="wordmark">Sirāj<span class="ar"> سِراج</span></span>
-  </a>
-  <div class="nav-links">
-    <a href="${u}index.html#features">${esc(t.nav.features)}</a>
-    <a href="${indexHref(lang)}">${esc(t.nav.prayerTimes)}</a>
-    <a href="${u}support.html">${esc(t.nav.support)}</a>
-    <a href="${u}index.html#download" class="cta">${esc(t.nav.getApp)}</a>
-  </div>
-</nav>`;
-}
-
-/* A plain list of links — no JS, crawlable, and it doubles as the hreflang
- * cluster's human-visible counterpart. */
-function langSwitcher(lang, slug) {
-  const t = I18N[lang];
-  const links = LANGS.map(code => {
-    const href = slug ? pageHref(code, slug) : indexHref(code);
-    const label = esc(I18N[code].name);
-    return code === lang
-      ? `<span class="lang-current" aria-current="true" lang="${code}">${label}</span>`
-      : `<a href="${href}" lang="${code}" hreflang="${code}">${label}</a>`;
-  }).join('\n    ');
-  return `<nav class="lang-switcher" aria-label="${esc(t.lang.switcher)}">
-    <span class="lang-label">${esc(t.lang.label)}</span>
-    ${links}
-  </nav>`;
-}
-
-function footer(lang) {
-  const t = I18N[lang], u = up(lang);
-  return `<footer class="site-footer">
-  <p class="legal">© <span id="year">2026</span> Sirāj. <a href="${u}privacy.html">${esc(t.footer.privacy)}</a> · <a href="${u}terms.html">${esc(t.footer.terms)}</a> · <a href="${u}support.html">${esc(t.footer.support)}</a></p>
-</footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-<script src="${u}analytics.js" defer></script>`;
-}
-
-function storeBadges(lang) {
-  const t = I18N[lang].store;
-  return `<div class="badges">
-      <a class="badge" href="${APP_STORE}" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M16.5 2c.1 1.2-.4 2.4-1.1 3.3-.8.9-2 1.6-3.1 1.5-.1-1.2.4-2.4 1.1-3.2C14.2 2.7 15.4 2.1 16.5 2zm3.4 16.1c-.5 1.2-.8 1.8-1.5 2.9-1 1.5-2.4 3.4-4.1 3.4-1.5 0-1.9-1-4-1-2 0-2.5 1-4 1-1.7 0-3-1.7-4-3.2-2.8-4.3-3.1-9.4-1.4-12.1 1.2-1.9 3.1-3 4.9-3 1.8 0 3 1 4.5 1 1.5 0 2.3-1 4.5-1 1.6 0 3.3.9 4.5 2.4-4 2.2-3.3 7.9.1 9.6z"/></svg>
-        <span class="t"><small>${esc(t.appleSmall)}</small><b>${esc(t.appleBig)}</b></span>
-      </a>
-      <a class="badge" href="${PLAY_STORE}" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M3.6 2.3c-.3.3-.5.7-.5 1.3v16.8c0 .6.2 1 .5 1.3l.1.1L13 12.1v-.2L3.7 2.2zM16.4 15.5l-3.1-3.1v-.2l3.1-3.1 3.6 2c1 .6 1 1.6 0 2.2zM15.8 8.4 12.4 12l-9-9c.4-.2.9-.1 1.5.2zM4 21.5l8.4-8.4 3.4 3.4-9.7 5.5c-.7.4-1.4.3-1.9-.1z"/></svg>
-        <span class="t"><small>${esc(t.playSmall)}</small><b>${esc(t.playBig)}</b></span>
-      </a>
-    </div>`;
-}
+const nav = (lang) => shared.nav(lang, up(lang));
+const footer = (lang) => shared.footer(lang, up(lang));
+const storeBadges = (lang) => shared.storeBadges(lang);
+const langSwitcher = (lang, slug) =>
+  shared.langSwitcher(lang, code => pageHref(code, slug), I18N[lang].nav.prayerTimes);
 
 function head(opts) {
-  const { lang, slug } = opts;
-  const dir = I18N[lang].dir;
-  const u = up(lang);
-  // hreflang cluster: every language, plus x-default pointing at English.
-  const alts = LANGS.map(code => {
-    const href = ORIGIN + (slug ? pageHref(code, slug) : indexHref(code));
-    return `<link rel="alternate" hreflang="${code}" href="${href}">`;
-  }).join('\n');
-  const xDefault = ORIGIN + (slug ? pageHref(DEFAULT_LANG, slug) : indexHref(DEFAULT_LANG));
-
-  return `<!doctype html>
-<html lang="${lang}" dir="${dir}">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(opts.title)}</title>
-<meta name="description" content="${esc(opts.description)}">
-<link rel="canonical" href="${ORIGIN}${opts.pathname}">
-${alts}
-<link rel="alternate" hreflang="x-default" href="${xDefault}">
-<meta name="robots" content="index, follow, max-image-preview:large">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Sirāj">
-<meta property="og:locale" content="${I18N[lang].locale.replace('-', '_')}">
-<meta property="og:title" content="${esc(opts.title)}">
-<meta property="og:description" content="${esc(opts.description)}">
-<meta property="og:url" content="${ORIGIN}${opts.pathname}">
-<meta property="og:image" content="${ORIGIN}/assets/banners/siraj-og-1200x630.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="${ORIGIN}/assets/banners/siraj-og-1200x630.png">
-<meta name="theme-color" content="#06120D">
-<link rel="icon" type="image/png" sizes="256x256" href="${u}assets/app-icon-256.png">
-<link rel="apple-touch-icon" href="${u}assets/app-icon-256.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="${u}styles.css">
-${opts.jsonld ? '<script type="application/ld+json">\n' + JSON.stringify(opts.jsonld, null, 2) + '\n</script>' : ''}
-</head>
-<body>
-${nav(lang)}`;
+  return shared.head({
+    lang: opts.lang, title: opts.title, description: opts.description,
+    pathname: opts.pathname, jsonld: opts.jsonld, up: up(opts.lang),
+    alternates: code => opts.slug ? pageHref(code, opts.slug) : indexHref(code)
+  }) + nav(opts.lang);
 }
+
 
 /* ---- one city page ------------------------------------------------- */
 
@@ -322,7 +159,7 @@ function cityPage(city, today, lang) {
 
   <div class="today" data-city='${esc(JSON.stringify({ lat: city.lat, lng: city.lng, tz: city.tz, method: city.method, asr: city.asr, lang, locale: t.locale, nextIn: c.nextIn, liveNote: c.liveNote, prayers: t.prayers }))}'>
     <div class="today-head">
-      <h2>${esc(c.today)} <span class="dim" id="today-date">${esc(longDate(lang, today.y, today.m, today.d))}</span></h2>
+      <h2>${esc(c.today)} <span class="dim" id="today-date">${esc(longDate(lang, today))}</span></h2>
       <span class="next-pill" id="next-prayer" hidden></span>
     </div>
     <div class="times">
@@ -463,45 +300,6 @@ ${footer(lang)}
 `;
 }
 
-/* ---- sitemap -------------------------------------------------------- */
-
-function sitemap(today) {
-  const stamp = `${today.y}-${String(today.m).padStart(2, '0')}-${String(today.d).padStart(2, '0')}`;
-  const NS = 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"';
-
-  // Alternate links for one logical page, repeated inside every <url> for it.
-  const alts = slug => LANGS.map(code =>
-    `    <xhtml:link rel="alternate" hreflang="${code}" href="${ORIGIN}${slug ? pageHref(code, slug) : indexHref(code)}"/>`)
-    .join('\n') +
-    `\n    <xhtml:link rel="alternate" hreflang="x-default" href="${ORIGIN}${slug ? pageHref(DEFAULT_LANG, slug) : indexHref(DEFAULT_LANG)}"/>`;
-
-  const core = [
-    ['/', 'weekly', '1.0'],
-    ['/support.html', 'monthly', '0.6'],
-    ['/privacy.html', 'monthly', '0.5'],
-    ['/terms.html', 'monthly', '0.5']
-  ].map(([p, f, pr]) =>
-    `  <url><loc>${ORIGIN}${p}</loc><changefreq>${f}</changefreq><priority>${pr}</priority></url>`);
-
-  const indexes = LANGS.map(code =>
-    `  <url>\n    <loc>${ORIGIN}${indexHref(code)}</loc>\n${alts(null)}\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>`);
-
-  const cityUrls = [];
-  for (const c of cities) {
-    for (const code of LANGS) {
-      cityUrls.push(`  <url>\n    <loc>${ORIGIN}${pageHref(code, c.slug)}</loc>\n${alts(c.slug)}\n    <lastmod>${stamp}</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>0.7</priority>\n  </url>`);
-    }
-  }
-
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset ${NS}>
-${core.join('\n')}
-${indexes.join('\n')}
-${cityUrls.join('\n')}
-</urlset>
-`;
-}
-
 /* ---- drive ---------------------------------------------------------- */
 
 function build() {
@@ -513,7 +311,6 @@ function build() {
     for (const c of cities) files.set(outPath(lang, c.slug + '.html'), cityPage(c, today, lang));
     files.set(outPath(lang, 'index.html'), indexPage(today, lang));
   }
-  files.set(path.join(ROOT, 'sitemap.xml'), sitemap(today));
   return files;
 }
 
@@ -571,7 +368,7 @@ function main() {
     }
   }
   for (const [f, content] of files) fs.writeFileSync(f, content, 'utf8');
-  console.log(`wrote ${cities.length} cities × ${LANGS.length} languages (${cities.length * LANGS.length} pages) + ${LANGS.length} indexes + sitemap`);
+  console.log(`wrote ${cities.length} cities × ${LANGS.length} languages (${cities.length * LANGS.length} pages) + ${LANGS.length} indexes`);
 }
 
 main();
