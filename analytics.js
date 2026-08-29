@@ -16,7 +16,7 @@
  * Until the token is filled in this script does nothing at all: no request is
  * made, so shipping it un-configured is harmless.
  */
-var SIRAJ_ANALYTICS_TOKEN = '';
+var SIRAJ_ANALYTICS_TOKEN = '82f7fb17b8fc4b26998093b91e551325';
 
 (function () {
   if (!SIRAJ_ANALYTICS_TOKEN) return;
