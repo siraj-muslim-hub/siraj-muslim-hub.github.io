@@ -64,7 +64,7 @@ nav.site-nav {
 nav.site-nav .logo { display: flex; align-items: center; gap: 10px; color: var(--text); }
 nav.site-nav .logo svg { width: 34px; height: 34px; }
 nav.site-nav .logo .wordmark { font-weight: 800; font-size: 21px; letter-spacing: -0.01em; }
-nav.site-nav .logo .wordmark .ar { color: var(--accent); margin-left: 6px; font-weight: 700; }
+nav.site-nav .logo .wordmark .ar { color: var(--accent); margin-inline-start: 6px; font-weight: 700; }
 nav.site-nav .nav-links { display: flex; gap: 26px; align-items: center; }
 nav.site-nav .nav-links a { color: var(--text-2); font-size: 14px; font-weight: 500; }
 nav.site-nav .nav-links a:hover { color: var(--text); }
@@ -173,7 +173,7 @@ h2.section-title { font-size: clamp(30px, 4.5vw, 46px); font-weight: 800; letter
 .values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
 @media (max-width: 760px) { .values { grid-template-columns: 1fr; } }
 .value h3 { font-size: 19px; margin-bottom: 8px; }
-.value h3 .num { color: var(--accent); font-weight: 800; margin-right: 8px; }
+.value h3 .num { color: var(--accent); font-weight: 800; margin-inline-end: 8px; }
 .value p { color: var(--text-2); font-size: 15px; }
 
 /* ---------- Screenshot carousel ---------- */
@@ -221,10 +221,10 @@ h2.section-title { font-size: clamp(30px, 4.5vw, 46px); font-weight: 800; letter
 }
 .badge.soon { cursor: default; }
 .badge svg { width: 26px; height: 26px; fill: var(--text); flex: none; }
-.badge .t { text-align: left; line-height: 1.2; }
+.badge .t { text-align: start; line-height: 1.2; }
 .badge .t small { display: block; color: var(--text-3); font-size: 10.5px; letter-spacing: 0.04em; }
 .badge .t b { font-size: 16px; font-weight: 700; }
-.badge .pill { margin-left: auto; font-size: 10px; font-weight: 700; color: var(--accent); border: 1px solid var(--border-strong); border-radius: 100px; padding: 2px 8px; text-transform: uppercase; letter-spacing: 0.08em; }
+.badge .pill { margin-inline-start: auto; font-size: 10px; font-weight: 700; color: var(--accent); border: 1px solid var(--border-strong); border-radius: 100px; padding: 2px 8px; text-transform: uppercase; letter-spacing: 0.08em; }
 
 /* ---------- Footer ---------- */
 footer.site-footer { border-top: 1px solid var(--border); padding: 48px 32px; }
@@ -245,9 +245,9 @@ footer.site-footer .legal .ar { color: var(--accent-light); }
 .doc h2 { font-size: 22px; font-weight: 700; margin: 36px 0 12px; }
 .doc h3 { font-size: 17px; font-weight: 700; margin: 24px 0 8px; }
 .doc p, .doc li { color: var(--text-2); font-size: 16px; margin-bottom: 12px; }
-.doc ul { padding-left: 22px; margin-bottom: 12px; }
+.doc ul { padding-inline-start: 22px; margin-bottom: 12px; }
 .doc a { color: var(--accent-light); }
-.doc .callout { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 16px 18px; margin: 20px 0; }
+.doc .callout { background: var(--surface); border: 1px solid var(--border); border-inline-start: 3px solid var(--accent); border-radius: 10px; padding: 16px 18px; margin: 20px 0; }
 .doc .callout p:last-child { margin-bottom: 0; }
 
 /* ---- generated prayer-time city pages ---------------------------------- */
@@ -262,7 +262,7 @@ footer.site-footer .legal .ar { color: var(--accent-light); }
 .today { background: var(--surface); border: 1px solid var(--border-strong); border-radius: var(--radius); padding: 22px 24px; margin: 26px 0 32px; }
 .today-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 .today h2 { margin: 0; font-size: 19px; }
-.today .dim { color: var(--text-3); font-weight: 500; font-size: 14px; margin-left: 6px; }
+.today .dim { color: var(--text-3); font-weight: 500; font-size: 14px; margin-inline-start: 6px; }
 .next-pill { background: rgba(212,185,104,0.14); border: 1px solid var(--border-strong); color: var(--accent-light); font-size: 12px; font-weight: 600; padding: 5px 11px; border-radius: 999px; white-space: nowrap; }
 
 .today .times { display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); gap: 10px; margin-top: 18px; }
@@ -283,10 +283,10 @@ footer.site-footer .legal .ar { color: var(--accent-light); }
 /* Wide tables scroll inside their own box rather than the page. */
 .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; margin: 18px 0 24px; -webkit-overflow-scrolling: touch; }
 .timetable { border-collapse: collapse; width: 100%; min-width: 520px; font-size: 14px; }
-.timetable caption { text-align: left; padding: 12px 16px; color: var(--text-3); font-size: 12px; border-bottom: 1px solid var(--border); }
-.timetable th, .timetable td { padding: 8px 12px; text-align: right; font-variant-numeric: tabular-nums; color: var(--text-2); }
+.timetable caption { text-align: start; padding: 12px 16px; color: var(--text-3); font-size: 12px; border-bottom: 1px solid var(--border); }
+.timetable th, .timetable td { padding: 8px 12px; text-align: end; font-variant-numeric: tabular-nums; color: var(--text-2); }
 .timetable thead th { position: sticky; top: 0; background: var(--surface-elevated); color: var(--text); font-weight: 600; font-size: 12px; letter-spacing: 0.03em; text-transform: uppercase; }
-.timetable tbody th { text-align: left; color: var(--text-3); font-weight: 600; }
+.timetable tbody th { text-align: start; color: var(--text-3); font-weight: 600; }
 .timetable tbody tr:nth-child(even) { background: rgba(255,255,255,0.015); }
 .timetable tbody tr.is-today { background: rgba(212,185,104,0.10); }
 .timetable tbody tr.is-today th, .timetable tbody tr.is-today td { color: var(--accent-light); font-weight: 600; }
@@ -314,3 +314,27 @@ footer.site-footer .legal .ar { color: var(--accent-light); }
   .today { padding: 18px 16px; }
   .today .times { grid-template-columns: repeat(3, 1fr); }
 }
+
+/* ---- language switcher + RTL ------------------------------------------- */
+.lang-switcher { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; margin: 28px 0 4px; padding-top: 18px; border-top: 1px solid var(--border); font-size: 14px; }
+.lang-switcher .lang-label { color: var(--text-3); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+.lang-switcher a { color: var(--text-2); text-decoration: none; }
+.lang-switcher a:hover { color: var(--accent-light); text-decoration: underline; }
+.lang-switcher .lang-current { color: var(--accent); font-weight: 600; }
+
+/* Arabic and Urdu need a naskh face with real diacritic support; Noto Naskh
+   is already loaded for the wordmark, so reuse it and give the body a size
+   bump — naskh reads small at the Latin size. */
+[dir="rtl"] body, [dir="rtl"] .doc p, [dir="rtl"] .doc li { font-family: "Noto Naskh Arabic", "Sora", system-ui, sans-serif; }
+[dir="rtl"] .doc p, [dir="rtl"] .doc li { font-size: 17px; line-height: 1.9; }
+[dir="rtl"] .doc h1 { line-height: 1.4; }
+
+/* The breadcrumb separator is a directional glyph; flip it rather than let
+   the bidi algorithm place a right-pointing chevron in a right-to-left run. */
+[dir="rtl"] .crumbs { direction: rtl; }
+
+/* Times and coordinates stay left-to-right inside RTL prose. */
+[dir="rtl"] .today .val, [dir="rtl"] .fact .v, [dir="rtl"] .timetable td,
+[dir="rtl"] .updated { direction: ltr; unicode-bidi: isolate; }
+[dir="rtl"] .timetable td { text-align: center; }
+[dir="rtl"] .timetable tbody th { text-align: start; }
