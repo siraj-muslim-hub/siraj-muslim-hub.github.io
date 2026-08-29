@@ -1,0 +1,50 @@
+# The city pages bake a month of prayer times into their HTML so that
+# crawlers — and anyone with JavaScript off — get real content rather than an
+# empty table. That baked month is only current for the month it was built in,
+# so regenerate it at the start of each one.
+#
+# Visitors with JavaScript always see times recomputed live in the browser, so
+# a late run degrades SEO freshness, never correctness.
+name: Refresh prayer-time pages
+
+on:
+  schedule:
+    # 02:10 UTC on the 1st of every month. Off the hour on purpose: GitHub
+    # drops scheduled runs that land in its busiest minutes.
+    - cron: '10 2 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-prayer-times
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Regenerate city pages and sitemap
+        run: node tools/gen-cities.js
+
+      - name: Verify every city still has a page
+        run: node tools/gen-cities.js --check
+
+      - name: Commit if anything changed
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Nothing to commit — pages already current."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add prayer-times sitemap.xml
+          git commit -m "chore: refresh prayer-time pages for $(date -u '+%B %Y')"
+          git push

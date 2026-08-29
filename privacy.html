@@ -29,6 +29,7 @@
   </a>
   <div class="nav-links">
     <a href="index.html#features">Features</a>
+    <a href="prayer-times/index.html">Prayer times</a>
     <a href="support.html">Support</a>
     <a href="index.html#download" class="cta">Get Sirāj</a>
   </div>
@@ -36,7 +37,7 @@
 
 <main class="doc">
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 20 June 2026</p>
+  <p class="updated">Last updated: 29 August 2026</p>
 
   <p>Sirāj (“the app”, “we”) is a Muslim companion app for prayer, the Qur'an, and remembrance. We built it to respect your privacy as much as your worship. This policy explains, in plain language, what the app uses, what stays on your device, and the few optional things that don't.</p>
 
@@ -62,6 +63,9 @@
   <h2>3. Diagnostics &amp; analytics</h2>
   <p>To keep the app stable and improve it, Sirāj may use Google Firebase Crashlytics (crash reports) and Firebase Analytics (anonymous, aggregate usage). These do <strong>not</strong> identify you personally and are <strong>opt-out</strong> in the app's settings. We do not use analytics for advertising and there is no ad tracking.</p>
 
+  <h3>This website</h3>
+  <p>Separately from the app, this website uses <strong>Cloudflare Web Analytics</strong> to count page views and referrers. It is cookieless, stores nothing on your device, does not fingerprint your browser, and cannot follow you to other sites &mdash; so there is nothing to consent to and nothing to opt out of. We also honour the <em>Do Not Track</em> and <em>Global Privacy Control</em> browser signals: if either is on, the measurement script is never loaded at all.</p>
+
   <h2>4. Network requests</h2>
   <p>Most content is bundled and works offline. The app reaches the network only to: optionally stream Qur'an recitation audio, sync your data when signed in, and fetch crash/usage diagnostics (unless you opt out). Sacred text (Qur'an and Ḥadīth) is bundled and verified — never generated.</p>
 
@@ -73,7 +77,7 @@
   </ul>
 
   <h2>6. Third-party services</h2>
-  <p>When you opt into the features above, data is processed by Google Firebase under Google's privacy terms. Streaming recitation is served by public Qur'an audio sources. We encourage you to review their respective policies.</p>
+  <p>When you opt into the features above, data is processed by Google Firebase under Google's privacy terms. Streaming recitation is served by public Qur'an audio sources. Page views on this website are counted by Cloudflare Web Analytics. We encourage you to review their respective policies.</p>
 
   <h2>7. Children</h2>
   <p>Sirāj is suitable for all ages and does not knowingly collect personal information from children. The optional account features are intended for users able to consent under their local law.</p>
@@ -98,5 +102,6 @@
   <p class="legal">© <span id="year">2026</span> Sirāj. <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a></p>
 </footer>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="analytics.js" defer></script>
 </body>
 </html>
