@@ -110,7 +110,7 @@ function ramadanHref(lang, slug) {
 
 /* ---- chrome ---------------------------------------------------------- */
 
-function nav(lang, u) {
+function nav(lang, u, hrefFor) {
   const t = I18N[lang];
   return `<nav class="site-nav">
   <a href="${u}index.html" class="logo" aria-label="Sirāj">
@@ -121,6 +121,7 @@ function nav(lang, u) {
     <a href="${prayerHref(lang, null)}">${esc(t.nav.prayerTimes)}</a>
     <a href="${ramadanHref(lang, null)}">${esc(t.ramadan.nav)}</a>
     <a href="${u}support.html">${esc(t.nav.support)}</a>
+    ${langMenu(lang, hrefFor)}
     <a href="${u}index.html#download" class="cta">${esc(t.nav.getApp)}</a>
   </div>
 </nav>`;
@@ -132,6 +133,7 @@ function footer(lang, u) {
   <p class="legal">© <span id="year">2026</span> Sirāj. <a href="${u}privacy.html">${esc(t.footer.privacy)}</a> · <a href="${u}terms.html">${esc(t.footer.terms)}</a> · <a href="${u}support.html">${esc(t.footer.support)}</a></p>
 </footer>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="${u}lang-menu.js" defer></script>
 <script src="${u}analytics.js" defer></script>`;
 }
 
@@ -149,6 +151,34 @@ function langSwitcher(lang, hrefFor, sectionLabel) {
     <span class="lang-label">${esc(sectionLabel || t.lang.label)}</span>
     ${links}
   </nav>`;
+}
+
+/* The language picker for the top nav.
+ *
+ * A <details> element, not a JS widget: the seven <a> hrefs are in the DOM
+ * whether the menu is open or shut, so crawlers follow them and the control
+ * works with JavaScript disabled. `hrefFor(code)` returns THIS page in another
+ * language, so switching keeps the reader where they were rather than
+ * dumping them on a translated home page.
+ */
+function langMenu(lang, hrefFor) {
+  const t = I18N[lang];
+  const items = LANGS.map(code => {
+    const current = code === lang;
+    return `      <a href="${hrefFor(code)}" lang="${code}" hreflang="${code}"` +
+           `${current ? ' aria-current="true" class="is-current"' : ''}>` +
+           `<span class="code">${code.toUpperCase()}</span>${esc(I18N[code].name)}</a>`;
+  }).join('\n');
+
+  return `<details class="lang-menu">
+    <summary aria-label="${esc(t.lang.switcher)}" title="${esc(t.lang.switcher)}">
+      <svg viewBox="0 0 24 24" aria-hidden="true" width="15" height="15"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3.6 9h16.8M3.6 15h16.8M12 3c2.4 2.4 3.6 5.4 3.6 9s-1.2 6.6-3.6 9c-2.4-2.4-3.6-5.4-3.6-9S9.6 5.4 12 3z"/></svg>
+      <span class="cur">${lang.toUpperCase()}</span>
+    </summary>
+    <div class="lang-list">
+${items}
+    </div>
+  </details>`;
 }
 
 function storeBadges(lang) {
@@ -208,5 +238,5 @@ module.exports = {
   LANGS, DEFAULT_LANG, ORIGIN, I18N, APP_STORE, PLAY_STORE,
   esc, fill, cityName, cityNameIn, countryName,
   num, monthName, longDate, shortDate, duration,
-  prayerHref, ramadanHref, nav, footer, langSwitcher, storeBadges, head
+  prayerHref, ramadanHref, nav, footer, langSwitcher, langMenu, storeBadges, head
 };

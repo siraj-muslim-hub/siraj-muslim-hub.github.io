@@ -73,18 +73,17 @@ function outPath(lang, name) {
 }
 function up(lang) { return lang === DEFAULT_LANG ? '../' : '../../'; }
 
-const nav = (lang) => shared.nav(lang, up(lang));
+const navFor = (lang, slug) =>
+  shared.nav(lang, up(lang), code => slug ? pageHref(code, slug) : indexHref(code));
 const footer = (lang) => shared.footer(lang, up(lang));
 const storeBadges = (lang) => shared.storeBadges(lang);
-const langSwitcher = (lang, slug) =>
-  shared.langSwitcher(lang, code => pageHref(code, slug), I18N[lang].nav.prayerTimes);
 
 function head(opts) {
   return shared.head({
     lang: opts.lang, title: opts.title, description: opts.description,
     pathname: opts.pathname, jsonld: opts.jsonld, up: up(opts.lang),
     alternates: code => opts.slug ? pageHref(code, opts.slug) : indexHref(code)
-  }) + nav(opts.lang);
+  }) + navFor(opts.lang, opts.slug);
 }
 
 
@@ -199,8 +198,6 @@ ${rows}      </tbody>
     ${storeBadges(lang)}
   </section>
 
-  ${langSwitcher(lang, city.slug)}
-
   <p style="margin-top:28px"><a href="${indexHref(lang)}">← ${esc(c.allCities)}</a></p>
 </main>
 ${footer(lang)}
@@ -278,8 +275,6 @@ function indexPage(today, lang) {
   <p class="updated">${esc(fill(x.meta, vars))}</p>
 
   <p>${intro}</p>
-
-  ${langSwitcher(lang, null)}
 
   <div class="city-filter">
     <label for="city-search" class="sr-only">${esc(x.searchLabel)}</label>
