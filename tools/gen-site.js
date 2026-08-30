@@ -54,6 +54,27 @@ const TABLET_SHOTS = [
  * from losing the thing it was reading. */
 const SVG_DEFS = fs.readFileSync(path.join(__dirname, 'partials', 'brand-mark.html'), 'utf8').trim();
 
+/* A verse for the Arabic hero.
+ *
+ * Sūrat Nūḥ 71:16 — "and made the moon therein a light, and made the sun a
+ * lamp". Chosen because it carries the word سِرَاجًا, and because the sun and
+ * moon are literally what set the prayer times and the Hijri calendar this
+ * app computes. It describes creation, so nothing here is being claimed for
+ * the app itself.
+ *
+ * Text is the Tanzil Uthmānī edition, the same source the app bundles, copied
+ * verbatim from the API rather than typed from memory — the app's own promise
+ * is that sacred text is never generated, and this page has to hold to it.
+ * Do not "tidy" the diacritics: the marks are part of the orthography.
+ *
+ * Arabic pages only. It is scripture set beside the headline, not a
+ * translated tagline, so it is not in tools/i18n.json.
+ */
+const HERO_AYAH = {
+  text: 'وَجَعَلَ ٱلْقَمَرَ فِيهِنَّ نُورًۭا وَجَعَلَ ٱلشَّمْسَ سِرَاجًۭا',
+  ref: 'سورة نوح · ١٦'
+};
+
 /* ---- paths ----------------------------------------------------------- */
 
 function pageHref(lang, file) {
@@ -183,6 +204,10 @@ function indexPage(lang) {
         <a href="#download" class="btn primary">${esc(s.heroCta1)}</a>
         <a href="#features" class="btn secondary">${esc(s.heroCta2)}</a>
       </div>
+${lang === 'ar' ? `      <figure class="ayah" lang="ar" dir="rtl">
+        <blockquote>${HERO_AYAH.text}</blockquote>
+        <figcaption>${HERO_AYAH.ref}</figcaption>
+      </figure>` : ''}
     </div>
     <div class="hero-shot">
       <img src="${u}assets/screenshots/phone/01-home.webp" width="750" height="1626" alt="Sirāj — ${esc(s.heroEyebrow)}">
