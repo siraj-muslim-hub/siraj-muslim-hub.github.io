@@ -73,7 +73,7 @@ function head(lang, file, opts) {
 }
 
 /* The site nav, with the landing-page anchors that only exist on index. */
-function siteNav(lang, onIndex) {
+function siteNav(lang, onIndex, file) {
   const t = I18N[lang];
   const u = up(lang);
   const home = u + 'index.html';
@@ -87,6 +87,7 @@ function siteNav(lang, onIndex) {
     <a href="${shared.prayerHref(lang, null)}">${esc(t.nav.prayerTimes)}</a>
     <a href="${shared.ramadanHref(lang, null)}">${esc(t.ramadan.nav)}</a>
     <a href="${u}support.html">${esc(t.nav.support)}</a>
+    ${shared.langMenu(lang, code => pageHref(code, file))}
     <a href="${onIndex ? '#download' : home + '#download'}" class="cta">${esc(t.nav.getApp)}</a>
   </div>
 </nav>`;
@@ -124,6 +125,7 @@ function footer(lang) {
   <p class="legal">© <span id="year">2026</span> Sirāj. <span class="ar">وَبِاللَّهِ التَّوْفِيق</span></p>
 </footer>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="${u}lang-menu.js" defer></script>
 <script src="${u}analytics.js" defer></script>`;
 }
 
@@ -168,7 +170,7 @@ function indexPage(lang) {
   };
 
   return head(lang, 'index.html', { title: `Sirāj — ${s.heroEyebrow}`, description: s.heroLead, jsonld })
-    + siteNav(lang, true) + '\n' + SVG_DEFS + `
+    + siteNav(lang, true, 'index.html') + '\n' + SVG_DEFS + `
 
 <header class="hero">
   <div class="hero-grid">
@@ -269,7 +271,7 @@ function supportPage(lang) {
     `<h3>${esc(s['sq'+i])}</h3>\n  <p>${esc(s['sa'+i])}</p>`).join('\n\n  ');
 
   return head(lang, 'support.html', { title: s.supTitle, description: s.supLead })
-    + siteNav(lang, false) + '\n' + SVG_DEFS + `
+    + siteNav(lang, false, 'support.html') + '\n' + SVG_DEFS + `
 
 <main class="doc">
   <h1>${esc(s.supH1)}</h1>
@@ -283,8 +285,6 @@ function supportPage(lang) {
   <h2>${esc(s.supCommon)}</h2>
 
   ${faq}
-
-  ${shared.langSwitcher(lang, code => pageHref(code, 'support.html'))}
 
   <p style="margin-top:28px"><a href="${up(lang)}index.html">← ${esc(s.backHome)}</a></p>
 </main>
@@ -321,7 +321,7 @@ function legalPage(lang, which) {
     : '';
 
   return head(lang, file, { title: doc.title, description: doc.intro })
-    + siteNav(lang, false) + '\n' + SVG_DEFS + `
+    + siteNav(lang, false, file) + '\n' + SVG_DEFS + `
 
 <main class="doc">
   <h1>${esc(doc.h1)}</h1>
@@ -330,8 +330,6 @@ ${governs}
   <p>${esc(doc.intro)}</p>
 ${short}
 ${sections}
-
-  ${shared.langSwitcher(lang, code => pageHref(code, file))}
 
   <p style="margin-top:28px"><a href="${up(lang)}index.html">← ${esc(L.backHome)}</a></p>
 </main>

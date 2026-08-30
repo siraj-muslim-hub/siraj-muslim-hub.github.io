@@ -52,6 +52,21 @@
     <a href="/prayer-times/de/">Gebetszeiten</a>
     <a href="/ramadan/de/">Ramadan</a>
     <a href="../../support.html">Hilfe</a>
+    <details class="lang-menu">
+    <summary aria-label="Sprache wählen" title="Sprache wählen">
+      <svg viewBox="0 0 24 24" aria-hidden="true" width="15" height="15"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3.6 9h16.8M3.6 15h16.8M12 3c2.4 2.4 3.6 5.4 3.6 9s-1.2 6.6-3.6 9c-2.4-2.4-3.6-5.4-3.6-9S9.6 5.4 12 3z"/></svg>
+      <span class="cur">DE</span>
+    </summary>
+    <div class="lang-list">
+      <a href="/ramadan/" lang="en" hreflang="en"><span class="code">EN</span>English</a>
+      <a href="/ramadan/ar/" lang="ar" hreflang="ar"><span class="code">AR</span>العربية</a>
+      <a href="/ramadan/ur/" lang="ur" hreflang="ur"><span class="code">UR</span>اردو</a>
+      <a href="/ramadan/tr/" lang="tr" hreflang="tr"><span class="code">TR</span>Türkçe</a>
+      <a href="/ramadan/id/" lang="id" hreflang="id"><span class="code">ID</span>Bahasa Indonesia</a>
+      <a href="/ramadan/fr/" lang="fr" hreflang="fr"><span class="code">FR</span>Français</a>
+      <a href="/ramadan/de/" lang="de" hreflang="de" aria-current="true" class="is-current"><span class="code">DE</span>Deutsch</a>
+    </div>
+  </details>
     <a href="../../index.html#download" class="cta">Sirāj holen</a>
   </div>
 </nav>
@@ -65,7 +80,7 @@
 
   <div class="today ramadan-countdown" data-ramadan='{&quot;start&quot;:&quot;2027-02-08&quot;,&quot;days&quot;:29,&quot;locale&quot;:&quot;de&quot;,&quot;before&quot;:&quot;Noch {days} Tage bis Ramadan&quot;,&quot;during&quot;:&quot;{day}. Tag des Ramadan&quot;,&quot;after&quot;:&quot;Ramadan 1448 ist zu Ende&quot;}'>
     <div class="today-head">
-      <h2 id="ramadan-countdown">Noch 163 Tage bis Ramadan</h2>
+      <h2 id="ramadan-countdown">Noch 162 Tage bis Ramadan</h2>
     </div>
     <p class="recalc">Die Daten unten folgen dem Umm-al-Qurā-Kalender. Wo der Monat mit der örtlichen Sichtung der Mondsichel beginnt, kann sich der Ramadan-Beginn um einen Tag verschieben — richten Sie sich nach Ihrer Moschee.</p>
   </div>
@@ -565,22 +580,12 @@
     </section>
   </div>
 
-  <nav class="lang-switcher" aria-label="Sprache wählen">
-    <span class="lang-label">Ramadan</span>
-    <a href="/ramadan/" lang="en" hreflang="en">English</a>
-    <a href="/ramadan/ar/" lang="ar" hreflang="ar">العربية</a>
-    <a href="/ramadan/ur/" lang="ur" hreflang="ur">اردو</a>
-    <a href="/ramadan/tr/" lang="tr" hreflang="tr">Türkçe</a>
-    <a href="/ramadan/id/" lang="id" hreflang="id">Bahasa Indonesia</a>
-    <a href="/ramadan/fr/" lang="fr" hreflang="fr">Français</a>
-    <span class="lang-current" aria-current="true" lang="de">Deutsch</span>
-  </nav>
-
   <p style="margin-top:28px"><a href="/prayer-times/de/">← Gebetszeiten</a></p>
 </main><footer class="site-footer">
   <p class="legal">© <span id="year">2026</span> Sirāj. <a href="../../privacy.html">Datenschutz</a> · <a href="../../terms.html">Nutzungsbedingungen</a> · <a href="../../support.html">Hilfe</a></p>
 </footer>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../../lang-menu.js" defer></script>
 <script src="../../analytics.js" defer></script>
 <script src="../../prayer-times/filter.js" defer></script>
 <script src="../../ramadan/countdown.js" defer></script>

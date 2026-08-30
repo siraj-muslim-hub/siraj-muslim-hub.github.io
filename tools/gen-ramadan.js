@@ -64,6 +64,7 @@ function cityPage(city, lang) {
   const country = shared.countryName(city, lang);
   const u = up(lang);
 
+  const alternatesFor = code => pageHref(code, city.slug);
   const rows = [];
   let longest = null, shortest = null;
   for (let n = 1; n <= RAMADAN.days; n++) {
@@ -128,8 +129,6 @@ ${rows.map(row => `<tr><th scope="row">${shared.num(lang, row.n)}</th><td>${shar
     ${shared.storeBadges(lang)}
   </section>
 
-  ${shared.langSwitcher(lang, s => pageHref(s, city.slug), r.nav)}
-
   <p style="margin-top:28px"><a href="${pageHref(lang, null)}">← ${shared.esc(r.allCities)}</a> · <a href="${shared.prayerHref(lang, city.slug)}">${shared.esc(t.nav.prayerTimes)}</a></p>
 </main>`;
 
@@ -152,7 +151,7 @@ ${rows.map(row => `<tr><th scope="row">${shared.num(lang, row.n)}</th><td>${shar
     pathname: pageHref(lang, city.slug),
     alternates: s => pageHref(s, city.slug),
     jsonld, up: u
-  }) + shared.nav(lang, u, { ramadan: true }) + body + shared.footer(lang, u) + `
+  }) + shared.nav(lang, u, alternatesFor) + body + shared.footer(lang, u) + `
 </body>
 </html>
 `;
@@ -165,6 +164,7 @@ function hubPage(lang) {
   const r = t.ramadan;
   const u = up(lang);
 
+  const alternatesFor = code => pageHref(code, null);
   const byCountry = new Map();
   for (const c of cities) {
     const label = shared.countryName(c, lang);
@@ -236,8 +236,6 @@ function hubPage(lang) {
 ${list}
   </div>
 
-  ${shared.langSwitcher(lang, s => pageHref(s, null), r.nav)}
-
   <p style="margin-top:28px"><a href="${shared.prayerHref(lang, null)}">← ${shared.esc(t.nav.prayerTimes)}</a></p>
 </main>`;
 
@@ -253,7 +251,7 @@ ${list}
     pathname: pageHref(lang, null),
     alternates: s => pageHref(s, null),
     jsonld, up: u
-  }) + shared.nav(lang, u, { ramadan: true }) + body + shared.footer(lang, u) + `
+  }) + shared.nav(lang, u, alternatesFor) + body + shared.footer(lang, u) + `
 <script src="${u}prayer-times/filter.js" defer></script>
 <script src="${u}ramadan/countdown.js" defer></script>
 </body>

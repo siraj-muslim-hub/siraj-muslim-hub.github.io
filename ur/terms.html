@@ -44,6 +44,21 @@
     <a href="/prayer-times/ur/">نماز کے اوقات</a>
     <a href="/ramadan/ur/">رمضان</a>
     <a href="../support.html">مدد</a>
+    <details class="lang-menu">
+    <summary aria-label="زبان منتخب کریں" title="زبان منتخب کریں">
+      <svg viewBox="0 0 24 24" aria-hidden="true" width="15" height="15"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3.6 9h16.8M3.6 15h16.8M12 3c2.4 2.4 3.6 5.4 3.6 9s-1.2 6.6-3.6 9c-2.4-2.4-3.6-5.4-3.6-9S9.6 5.4 12 3z"/></svg>
+      <span class="cur">UR</span>
+    </summary>
+    <div class="lang-list">
+      <a href="/terms.html" lang="en" hreflang="en"><span class="code">EN</span>English</a>
+      <a href="/ar/terms.html" lang="ar" hreflang="ar"><span class="code">AR</span>العربية</a>
+      <a href="/ur/terms.html" lang="ur" hreflang="ur" aria-current="true" class="is-current"><span class="code">UR</span>اردو</a>
+      <a href="/tr/terms.html" lang="tr" hreflang="tr"><span class="code">TR</span>Türkçe</a>
+      <a href="/id/terms.html" lang="id" hreflang="id"><span class="code">ID</span>Bahasa Indonesia</a>
+      <a href="/fr/terms.html" lang="fr" hreflang="fr"><span class="code">FR</span>Français</a>
+      <a href="/de/terms.html" lang="de" hreflang="de"><span class="code">DE</span>Deutsch</a>
+    </div>
+  </details>
     <a href="../index.html#download" class="cta">سِراج حاصل کریں</a>
   </div>
 </nav>
@@ -115,17 +130,6 @@
   <h2>۸. رابطہ</h2>
   <p>ان شرائط کے بارے میں سوال ہے؟ <a href="mailto:akhbrnatoday@gmail.com">akhbrnatoday@gmail.com</a> پر ای میل کریں۔</p>
 
-  <nav class="lang-switcher" aria-label="زبان منتخب کریں">
-    <span class="lang-label">زبان</span>
-    <a href="/terms.html" lang="en" hreflang="en">English</a>
-    <a href="/ar/terms.html" lang="ar" hreflang="ar">العربية</a>
-    <span class="lang-current" aria-current="true" lang="ur">اردو</span>
-    <a href="/tr/terms.html" lang="tr" hreflang="tr">Türkçe</a>
-    <a href="/id/terms.html" lang="id" hreflang="id">Bahasa Indonesia</a>
-    <a href="/fr/terms.html" lang="fr" hreflang="fr">Français</a>
-    <a href="/de/terms.html" lang="de" hreflang="de">Deutsch</a>
-  </nav>
-
   <p style="margin-top:28px"><a href="../index.html">← ہوم پر واپس</a></p>
 </main>
 <footer class="site-footer">
@@ -166,6 +170,7 @@
   <p class="legal">© <span id="year">2026</span> Sirāj. <span class="ar">وَبِاللَّهِ التَّوْفِيق</span></p>
 </footer>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../lang-menu.js" defer></script>
 <script src="../analytics.js" defer></script>
 </body>
 </html>
