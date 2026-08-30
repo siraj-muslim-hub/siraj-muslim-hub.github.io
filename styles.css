@@ -17,7 +17,7 @@
   --glow: #FFF7DC;            /* the light */
   --text: #FBFAF5;
   --text-2: rgba(251,250,245,0.70);
-  --text-3: rgba(251,250,245,0.45);
+  --text-3: rgba(251,250,245,0.52);  /* 0.45 measured 4.35:1 — under the 4.5 AA floor */
   --border: rgba(212,185,104,0.14);
   --border-strong: rgba(212,185,104,0.28);
   --radius: 16px;
@@ -68,13 +68,18 @@ nav.site-nav .logo .wordmark .ar { color: var(--accent); margin-inline-start: 6p
 nav.site-nav .nav-links { display: flex; gap: 26px; align-items: center; }
 nav.site-nav .nav-links a { color: var(--text-2); font-size: 14px; font-weight: 500; }
 nav.site-nav .nav-links a:hover { color: var(--text); }
-nav.site-nav .cta {
+/* Scoped as `.nav-links a.cta`, not `.cta`, on purpose. The generic
+   `nav.site-nav .nav-links a` rule above scores (0,2,2); a bare
+   `nav.site-nav .cta` scores (0,2,1) and loses, so the dark text colour
+   never applied and the label sat cream-on-gold at 1.55:1. Same for hover.
+   Keep a.cta here if these selectors are ever reorganised. */
+nav.site-nav .nav-links a.cta {
   background: var(--accent); color: #06120D;
   padding: 10px 18px; border-radius: 100px;
   font-size: 14px; font-weight: 700;
   transition: transform 0.2s, background 0.2s;
 }
-nav.site-nav .cta:hover { transform: translateY(-1px); background: var(--accent-light); color: #06120D; }
+nav.site-nav .nav-links a.cta:hover { transform: translateY(-1px); background: var(--accent-light); color: #06120D; }
 @media (max-width: 720px) { nav.site-nav .nav-links a:not(.cta) { display: none; } nav.site-nav { padding: 12px 18px; } }
 
 /* ---------- Buttons ---------- */
